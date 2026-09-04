@@ -1,0 +1,57 @@
+{
+  "schema_version": "1.0",
+  "manifest_id": "q3_pt_v1",
+  "freeze_status": "FROZEN",
+  "model": {
+    "model_id": "Qwen/Qwen2.5-3B",
+    "revision": "3aab1f1954e9cc14eb9509a215f9e5ca08227a9b",
+    "local_snapshot": "models/q3_pt_v1",
+    "license": {
+      "id": "qwen-research",
+      "source": "https://huggingface.co/Qwen/Qwen2.5-3B",
+      "verified_on": "2026-08-28"
+    },
+    "parameters": {
+      "language_model_b": 3.09,
+      "total_b": 3.09,
+      "active_b": 3.09,
+      "non_embedding_b": 2.77,
+      "source": "https://huggingface.co/Qwen/Qwen2.5-3B"
+    },
+    "architecture": "Qwen2ForCausalLM",
+    "modality": "text",
+    "processor_required": false,
+    "wrapper": "plain_completion_v1",
+    "wrapper_spec": "../wrappers/plain_completion.v1.json"
+  },
+  "factors": {
+    "panel_role": "core_pilot",
+    "size_class": "medium",
+    "family": "Qwen2.5",
+    "instruction_tuned": false,
+    "medical_adapted": false,
+    "release_reference": false
+  },
+  "runtime": {
+    "engine": "vllm",
+    "primary_dtype": "bfloat16",
+    "quantization": null,
+    "temperature": 0,
+    "seed": 2026,
+    "max_context_tokens": 2048,
+    "max_output_tokens": {"typed_state": 192, "ext_notes_context": 96},
+    "thinking_mode": "not_applicable",
+    "vision_encoder": "not_applicable",
+    "offline_only": true
+  },
+  "verification": {
+    "artifact_sha256": "f86b1290b5434e996b9f31dec34af921a384a15cd7d6e55777a8a8883b863225",
+    "tokenizer_sha256": "8bd1669a7d6de52a648e1e99d2d8e571c2282592688bb897c04848a77de3444b",
+    "processor_sha256": null,
+    "chat_template_sha256": null,
+    "wrapper_spec_sha256": "2183737f322e795b6a5c20f95c3457172ba089096d46344104e62d856a293b8f",
+    "runtime_version": "vllm=0.22.1;transformers=5.10.2;torch=2.11.0;accelerate=1.13.0;huggingface-hub=1.18.0",
+    "static_gpu_memory_bytes": null,
+    "peak_gpu_memory_bytes": null
+  }
+}

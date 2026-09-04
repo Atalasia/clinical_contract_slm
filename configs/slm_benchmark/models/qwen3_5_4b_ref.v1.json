@@ -1,0 +1,57 @@
+{
+  "schema_version": "1.0",
+  "manifest_id": "q35_ref_v1",
+  "freeze_status": "FROZEN",
+  "model": {
+    "model_id": "Qwen/Qwen3.5-4B",
+    "revision": "851bf6e806efd8d0a36b00ddf55e13ccb7b8cd0a",
+    "local_snapshot": "models/q35_ref_v1",
+    "license": {
+      "id": "apache-2.0",
+      "source": "https://huggingface.co/Qwen/Qwen3.5-4B",
+      "verified_on": "2026-08-28"
+    },
+    "parameters": {
+      "language_model_b": 4.0,
+      "total_b": null,
+      "active_b": null,
+      "non_embedding_b": null,
+      "source": "https://huggingface.co/Qwen/Qwen3.5-4B"
+    },
+    "architecture": "Qwen3_5ForConditionalGeneration",
+    "modality": "multimodal",
+    "processor_required": true,
+    "wrapper": "official_processor_chat_template",
+    "wrapper_spec": "../wrappers/official_processor_chat.v1.json"
+  },
+  "factors": {
+    "panel_role": "contemporary_reference",
+    "size_class": "medium",
+    "family": "Qwen3.5",
+    "instruction_tuned": true,
+    "medical_adapted": false,
+    "release_reference": true
+  },
+  "runtime": {
+    "engine": "vllm",
+    "primary_dtype": "bfloat16",
+    "quantization": null,
+    "temperature": 0,
+    "seed": 2026,
+    "max_context_tokens": 2048,
+    "max_output_tokens": {"typed_state": 192, "ext_notes_context": 96},
+    "thinking_mode": "disabled",
+    "vision_encoder": "language_model_only_to_verify",
+    "offline_only": true
+  },
+  "verification": {
+    "artifact_sha256": "bdf2830ae772ad6bbd7fabfb2fd527abbe5fc8ce1a5cd6a625ed3fa779368337",
+    "tokenizer_sha256": "6c9a0e93df6ab049ad683fb258ce86bf155b9233e2dc2559057eb9c32e16546b",
+    "processor_sha256": "b5c1c5306a2e3d02a88e0b432f8313937e1a1be13c4934d49cb68696bf6969da",
+    "chat_template_sha256": "f375588bce39618c4cfceea8b82d04c224ab57f6c621b7dc18e10567c38c8e7f",
+    "wrapper_spec_sha256": "d4255390734c6d61efc3213ed24f4dcf1487b39279a76c523051567301a04355",
+    "runtime_version": "vllm=0.22.1;transformers=5.10.2;torch=2.11.0;accelerate=1.13.0;huggingface-hub=1.18.0",
+    "static_gpu_memory_bytes": null,
+    "peak_gpu_memory_bytes": null
+  }
+}

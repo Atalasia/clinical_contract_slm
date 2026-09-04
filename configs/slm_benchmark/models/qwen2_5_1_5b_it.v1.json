@@ -1,0 +1,57 @@
+{
+  "schema_version": "1.0",
+  "manifest_id": "q15_it_v1",
+  "freeze_status": "FROZEN",
+  "model": {
+    "model_id": "Qwen/Qwen2.5-1.5B-Instruct",
+    "revision": "989aa7980e4cf806f80c7fef2b1adb7bc71aa306",
+    "local_snapshot": "models/q15_it_v1",
+    "license": {
+      "id": "apache-2.0",
+      "source": "https://huggingface.co/Qwen/Qwen2.5-1.5B-Instruct",
+      "verified_on": "2026-08-28"
+    },
+    "parameters": {
+      "language_model_b": 1.54,
+      "total_b": 1.54,
+      "active_b": 1.54,
+      "non_embedding_b": 1.31,
+      "source": "https://huggingface.co/Qwen/Qwen2.5-1.5B-Instruct"
+    },
+    "architecture": "Qwen2ForCausalLM",
+    "modality": "text",
+    "processor_required": false,
+    "wrapper": "official_chat_template",
+    "wrapper_spec": "../wrappers/official_chat.v1.json"
+  },
+  "factors": {
+    "panel_role": "core_pilot",
+    "size_class": "small",
+    "family": "Qwen2.5",
+    "instruction_tuned": true,
+    "medical_adapted": false,
+    "release_reference": false
+  },
+  "runtime": {
+    "engine": "vllm",
+    "primary_dtype": "bfloat16",
+    "quantization": null,
+    "temperature": 0,
+    "seed": 2026,
+    "max_context_tokens": 2048,
+    "max_output_tokens": {"typed_state": 192, "ext_notes_context": 96},
+    "thinking_mode": "not_applicable",
+    "vision_encoder": "not_applicable",
+    "offline_only": true
+  },
+  "verification": {
+    "artifact_sha256": "4c0af54c7d024f67ee1da191a0a0b7bd3d3857a72730fd2b3f6b0a58258ef320",
+    "tokenizer_sha256": "a70f82813370d6af4b5dbc285fcf2a742d3873bcf9441501a068187fc9850fc7",
+    "processor_sha256": null,
+    "chat_template_sha256": "de500c1c38e77209e65f8bf96878c1796fae3e73f8ea77b9392b10bc9cb63757",
+    "wrapper_spec_sha256": "790f40f0e2ddf967fbd0a554dd9fbac122efd281a2bb6bb938c6cbec8781ab01",
+    "runtime_version": "vllm=0.22.1;transformers=5.10.2;torch=2.11.0;accelerate=1.13.0;huggingface-hub=1.18.0",
+    "static_gpu_memory_bytes": null,
+    "peak_gpu_memory_bytes": null
+  }
+}

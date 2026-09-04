@@ -10,7 +10,7 @@ htmlcov/
 
 # Never commit source data, model snapshots, or model-level outputs.
 data/
-models/
+/models/
 outputs/
 paper_artifacts/
 

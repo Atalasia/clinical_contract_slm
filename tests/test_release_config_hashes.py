@@ -27,6 +27,16 @@ def _file_sha256(path: Path) -> str:
 
 
 class ReleaseConfigHashTests(unittest.TestCase):
+    def test_portable_design_references_are_in_the_release(self) -> None:
+        benchmark = _load(CONFIG_ROOT / "benchmark.v2.json")
+        for field in ("design_document", "declaration_review"):
+            self.assertTrue((CONFIG_ROOT / benchmark[field]).resolve().is_file())
+
+        tree_config = _load(CONFIG_ROOT / "e2.historical_tree_binary.v1.json")
+        self.assertTrue(
+            (CONFIG_ROOT / tree_config["design_document"]).resolve().is_file()
+        )
+
     def test_task_configs_match_benchmark_and_prompt_hashes(self) -> None:
         benchmark = _load(CONFIG_ROOT / "benchmark.v2.json")
         benchmark_hash = _config_sha256(benchmark)

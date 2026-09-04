@@ -1,0 +1,57 @@
+{
+  "schema_version": "1.0",
+  "manifest_id": "mg15_it_v1",
+  "freeze_status": "FROZEN",
+  "model": {
+    "model_id": "google/medgemma-1.5-4b-it",
+    "revision": "91850547d9f0b2fdd21aa7c5f4f3d1a8a52c243b",
+    "local_snapshot": "models/mg15_it_v1",
+    "license": {
+      "id": "health-ai-developer-foundations",
+      "source": "https://developers.google.com/health-ai-developer-foundations/terms",
+      "verified_on": "2026-08-28"
+    },
+    "parameters": {
+      "language_model_b": 4.0,
+      "total_b": null,
+      "active_b": null,
+      "non_embedding_b": null,
+      "source": "https://huggingface.co/google/medgemma-1.5-4b-it"
+    },
+    "architecture": "Gemma3ForConditionalGeneration",
+    "modality": "multimodal",
+    "processor_required": true,
+    "wrapper": "official_processor_chat_template",
+    "wrapper_spec": "../wrappers/gemma_processor_json_prefill.v1.json"
+  },
+  "factors": {
+    "panel_role": "contemporary_reference",
+    "size_class": "medium",
+    "family": "Gemma 3 / MedGemma 1.5",
+    "instruction_tuned": true,
+    "medical_adapted": true,
+    "release_reference": true
+  },
+  "runtime": {
+    "engine": "vllm",
+    "primary_dtype": "bfloat16",
+    "quantization": null,
+    "temperature": 0,
+    "seed": 2026,
+    "max_context_tokens": 2048,
+    "max_output_tokens": {"typed_state": 192, "ext_notes_context": 96},
+    "thinking_mode": "not_applicable",
+    "vision_encoder": "text_only_loading_to_verify",
+    "offline_only": true
+  },
+  "verification": {
+    "artifact_sha256": "87e87ea82f266cec9d3a95ee179e95d5d5ba4f64a97be0627cf130a7264edb2d",
+    "tokenizer_sha256": "1ef3927e22c329fe64e097863c48e7ead00f1553c7859bfb53c0c966720ae482",
+    "processor_sha256": "8802d18c62ce09854ab2ef19634540601520afd23b7b31fd3145c17a9494c6cd",
+    "chat_template_sha256": "7abac4cc297348fa48e7fa24e0d435faa1593bc097d2cc833677f831c98860cb",
+    "wrapper_spec_sha256": "1988df6e5e094021633753c77bdb72f663ae73247edee8299b7b89dcd30b2898",
+    "runtime_version": "vllm=0.22.1;transformers=5.10.2;torch=2.11.0;accelerate=1.13.0;huggingface-hub=1.18.0",
+    "static_gpu_memory_bytes": null,
+    "peak_gpu_memory_bytes": null
+  }
+}

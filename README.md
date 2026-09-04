@@ -14,6 +14,7 @@ It is not a copy of the full development repository. Earlier MIMIC-IV experiment
 
 ```text
 configs/        Portable copies of the task, model, prompt, wrapper, tree, and registry specifications
+docs/design/    Portable benchmark-design and model-panel provenance records
 examples/       Non-patient mechanical tree used by unit tests
 scripts/        Paper interaction analysis and Figure 1 generator
 src/cpg2/       Minimal execution and evaluation package plus dependency closure
@@ -78,6 +79,7 @@ The command-line interface exposes only the paper-relevant stages:
 
 ```bash
 cpg2-paper --help
+cpg2-paper slm-benchmark-validate --benchmark configs/slm_benchmark/benchmark.v2.json --require-inference-ready
 cpg2-paper slm-benchmark-e1-prepare --help
 cpg2-paper slm-benchmark-e1-s2-run --help
 cpg2-paper slm-benchmark-e2-run --help
