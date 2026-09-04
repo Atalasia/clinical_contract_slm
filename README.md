@@ -91,10 +91,11 @@ Run the stages in this order:
 3. prepare, token-audit, infer, and aggregate E1;
 4. token-audit, infer, and aggregate E1-S2 on the same E1 manifest;
 5. prepare, token-audit, infer, and aggregate E2;
-6. locally audit MIMIC-III-Ext-Notes, then prepare, infer, and aggregate E3; and
-7. run `scripts/make_ml4h_findings_contract_figure_v0_7.py` after the E1 and E1-S2 response trees occupy the default `outputs/local_restricted/slm_benchmark_v2/` layout.
+6. run `scripts/analyze_e2_punctuation_policy_v0_7.py` to reproduce the post-hoc, inference-free punctuation-policy diagnostic from the frozen E2 decision logs;
+7. locally audit MIMIC-III-Ext-Notes, then prepare, infer, and aggregate E3; and
+8. run `scripts/make_ml4h_findings_contract_figure_v0_7.py` after the E1 and E1-S2 response trees occupy the default `outputs/local_restricted/slm_benchmark_v2/` layout.
 
-The analysis script also accepts path overrides through `CPG2_E1_RESULTS`, `CPG2_E1_S2_RESULTS`, `CPG2_E1_RESPONSES`, `CPG2_E1_S2_RESPONSES`, `CPG2_FIGURE_OUTPUT_DIR`, and `CPG2_DERIVED_OUTPUT`. This allows analysis of locally retained outputs without copying them into the repository.
+The Figure 1 script accepts path overrides through `CPG2_E1_RESULTS`, `CPG2_E1_S2_RESULTS`, `CPG2_E1_RESPONSES`, `CPG2_E1_S2_RESPONSES`, `CPG2_FIGURE_OUTPUT_DIR`, and `CPG2_DERIVED_OUTPUT`. The punctuation replay accepts `--e2-root` and `--output`. These options allow analysis of locally retained outputs without copying them into the repository.
 
 All request and response JSONL files are written with restricted permissions by the execution code. Keep the complete `outputs/` tree local. Only independently reviewed, privacy-safe aggregate material should ever be considered for release.
 
@@ -102,6 +103,7 @@ All request and response JSONL files are written with restricted permissions by 
 
 - E1 and E2 source vignettes are not blinded holdouts.
 - E1-S2 is an exploratory output-contract sensitivity analysis.
+- The punctuation-normalized E2 policy is a post-hoc, inference-free diagnostic.
 - E3 evaluates released MetaMap candidates in single nursing notes; it is not end-to-end extraction or longitudinal state inference.
 - The code measures agreement, format compliance, and evaluator behavior. It does not establish clinical safety or patient benefit.
 - No software license has been selected in this staging copy. Add an explicit license before a public release if reuse is intended.

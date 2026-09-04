@@ -6,7 +6,7 @@
 - typed-state output parsing and validation;
 - deterministic synthetic request construction;
 - local vLLM inference for E1, E1-S2, E2, and E3;
-- strict and legacy evaluator policies used in the paper;
+- strict and legacy evaluator policies plus the post-hoc punctuation-normalized replay used in the paper;
 - model-level aggregation, paired comparisons, clustered bootstrap procedures, and baselines;
 - the direct contract-by-model interaction analysis and Figure 1 renderer; and
 - focused unit tests for the included implementation.
