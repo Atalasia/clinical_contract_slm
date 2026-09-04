@@ -1,0 +1,1652 @@
+{
+  "domain": "prostate_cancer",
+  "nodes": [
+    {
+      "branches": {
+        "no": "prostate_symptoms_n02_severe_bone_pain",
+        "yes": "prostate_actions_for_patients_with_unexplained_symptoms_of_metastatic_prostate_cancer_n01_prostate_is_hard_or_irregular_on_dre"
+      },
+      "criterion_id": "prostate_suspicious_low_back_pain_percussion_tenderness",
+      "criterion_type": "legacy_semantic_temporal",
+      "node_id": "prostate_symptoms_n01_suspicious_low_back_pain_such_as_that_associated_with_reproducible_percussion_tenderness",
+      "node_type": "criterion",
+      "normalization_metadata": {
+        "legacy_name": "Suspicious low back pain such as that associated with reproducible percussion tenderness",
+        "legacy_section": "symptoms",
+        "requires_domain_temporal_freeze": true,
+        "yes_is_section_continuation": true
+      },
+      "question": "Does the available evidence satisfy the encoded criterion: Suspicious low back pain such as that associated with reproducible percussion tenderness?",
+      "source_reference": "trees/pc_tree.json:symptoms/nodes[0]",
+      "state_branch_map": {
+        "ABSENT_EXPLICIT": [
+          "no"
+        ],
+        "CONFLICTING": [
+          "no",
+          "yes"
+        ],
+        "FAMILY_HISTORY_OR_OTHER_EXPERIENCER": [
+          "no",
+          "yes"
+        ],
+        "HISTORICAL": [
+          "no",
+          "yes"
+        ],
+        "INFERENCE_FAILURE": [
+          "no",
+          "yes"
+        ],
+        "MODEL_ABSTENTION": [
+          "no",
+          "yes"
+        ],
+        "NOT_DOCUMENTED": [
+          "no",
+          "yes"
+        ],
+        "PARSE_FAILURE": [
+          "no",
+          "yes"
+        ],
+        "POST_CUTOFF_ONLY": [
+          "no",
+          "yes"
+        ],
+        "PRESENT_CURRENT": [
+          "yes"
+        ],
+        "UNCERTAIN": [
+          "no",
+          "yes"
+        ]
+      },
+      "temporal_rule": {
+        "cutoff_relation": "at_or_before",
+        "lookback_hours": null
+      }
+    },
+    {
+      "branches": {
+        "no": "prostate_symptoms_n03_weight_loss_especially_in_the_elderly",
+        "yes": "prostate_actions_for_patients_with_unexplained_symptoms_of_metastatic_prostate_cancer_n01_prostate_is_hard_or_irregular_on_dre"
+      },
+      "criterion_id": "prostate_severe_bone_pain",
+      "criterion_type": "legacy_semantic_temporal",
+      "node_id": "prostate_symptoms_n02_severe_bone_pain",
+      "node_type": "criterion",
+      "normalization_metadata": {
+        "legacy_name": "Severe bone pain",
+        "legacy_section": "symptoms",
+        "requires_domain_temporal_freeze": true,
+        "yes_is_section_continuation": true
+      },
+      "question": "Does the available evidence satisfy the encoded criterion: Severe bone pain?",
+      "source_reference": "trees/pc_tree.json:symptoms/nodes[1]",
+      "state_branch_map": {
+        "ABSENT_EXPLICIT": [
+          "no"
+        ],
+        "CONFLICTING": [
+          "no",
+          "yes"
+        ],
+        "FAMILY_HISTORY_OR_OTHER_EXPERIENCER": [
+          "no",
+          "yes"
+        ],
+        "HISTORICAL": [
+          "no",
+          "yes"
+        ],
+        "INFERENCE_FAILURE": [
+          "no",
+          "yes"
+        ],
+        "MODEL_ABSTENTION": [
+          "no",
+          "yes"
+        ],
+        "NOT_DOCUMENTED": [
+          "no",
+          "yes"
+        ],
+        "PARSE_FAILURE": [
+          "no",
+          "yes"
+        ],
+        "POST_CUTOFF_ONLY": [
+          "no",
+          "yes"
+        ],
+        "PRESENT_CURRENT": [
+          "yes"
+        ],
+        "UNCERTAIN": [
+          "no",
+          "yes"
+        ]
+      },
+      "temporal_rule": {
+        "cutoff_relation": "at_or_before",
+        "lookback_hours": null
+      }
+    },
+    {
+      "branches": {
+        "no": "prostate_symptoms_n04_luts_symptoms_with_no_urinary_tract_infection",
+        "yes": "prostate_actions_for_patients_with_unexplained_symptoms_of_metastatic_prostate_cancer_n01_prostate_is_hard_or_irregular_on_dre"
+      },
+      "criterion_id": "prostate_weight_loss_elderly",
+      "criterion_type": "legacy_semantic_temporal",
+      "node_id": "prostate_symptoms_n03_weight_loss_especially_in_the_elderly",
+      "node_type": "criterion",
+      "normalization_metadata": {
+        "legacy_name": "Weight loss, especially in the elderly",
+        "legacy_section": "symptoms",
+        "requires_domain_temporal_freeze": true,
+        "yes_is_section_continuation": true
+      },
+      "question": "Does the available evidence satisfy the encoded criterion: Weight loss, especially in the elderly?",
+      "source_reference": "trees/pc_tree.json:symptoms/nodes[2]",
+      "state_branch_map": {
+        "ABSENT_EXPLICIT": [
+          "no"
+        ],
+        "CONFLICTING": [
+          "no",
+          "yes"
+        ],
+        "FAMILY_HISTORY_OR_OTHER_EXPERIENCER": [
+          "no",
+          "yes"
+        ],
+        "HISTORICAL": [
+          "no",
+          "yes"
+        ],
+        "INFERENCE_FAILURE": [
+          "no",
+          "yes"
+        ],
+        "MODEL_ABSTENTION": [
+          "no",
+          "yes"
+        ],
+        "NOT_DOCUMENTED": [
+          "no",
+          "yes"
+        ],
+        "PARSE_FAILURE": [
+          "no",
+          "yes"
+        ],
+        "POST_CUTOFF_ONLY": [
+          "no",
+          "yes"
+        ],
+        "PRESENT_CURRENT": [
+          "yes"
+        ],
+        "UNCERTAIN": [
+          "no",
+          "yes"
+        ]
+      },
+      "temporal_rule": {
+        "cutoff_relation": "at_or_before",
+        "lookback_hours": null
+      }
+    },
+    {
+      "branches": {
+        "no": "prostate_symptoms_n05_incidental_elevated_psa_results",
+        "yes": "prostate_actions_for_patients_with_luts_n01_prostate_is_hard_or_irregular_on_dre"
+      },
+      "criterion_id": "prostate_luts_without_uti",
+      "criterion_type": "legacy_semantic_temporal",
+      "node_id": "prostate_symptoms_n04_luts_symptoms_with_no_urinary_tract_infection",
+      "node_type": "criterion",
+      "normalization_metadata": {
+        "legacy_name": "LUTS symptoms with no urinary tract infection",
+        "legacy_section": "symptoms",
+        "requires_domain_temporal_freeze": true,
+        "yes_is_section_continuation": true
+      },
+      "question": "Does the available evidence satisfy the encoded criterion: LUTS symptoms with no urinary tract infection?",
+      "source_reference": "trees/pc_tree.json:symptoms/nodes[3]",
+      "state_branch_map": {
+        "ABSENT_EXPLICIT": [
+          "no"
+        ],
+        "CONFLICTING": [
+          "no",
+          "yes"
+        ],
+        "FAMILY_HISTORY_OR_OTHER_EXPERIENCER": [
+          "no",
+          "yes"
+        ],
+        "HISTORICAL": [
+          "no",
+          "yes"
+        ],
+        "INFERENCE_FAILURE": [
+          "no",
+          "yes"
+        ],
+        "MODEL_ABSTENTION": [
+          "no",
+          "yes"
+        ],
+        "NOT_DOCUMENTED": [
+          "no",
+          "yes"
+        ],
+        "PARSE_FAILURE": [
+          "no",
+          "yes"
+        ],
+        "POST_CUTOFF_ONLY": [
+          "no",
+          "yes"
+        ],
+        "PRESENT_CURRENT": [
+          "yes"
+        ],
+        "UNCERTAIN": [
+          "no",
+          "yes"
+        ]
+      },
+      "temporal_rule": {
+        "cutoff_relation": "at_or_before",
+        "lookback_hours": null
+      }
+    },
+    {
+      "branches": {
+        "no": "prostate_t_end",
+        "yes": "prostate_actions_for_patients_with_incidental_elevated_psa_results_n01_prostate_is_hard_or_irregular_on_dre_and_the_age_based_psa_level_is_elevated_but_less_than_10_micrograms_per_liter"
+      },
+      "criterion_id": "prostate_incidental_elevated_psa",
+      "criterion_type": "legacy_semantic_temporal",
+      "node_id": "prostate_symptoms_n05_incidental_elevated_psa_results",
+      "node_type": "criterion",
+      "normalization_metadata": {
+        "legacy_name": "Incidental elevated PSA results",
+        "legacy_section": "symptoms",
+        "requires_domain_temporal_freeze": true,
+        "yes_is_section_continuation": true
+      },
+      "question": "Does the available evidence satisfy the encoded criterion: Incidental elevated PSA results?",
+      "source_reference": "trees/pc_tree.json:symptoms/nodes[4]",
+      "state_branch_map": {
+        "ABSENT_EXPLICIT": [
+          "no"
+        ],
+        "CONFLICTING": [
+          "no",
+          "yes"
+        ],
+        "FAMILY_HISTORY_OR_OTHER_EXPERIENCER": [
+          "no",
+          "yes"
+        ],
+        "HISTORICAL": [
+          "no",
+          "yes"
+        ],
+        "INFERENCE_FAILURE": [
+          "no",
+          "yes"
+        ],
+        "MODEL_ABSTENTION": [
+          "no",
+          "yes"
+        ],
+        "NOT_DOCUMENTED": [
+          "no",
+          "yes"
+        ],
+        "PARSE_FAILURE": [
+          "no",
+          "yes"
+        ],
+        "POST_CUTOFF_ONLY": [
+          "no",
+          "yes"
+        ],
+        "PRESENT_CURRENT": [
+          "yes"
+        ],
+        "UNCERTAIN": [
+          "no",
+          "yes"
+        ]
+      },
+      "temporal_rule": {
+        "cutoff_relation": "at_or_before",
+        "lookback_hours": null
+      }
+    },
+    {
+      "branches": {
+        "no": "prostate_actions_for_patients_with_unexplained_symptoms_of_metastatic_prostate_cancer_n02_psa_level_greater_than_or_equal_to_20_micrograms_per_liter",
+        "yes": "prostate_t_actions_for_patients_with_unexplained_symptoms_of_metastatic_prostate_cancer_yes_01"
+      },
+      "criterion_id": "prostate_hard_or_irregular_dre",
+      "criterion_type": "legacy_semantic_temporal",
+      "node_id": "prostate_actions_for_patients_with_unexplained_symptoms_of_metastatic_prostate_cancer_n01_prostate_is_hard_or_irregular_on_dre",
+      "node_type": "criterion",
+      "normalization_metadata": {
+        "legacy_name": "Prostate is hard or irregular on DRE",
+        "legacy_section": "actions for patients with unexplained symptoms of metastatic prostate cancer",
+        "requires_domain_temporal_freeze": true,
+        "yes_is_section_continuation": false
+      },
+      "question": "Does the available evidence satisfy the encoded criterion: Prostate is hard or irregular on DRE?",
+      "source_reference": "trees/pc_tree.json:actions for patients with unexplained symptoms of metastatic prostate cancer/nodes[0]",
+      "state_branch_map": {
+        "ABSENT_EXPLICIT": [
+          "no"
+        ],
+        "CONFLICTING": [
+          "no",
+          "yes"
+        ],
+        "FAMILY_HISTORY_OR_OTHER_EXPERIENCER": [
+          "no",
+          "yes"
+        ],
+        "HISTORICAL": [
+          "no",
+          "yes"
+        ],
+        "INFERENCE_FAILURE": [
+          "no",
+          "yes"
+        ],
+        "MODEL_ABSTENTION": [
+          "no",
+          "yes"
+        ],
+        "NOT_DOCUMENTED": [
+          "no",
+          "yes"
+        ],
+        "PARSE_FAILURE": [
+          "no",
+          "yes"
+        ],
+        "POST_CUTOFF_ONLY": [
+          "no",
+          "yes"
+        ],
+        "PRESENT_CURRENT": [
+          "yes"
+        ],
+        "UNCERTAIN": [
+          "no",
+          "yes"
+        ]
+      },
+      "temporal_rule": {
+        "cutoff_relation": "at_or_before",
+        "lookback_hours": null
+      }
+    },
+    {
+      "branches": {
+        "no": "prostate_actions_for_patients_with_unexplained_symptoms_of_metastatic_prostate_cancer_n03_psa_level_between_10_and_20_micrograms_per_liter",
+        "yes": "prostate_t_actions_for_patients_with_unexplained_symptoms_of_metastatic_prostate_cancer_yes_02"
+      },
+      "criterion_id": "prostate_psa_ge_20_ug_l",
+      "criterion_type": "numeric_threshold",
+      "node_id": "prostate_actions_for_patients_with_unexplained_symptoms_of_metastatic_prostate_cancer_n02_psa_level_greater_than_or_equal_to_20_micrograms_per_liter",
+      "node_type": "criterion",
+      "normalization_metadata": {
+        "legacy_name": "PSA level greater than or equal to 20 micrograms per liter",
+        "legacy_section": "actions for patients with unexplained symptoms of metastatic prostate cancer",
+        "requires_domain_temporal_freeze": true,
+        "yes_is_section_continuation": false
+      },
+      "question": "Does the available evidence satisfy the encoded criterion: PSA level greater than or equal to 20 micrograms per liter?",
+      "source_reference": "trees/pc_tree.json:actions for patients with unexplained symptoms of metastatic prostate cancer/nodes[1]",
+      "state_branch_map": {
+        "ABSENT_EXPLICIT": [
+          "no"
+        ],
+        "CONFLICTING": [
+          "no",
+          "yes"
+        ],
+        "FAMILY_HISTORY_OR_OTHER_EXPERIENCER": [
+          "no",
+          "yes"
+        ],
+        "HISTORICAL": [
+          "no",
+          "yes"
+        ],
+        "INFERENCE_FAILURE": [
+          "no",
+          "yes"
+        ],
+        "MODEL_ABSTENTION": [
+          "no",
+          "yes"
+        ],
+        "NOT_DOCUMENTED": [
+          "no",
+          "yes"
+        ],
+        "PARSE_FAILURE": [
+          "no",
+          "yes"
+        ],
+        "POST_CUTOFF_ONLY": [
+          "no",
+          "yes"
+        ],
+        "PRESENT_CURRENT": [
+          "yes"
+        ],
+        "UNCERTAIN": [
+          "no",
+          "yes"
+        ]
+      },
+      "temporal_rule": {
+        "cutoff_relation": "at_or_before",
+        "lookback_hours": null
+      }
+    },
+    {
+      "branches": {
+        "no": "prostate_actions_for_patients_with_unexplained_symptoms_of_metastatic_prostate_cancer_n04_psa_level_less_than_10_micrograms_per_liter",
+        "yes": "prostate_t_actions_for_patients_with_unexplained_symptoms_of_metastatic_prostate_cancer_yes_03"
+      },
+      "criterion_id": "prostate_psa_between_10_and_20_ug_l",
+      "criterion_type": "legacy_semantic_temporal",
+      "node_id": "prostate_actions_for_patients_with_unexplained_symptoms_of_metastatic_prostate_cancer_n03_psa_level_between_10_and_20_micrograms_per_liter",
+      "node_type": "criterion",
+      "normalization_metadata": {
+        "legacy_name": "PSA level between 10 and 20 micrograms per liter",
+        "legacy_section": "actions for patients with unexplained symptoms of metastatic prostate cancer",
+        "requires_domain_temporal_freeze": true,
+        "yes_is_section_continuation": false
+      },
+      "question": "Does the available evidence satisfy the encoded criterion: PSA level between 10 and 20 micrograms per liter?",
+      "source_reference": "trees/pc_tree.json:actions for patients with unexplained symptoms of metastatic prostate cancer/nodes[2]",
+      "state_branch_map": {
+        "ABSENT_EXPLICIT": [
+          "no"
+        ],
+        "CONFLICTING": [
+          "no",
+          "yes"
+        ],
+        "FAMILY_HISTORY_OR_OTHER_EXPERIENCER": [
+          "no",
+          "yes"
+        ],
+        "HISTORICAL": [
+          "no",
+          "yes"
+        ],
+        "INFERENCE_FAILURE": [
+          "no",
+          "yes"
+        ],
+        "MODEL_ABSTENTION": [
+          "no",
+          "yes"
+        ],
+        "NOT_DOCUMENTED": [
+          "no",
+          "yes"
+        ],
+        "PARSE_FAILURE": [
+          "no",
+          "yes"
+        ],
+        "POST_CUTOFF_ONLY": [
+          "no",
+          "yes"
+        ],
+        "PRESENT_CURRENT": [
+          "yes"
+        ],
+        "UNCERTAIN": [
+          "no",
+          "yes"
+        ]
+      },
+      "temporal_rule": {
+        "cutoff_relation": "at_or_before",
+        "lookback_hours": null
+      }
+    },
+    {
+      "branches": {
+        "no": "prostate_t_end",
+        "yes": "prostate_t_actions_for_patients_with_unexplained_symptoms_of_metastatic_prostate_cancer_yes_04"
+      },
+      "criterion_id": "prostate_psa_lt_10_ug_l",
+      "criterion_type": "numeric_threshold",
+      "node_id": "prostate_actions_for_patients_with_unexplained_symptoms_of_metastatic_prostate_cancer_n04_psa_level_less_than_10_micrograms_per_liter",
+      "node_type": "criterion",
+      "normalization_metadata": {
+        "legacy_name": "PSA level less than 10 micrograms per liter",
+        "legacy_section": "actions for patients with unexplained symptoms of metastatic prostate cancer",
+        "requires_domain_temporal_freeze": true,
+        "yes_is_section_continuation": false
+      },
+      "question": "Does the available evidence satisfy the encoded criterion: PSA level less than 10 micrograms per liter?",
+      "source_reference": "trees/pc_tree.json:actions for patients with unexplained symptoms of metastatic prostate cancer/nodes[3]",
+      "state_branch_map": {
+        "ABSENT_EXPLICIT": [
+          "no"
+        ],
+        "CONFLICTING": [
+          "no",
+          "yes"
+        ],
+        "FAMILY_HISTORY_OR_OTHER_EXPERIENCER": [
+          "no",
+          "yes"
+        ],
+        "HISTORICAL": [
+          "no",
+          "yes"
+        ],
+        "INFERENCE_FAILURE": [
+          "no",
+          "yes"
+        ],
+        "MODEL_ABSTENTION": [
+          "no",
+          "yes"
+        ],
+        "NOT_DOCUMENTED": [
+          "no",
+          "yes"
+        ],
+        "PARSE_FAILURE": [
+          "no",
+          "yes"
+        ],
+        "POST_CUTOFF_ONLY": [
+          "no",
+          "yes"
+        ],
+        "PRESENT_CURRENT": [
+          "yes"
+        ],
+        "UNCERTAIN": [
+          "no",
+          "yes"
+        ]
+      },
+      "temporal_rule": {
+        "cutoff_relation": "at_or_before",
+        "lookback_hours": null
+      }
+    },
+    {
+      "branches": {
+        "no": "prostate_actions_for_patients_with_luts_n02_prostate_is_hard_or_irregular_on_dre_and_the_age_based_psa_level_is_elevated_but_less_than_10_micrograms_per_liter",
+        "yes": "prostate_t_actions_for_patients_with_luts_yes_01"
+      },
+      "criterion_id": "prostate_hard_or_irregular_dre",
+      "criterion_type": "legacy_semantic_temporal",
+      "node_id": "prostate_actions_for_patients_with_luts_n01_prostate_is_hard_or_irregular_on_dre",
+      "node_type": "criterion",
+      "normalization_metadata": {
+        "legacy_name": "Prostate is hard or irregular on DRE",
+        "legacy_section": "actions for patients with luts",
+        "requires_domain_temporal_freeze": true,
+        "yes_is_section_continuation": false
+      },
+      "question": "Does the available evidence satisfy the encoded criterion: Prostate is hard or irregular on DRE?",
+      "source_reference": "trees/pc_tree.json:actions for patients with luts/nodes[0]",
+      "state_branch_map": {
+        "ABSENT_EXPLICIT": [
+          "no"
+        ],
+        "CONFLICTING": [
+          "no",
+          "yes"
+        ],
+        "FAMILY_HISTORY_OR_OTHER_EXPERIENCER": [
+          "no",
+          "yes"
+        ],
+        "HISTORICAL": [
+          "no",
+          "yes"
+        ],
+        "INFERENCE_FAILURE": [
+          "no",
+          "yes"
+        ],
+        "MODEL_ABSTENTION": [
+          "no",
+          "yes"
+        ],
+        "NOT_DOCUMENTED": [
+          "no",
+          "yes"
+        ],
+        "PARSE_FAILURE": [
+          "no",
+          "yes"
+        ],
+        "POST_CUTOFF_ONLY": [
+          "no",
+          "yes"
+        ],
+        "PRESENT_CURRENT": [
+          "yes"
+        ],
+        "UNCERTAIN": [
+          "no",
+          "yes"
+        ]
+      },
+      "temporal_rule": {
+        "cutoff_relation": "at_or_before",
+        "lookback_hours": null
+      }
+    },
+    {
+      "branches": {
+        "no": "prostate_actions_for_patients_with_luts_n03_prostate_is_hard_or_irregular_on_dre_and_the_psa_level_is_between_10_and_20_micrograms_per_liter",
+        "yes": "prostate_t_actions_for_patients_with_luts_yes_02"
+      },
+      "criterion_id": "prostate_abnormal_dre_and_age_psa_elevated_lt_10_ug_l",
+      "criterion_type": "legacy_semantic_temporal",
+      "node_id": "prostate_actions_for_patients_with_luts_n02_prostate_is_hard_or_irregular_on_dre_and_the_age_based_psa_level_is_elevated_but_less_than_10_micrograms_per_liter",
+      "node_type": "criterion",
+      "normalization_metadata": {
+        "legacy_name": "Prostate is hard or irregular on DRE and the age-based PSA level is elevated but less than 10 micrograms per liter",
+        "legacy_section": "actions for patients with luts",
+        "requires_domain_temporal_freeze": true,
+        "yes_is_section_continuation": false
+      },
+      "question": "Does the available evidence satisfy the encoded criterion: Prostate is hard or irregular on DRE and the age-based PSA level is elevated but less than 10 micrograms per liter?",
+      "source_reference": "trees/pc_tree.json:actions for patients with luts/nodes[1]",
+      "state_branch_map": {
+        "ABSENT_EXPLICIT": [
+          "no"
+        ],
+        "CONFLICTING": [
+          "no",
+          "yes"
+        ],
+        "FAMILY_HISTORY_OR_OTHER_EXPERIENCER": [
+          "no",
+          "yes"
+        ],
+        "HISTORICAL": [
+          "no",
+          "yes"
+        ],
+        "INFERENCE_FAILURE": [
+          "no",
+          "yes"
+        ],
+        "MODEL_ABSTENTION": [
+          "no",
+          "yes"
+        ],
+        "NOT_DOCUMENTED": [
+          "no",
+          "yes"
+        ],
+        "PARSE_FAILURE": [
+          "no",
+          "yes"
+        ],
+        "POST_CUTOFF_ONLY": [
+          "no",
+          "yes"
+        ],
+        "PRESENT_CURRENT": [
+          "yes"
+        ],
+        "UNCERTAIN": [
+          "no",
+          "yes"
+        ]
+      },
+      "temporal_rule": {
+        "cutoff_relation": "at_or_before",
+        "lookback_hours": null
+      }
+    },
+    {
+      "branches": {
+        "no": "prostate_actions_for_patients_with_luts_n04_psa_level_is_greater_than_or_equal_to_20_micrograms_per_liter",
+        "yes": "prostate_t_actions_for_patients_with_luts_yes_03"
+      },
+      "criterion_id": "prostate_abnormal_dre_and_psa_between_10_and_20_ug_l",
+      "criterion_type": "legacy_semantic_temporal",
+      "node_id": "prostate_actions_for_patients_with_luts_n03_prostate_is_hard_or_irregular_on_dre_and_the_psa_level_is_between_10_and_20_micrograms_per_liter",
+      "node_type": "criterion",
+      "normalization_metadata": {
+        "legacy_name": "Prostate is hard or irregular on DRE and the PSA level is between 10 and 20 micrograms per liter",
+        "legacy_section": "actions for patients with luts",
+        "requires_domain_temporal_freeze": true,
+        "yes_is_section_continuation": false
+      },
+      "question": "Does the available evidence satisfy the encoded criterion: Prostate is hard or irregular on DRE and the PSA level is between 10 and 20 micrograms per liter?",
+      "source_reference": "trees/pc_tree.json:actions for patients with luts/nodes[2]",
+      "state_branch_map": {
+        "ABSENT_EXPLICIT": [
+          "no"
+        ],
+        "CONFLICTING": [
+          "no",
+          "yes"
+        ],
+        "FAMILY_HISTORY_OR_OTHER_EXPERIENCER": [
+          "no",
+          "yes"
+        ],
+        "HISTORICAL": [
+          "no",
+          "yes"
+        ],
+        "INFERENCE_FAILURE": [
+          "no",
+          "yes"
+        ],
+        "MODEL_ABSTENTION": [
+          "no",
+          "yes"
+        ],
+        "NOT_DOCUMENTED": [
+          "no",
+          "yes"
+        ],
+        "PARSE_FAILURE": [
+          "no",
+          "yes"
+        ],
+        "POST_CUTOFF_ONLY": [
+          "no",
+          "yes"
+        ],
+        "PRESENT_CURRENT": [
+          "yes"
+        ],
+        "UNCERTAIN": [
+          "no",
+          "yes"
+        ]
+      },
+      "temporal_rule": {
+        "cutoff_relation": "at_or_before",
+        "lookback_hours": null
+      }
+    },
+    {
+      "branches": {
+        "no": "prostate_actions_for_patients_with_luts_n05_dre_findings_are_normal_and_the_psa_level_is_between_10_and_20_micrograms_per_liter",
+        "yes": "prostate_t_actions_for_patients_with_luts_yes_04"
+      },
+      "criterion_id": "prostate_psa_ge_20_ug_l",
+      "criterion_type": "numeric_threshold",
+      "node_id": "prostate_actions_for_patients_with_luts_n04_psa_level_is_greater_than_or_equal_to_20_micrograms_per_liter",
+      "node_type": "criterion",
+      "normalization_metadata": {
+        "legacy_name": "PSA level is greater than or equal to 20 micrograms per liter",
+        "legacy_section": "actions for patients with luts",
+        "requires_domain_temporal_freeze": true,
+        "yes_is_section_continuation": false
+      },
+      "question": "Does the available evidence satisfy the encoded criterion: PSA level is greater than or equal to 20 micrograms per liter?",
+      "source_reference": "trees/pc_tree.json:actions for patients with luts/nodes[3]",
+      "state_branch_map": {
+        "ABSENT_EXPLICIT": [
+          "no"
+        ],
+        "CONFLICTING": [
+          "no",
+          "yes"
+        ],
+        "FAMILY_HISTORY_OR_OTHER_EXPERIENCER": [
+          "no",
+          "yes"
+        ],
+        "HISTORICAL": [
+          "no",
+          "yes"
+        ],
+        "INFERENCE_FAILURE": [
+          "no",
+          "yes"
+        ],
+        "MODEL_ABSTENTION": [
+          "no",
+          "yes"
+        ],
+        "NOT_DOCUMENTED": [
+          "no",
+          "yes"
+        ],
+        "PARSE_FAILURE": [
+          "no",
+          "yes"
+        ],
+        "POST_CUTOFF_ONLY": [
+          "no",
+          "yes"
+        ],
+        "PRESENT_CURRENT": [
+          "yes"
+        ],
+        "UNCERTAIN": [
+          "no",
+          "yes"
+        ]
+      },
+      "temporal_rule": {
+        "cutoff_relation": "at_or_before",
+        "lookback_hours": null
+      }
+    },
+    {
+      "branches": {
+        "no": "prostate_actions_for_patients_with_luts_n06_dre_findings_are_normal_and_the_age_based_psa_level_is_elevated_but_less_than_10_micrograms_per_liter",
+        "yes": "prostate_t_actions_for_patients_with_luts_yes_05"
+      },
+      "criterion_id": "prostate_normal_dre_and_psa_between_10_and_20_ug_l",
+      "criterion_type": "legacy_semantic_temporal",
+      "node_id": "prostate_actions_for_patients_with_luts_n05_dre_findings_are_normal_and_the_psa_level_is_between_10_and_20_micrograms_per_liter",
+      "node_type": "criterion",
+      "normalization_metadata": {
+        "legacy_name": "DRE findings are normal and the PSA level is between 10 and 20 micrograms per liter",
+        "legacy_section": "actions for patients with luts",
+        "requires_domain_temporal_freeze": true,
+        "yes_is_section_continuation": false
+      },
+      "question": "Does the available evidence satisfy the encoded criterion: DRE findings are normal and the PSA level is between 10 and 20 micrograms per liter?",
+      "source_reference": "trees/pc_tree.json:actions for patients with luts/nodes[4]",
+      "state_branch_map": {
+        "ABSENT_EXPLICIT": [
+          "no"
+        ],
+        "CONFLICTING": [
+          "no",
+          "yes"
+        ],
+        "FAMILY_HISTORY_OR_OTHER_EXPERIENCER": [
+          "no",
+          "yes"
+        ],
+        "HISTORICAL": [
+          "no",
+          "yes"
+        ],
+        "INFERENCE_FAILURE": [
+          "no",
+          "yes"
+        ],
+        "MODEL_ABSTENTION": [
+          "no",
+          "yes"
+        ],
+        "NOT_DOCUMENTED": [
+          "no",
+          "yes"
+        ],
+        "PARSE_FAILURE": [
+          "no",
+          "yes"
+        ],
+        "POST_CUTOFF_ONLY": [
+          "no",
+          "yes"
+        ],
+        "PRESENT_CURRENT": [
+          "yes"
+        ],
+        "UNCERTAIN": [
+          "no",
+          "yes"
+        ]
+      },
+      "temporal_rule": {
+        "cutoff_relation": "at_or_before",
+        "lookback_hours": null
+      }
+    },
+    {
+      "branches": {
+        "no": "prostate_t_end",
+        "yes": "prostate_nomograms_n01_risk_of_high_grade_prostate_cancer_is_less_than_5_percent"
+      },
+      "criterion_id": "prostate_normal_dre_and_age_psa_elevated_lt_10_ug_l",
+      "criterion_type": "legacy_semantic_temporal",
+      "node_id": "prostate_actions_for_patients_with_luts_n06_dre_findings_are_normal_and_the_age_based_psa_level_is_elevated_but_less_than_10_micrograms_per_liter",
+      "node_type": "criterion",
+      "normalization_metadata": {
+        "legacy_name": "DRE findings are normal and the age-based PSA level is elevated but less than 10 micrograms per liter",
+        "legacy_section": "actions for patients with luts",
+        "requires_domain_temporal_freeze": true,
+        "yes_is_section_continuation": true
+      },
+      "question": "Does the available evidence satisfy the encoded criterion: DRE findings are normal and the age-based PSA level is elevated but less than 10 micrograms per liter?",
+      "source_reference": "trees/pc_tree.json:actions for patients with luts/nodes[5]",
+      "state_branch_map": {
+        "ABSENT_EXPLICIT": [
+          "no"
+        ],
+        "CONFLICTING": [
+          "no",
+          "yes"
+        ],
+        "FAMILY_HISTORY_OR_OTHER_EXPERIENCER": [
+          "no",
+          "yes"
+        ],
+        "HISTORICAL": [
+          "no",
+          "yes"
+        ],
+        "INFERENCE_FAILURE": [
+          "no",
+          "yes"
+        ],
+        "MODEL_ABSTENTION": [
+          "no",
+          "yes"
+        ],
+        "NOT_DOCUMENTED": [
+          "no",
+          "yes"
+        ],
+        "PARSE_FAILURE": [
+          "no",
+          "yes"
+        ],
+        "POST_CUTOFF_ONLY": [
+          "no",
+          "yes"
+        ],
+        "PRESENT_CURRENT": [
+          "yes"
+        ],
+        "UNCERTAIN": [
+          "no",
+          "yes"
+        ]
+      },
+      "temporal_rule": {
+        "cutoff_relation": "at_or_before",
+        "lookback_hours": null
+      }
+    },
+    {
+      "branches": {
+        "no": "prostate_actions_for_patients_with_incidental_elevated_psa_results_n02_prostate_is_hard_or_irregular_on_dre_and_the_psa_level_is_between_10_and_20_micrograms_per_liter",
+        "yes": "prostate_t_actions_for_patients_with_incidental_elevated_psa_results_yes_01"
+      },
+      "criterion_id": "prostate_abnormal_dre_and_age_psa_elevated_lt_10_ug_l",
+      "criterion_type": "legacy_semantic_temporal",
+      "node_id": "prostate_actions_for_patients_with_incidental_elevated_psa_results_n01_prostate_is_hard_or_irregular_on_dre_and_the_age_based_psa_level_is_elevated_but_less_than_10_micrograms_per_liter",
+      "node_type": "criterion",
+      "normalization_metadata": {
+        "legacy_name": "Prostate is hard or irregular on DRE and the age-based PSA level is elevated but less than 10 micrograms per liter",
+        "legacy_section": "actions for patients with incidental elevated psa results",
+        "requires_domain_temporal_freeze": true,
+        "yes_is_section_continuation": false
+      },
+      "question": "Does the available evidence satisfy the encoded criterion: Prostate is hard or irregular on DRE and the age-based PSA level is elevated but less than 10 micrograms per liter?",
+      "source_reference": "trees/pc_tree.json:actions for patients with incidental elevated psa results/nodes[0]",
+      "state_branch_map": {
+        "ABSENT_EXPLICIT": [
+          "no"
+        ],
+        "CONFLICTING": [
+          "no",
+          "yes"
+        ],
+        "FAMILY_HISTORY_OR_OTHER_EXPERIENCER": [
+          "no",
+          "yes"
+        ],
+        "HISTORICAL": [
+          "no",
+          "yes"
+        ],
+        "INFERENCE_FAILURE": [
+          "no",
+          "yes"
+        ],
+        "MODEL_ABSTENTION": [
+          "no",
+          "yes"
+        ],
+        "NOT_DOCUMENTED": [
+          "no",
+          "yes"
+        ],
+        "PARSE_FAILURE": [
+          "no",
+          "yes"
+        ],
+        "POST_CUTOFF_ONLY": [
+          "no",
+          "yes"
+        ],
+        "PRESENT_CURRENT": [
+          "yes"
+        ],
+        "UNCERTAIN": [
+          "no",
+          "yes"
+        ]
+      },
+      "temporal_rule": {
+        "cutoff_relation": "at_or_before",
+        "lookback_hours": null
+      }
+    },
+    {
+      "branches": {
+        "no": "prostate_actions_for_patients_with_incidental_elevated_psa_results_n03_psa_level_is_greater_than_or_equal_to_20_micrograms_per_liter",
+        "yes": "prostate_t_actions_for_patients_with_incidental_elevated_psa_results_yes_02"
+      },
+      "criterion_id": "prostate_abnormal_dre_and_psa_between_10_and_20_ug_l",
+      "criterion_type": "legacy_semantic_temporal",
+      "node_id": "prostate_actions_for_patients_with_incidental_elevated_psa_results_n02_prostate_is_hard_or_irregular_on_dre_and_the_psa_level_is_between_10_and_20_micrograms_per_liter",
+      "node_type": "criterion",
+      "normalization_metadata": {
+        "legacy_name": "Prostate is hard or irregular on DRE and the PSA level is between 10 and 20 micrograms per liter",
+        "legacy_section": "actions for patients with incidental elevated psa results",
+        "requires_domain_temporal_freeze": true,
+        "yes_is_section_continuation": false
+      },
+      "question": "Does the available evidence satisfy the encoded criterion: Prostate is hard or irregular on DRE and the PSA level is between 10 and 20 micrograms per liter?",
+      "source_reference": "trees/pc_tree.json:actions for patients with incidental elevated psa results/nodes[1]",
+      "state_branch_map": {
+        "ABSENT_EXPLICIT": [
+          "no"
+        ],
+        "CONFLICTING": [
+          "no",
+          "yes"
+        ],
+        "FAMILY_HISTORY_OR_OTHER_EXPERIENCER": [
+          "no",
+          "yes"
+        ],
+        "HISTORICAL": [
+          "no",
+          "yes"
+        ],
+        "INFERENCE_FAILURE": [
+          "no",
+          "yes"
+        ],
+        "MODEL_ABSTENTION": [
+          "no",
+          "yes"
+        ],
+        "NOT_DOCUMENTED": [
+          "no",
+          "yes"
+        ],
+        "PARSE_FAILURE": [
+          "no",
+          "yes"
+        ],
+        "POST_CUTOFF_ONLY": [
+          "no",
+          "yes"
+        ],
+        "PRESENT_CURRENT": [
+          "yes"
+        ],
+        "UNCERTAIN": [
+          "no",
+          "yes"
+        ]
+      },
+      "temporal_rule": {
+        "cutoff_relation": "at_or_before",
+        "lookback_hours": null
+      }
+    },
+    {
+      "branches": {
+        "no": "prostate_actions_for_patients_with_incidental_elevated_psa_results_n04_dre_findings_are_normal_and_the_psa_level_is_between_10_and_20_micrograms_per_liter",
+        "yes": "prostate_t_actions_for_patients_with_incidental_elevated_psa_results_yes_03"
+      },
+      "criterion_id": "prostate_psa_ge_20_ug_l",
+      "criterion_type": "numeric_threshold",
+      "node_id": "prostate_actions_for_patients_with_incidental_elevated_psa_results_n03_psa_level_is_greater_than_or_equal_to_20_micrograms_per_liter",
+      "node_type": "criterion",
+      "normalization_metadata": {
+        "legacy_name": "PSA level is greater than or equal to 20 micrograms per liter",
+        "legacy_section": "actions for patients with incidental elevated psa results",
+        "requires_domain_temporal_freeze": true,
+        "yes_is_section_continuation": false
+      },
+      "question": "Does the available evidence satisfy the encoded criterion: PSA level is greater than or equal to 20 micrograms per liter?",
+      "source_reference": "trees/pc_tree.json:actions for patients with incidental elevated psa results/nodes[2]",
+      "state_branch_map": {
+        "ABSENT_EXPLICIT": [
+          "no"
+        ],
+        "CONFLICTING": [
+          "no",
+          "yes"
+        ],
+        "FAMILY_HISTORY_OR_OTHER_EXPERIENCER": [
+          "no",
+          "yes"
+        ],
+        "HISTORICAL": [
+          "no",
+          "yes"
+        ],
+        "INFERENCE_FAILURE": [
+          "no",
+          "yes"
+        ],
+        "MODEL_ABSTENTION": [
+          "no",
+          "yes"
+        ],
+        "NOT_DOCUMENTED": [
+          "no",
+          "yes"
+        ],
+        "PARSE_FAILURE": [
+          "no",
+          "yes"
+        ],
+        "POST_CUTOFF_ONLY": [
+          "no",
+          "yes"
+        ],
+        "PRESENT_CURRENT": [
+          "yes"
+        ],
+        "UNCERTAIN": [
+          "no",
+          "yes"
+        ]
+      },
+      "temporal_rule": {
+        "cutoff_relation": "at_or_before",
+        "lookback_hours": null
+      }
+    },
+    {
+      "branches": {
+        "no": "prostate_actions_for_patients_with_incidental_elevated_psa_results_n05_dre_findings_are_normal_and_the_age_based_psa_level_is_elevated_but_less_than_10_micrograms_per_liter",
+        "yes": "prostate_t_actions_for_patients_with_incidental_elevated_psa_results_yes_04"
+      },
+      "criterion_id": "prostate_normal_dre_and_psa_between_10_and_20_ug_l",
+      "criterion_type": "legacy_semantic_temporal",
+      "node_id": "prostate_actions_for_patients_with_incidental_elevated_psa_results_n04_dre_findings_are_normal_and_the_psa_level_is_between_10_and_20_micrograms_per_liter",
+      "node_type": "criterion",
+      "normalization_metadata": {
+        "legacy_name": "DRE findings are normal and the PSA level is between 10 and 20 micrograms per liter",
+        "legacy_section": "actions for patients with incidental elevated psa results",
+        "requires_domain_temporal_freeze": true,
+        "yes_is_section_continuation": false
+      },
+      "question": "Does the available evidence satisfy the encoded criterion: DRE findings are normal and the PSA level is between 10 and 20 micrograms per liter?",
+      "source_reference": "trees/pc_tree.json:actions for patients with incidental elevated psa results/nodes[3]",
+      "state_branch_map": {
+        "ABSENT_EXPLICIT": [
+          "no"
+        ],
+        "CONFLICTING": [
+          "no",
+          "yes"
+        ],
+        "FAMILY_HISTORY_OR_OTHER_EXPERIENCER": [
+          "no",
+          "yes"
+        ],
+        "HISTORICAL": [
+          "no",
+          "yes"
+        ],
+        "INFERENCE_FAILURE": [
+          "no",
+          "yes"
+        ],
+        "MODEL_ABSTENTION": [
+          "no",
+          "yes"
+        ],
+        "NOT_DOCUMENTED": [
+          "no",
+          "yes"
+        ],
+        "PARSE_FAILURE": [
+          "no",
+          "yes"
+        ],
+        "POST_CUTOFF_ONLY": [
+          "no",
+          "yes"
+        ],
+        "PRESENT_CURRENT": [
+          "yes"
+        ],
+        "UNCERTAIN": [
+          "no",
+          "yes"
+        ]
+      },
+      "temporal_rule": {
+        "cutoff_relation": "at_or_before",
+        "lookback_hours": null
+      }
+    },
+    {
+      "branches": {
+        "no": "prostate_t_end",
+        "yes": "prostate_nomograms_n01_risk_of_high_grade_prostate_cancer_is_less_than_5_percent"
+      },
+      "criterion_id": "prostate_normal_dre_and_age_psa_elevated_lt_10_ug_l",
+      "criterion_type": "legacy_semantic_temporal",
+      "node_id": "prostate_actions_for_patients_with_incidental_elevated_psa_results_n05_dre_findings_are_normal_and_the_age_based_psa_level_is_elevated_but_less_than_10_micrograms_per_liter",
+      "node_type": "criterion",
+      "normalization_metadata": {
+        "legacy_name": "DRE findings are normal and the age-based PSA level is elevated but less than 10 micrograms per liter",
+        "legacy_section": "actions for patients with incidental elevated psa results",
+        "requires_domain_temporal_freeze": true,
+        "yes_is_section_continuation": true
+      },
+      "question": "Does the available evidence satisfy the encoded criterion: DRE findings are normal and the age-based PSA level is elevated but less than 10 micrograms per liter?",
+      "source_reference": "trees/pc_tree.json:actions for patients with incidental elevated psa results/nodes[4]",
+      "state_branch_map": {
+        "ABSENT_EXPLICIT": [
+          "no"
+        ],
+        "CONFLICTING": [
+          "no",
+          "yes"
+        ],
+        "FAMILY_HISTORY_OR_OTHER_EXPERIENCER": [
+          "no",
+          "yes"
+        ],
+        "HISTORICAL": [
+          "no",
+          "yes"
+        ],
+        "INFERENCE_FAILURE": [
+          "no",
+          "yes"
+        ],
+        "MODEL_ABSTENTION": [
+          "no",
+          "yes"
+        ],
+        "NOT_DOCUMENTED": [
+          "no",
+          "yes"
+        ],
+        "PARSE_FAILURE": [
+          "no",
+          "yes"
+        ],
+        "POST_CUTOFF_ONLY": [
+          "no",
+          "yes"
+        ],
+        "PRESENT_CURRENT": [
+          "yes"
+        ],
+        "UNCERTAIN": [
+          "no",
+          "yes"
+        ]
+      },
+      "temporal_rule": {
+        "cutoff_relation": "at_or_before",
+        "lookback_hours": null
+      }
+    },
+    {
+      "branches": {
+        "no": "prostate_nomograms_n02_risk_of_high_grade_prostate_cancer_is_between_5_percent_and_20_percent",
+        "yes": "prostate_t_nomograms_yes_01"
+      },
+      "criterion_id": "prostate_high_grade_risk_lt_5_percent",
+      "criterion_type": "numeric_threshold",
+      "node_id": "prostate_nomograms_n01_risk_of_high_grade_prostate_cancer_is_less_than_5_percent",
+      "node_type": "criterion",
+      "normalization_metadata": {
+        "legacy_name": "Risk of high-grade prostate cancer is less than 5 percent",
+        "legacy_section": "nomograms",
+        "requires_domain_temporal_freeze": true,
+        "yes_is_section_continuation": false
+      },
+      "question": "Does the available evidence satisfy the encoded criterion: Risk of high-grade prostate cancer is less than 5 percent?",
+      "source_reference": "trees/pc_tree.json:nomograms/nodes[0]",
+      "state_branch_map": {
+        "ABSENT_EXPLICIT": [
+          "no"
+        ],
+        "CONFLICTING": [
+          "no",
+          "yes"
+        ],
+        "FAMILY_HISTORY_OR_OTHER_EXPERIENCER": [
+          "no",
+          "yes"
+        ],
+        "HISTORICAL": [
+          "no",
+          "yes"
+        ],
+        "INFERENCE_FAILURE": [
+          "no",
+          "yes"
+        ],
+        "MODEL_ABSTENTION": [
+          "no",
+          "yes"
+        ],
+        "NOT_DOCUMENTED": [
+          "no",
+          "yes"
+        ],
+        "PARSE_FAILURE": [
+          "no",
+          "yes"
+        ],
+        "POST_CUTOFF_ONLY": [
+          "no",
+          "yes"
+        ],
+        "PRESENT_CURRENT": [
+          "yes"
+        ],
+        "UNCERTAIN": [
+          "no",
+          "yes"
+        ]
+      },
+      "temporal_rule": {
+        "cutoff_relation": "at_or_before",
+        "lookback_hours": null
+      }
+    },
+    {
+      "branches": {
+        "no": "prostate_nomograms_n03_risk_of_high_grade_prostate_cancer_is_greater_than_20_percent",
+        "yes": "prostate_t_nomograms_yes_02"
+      },
+      "criterion_id": "prostate_high_grade_risk_between_5_and_20_percent",
+      "criterion_type": "legacy_semantic_temporal",
+      "node_id": "prostate_nomograms_n02_risk_of_high_grade_prostate_cancer_is_between_5_percent_and_20_percent",
+      "node_type": "criterion",
+      "normalization_metadata": {
+        "legacy_name": "Risk of high-grade prostate cancer is between 5 percent and 20 percent",
+        "legacy_section": "nomograms",
+        "requires_domain_temporal_freeze": true,
+        "yes_is_section_continuation": false
+      },
+      "question": "Does the available evidence satisfy the encoded criterion: Risk of high-grade prostate cancer is between 5 percent and 20 percent?",
+      "source_reference": "trees/pc_tree.json:nomograms/nodes[1]",
+      "state_branch_map": {
+        "ABSENT_EXPLICIT": [
+          "no"
+        ],
+        "CONFLICTING": [
+          "no",
+          "yes"
+        ],
+        "FAMILY_HISTORY_OR_OTHER_EXPERIENCER": [
+          "no",
+          "yes"
+        ],
+        "HISTORICAL": [
+          "no",
+          "yes"
+        ],
+        "INFERENCE_FAILURE": [
+          "no",
+          "yes"
+        ],
+        "MODEL_ABSTENTION": [
+          "no",
+          "yes"
+        ],
+        "NOT_DOCUMENTED": [
+          "no",
+          "yes"
+        ],
+        "PARSE_FAILURE": [
+          "no",
+          "yes"
+        ],
+        "POST_CUTOFF_ONLY": [
+          "no",
+          "yes"
+        ],
+        "PRESENT_CURRENT": [
+          "yes"
+        ],
+        "UNCERTAIN": [
+          "no",
+          "yes"
+        ]
+      },
+      "temporal_rule": {
+        "cutoff_relation": "at_or_before",
+        "lookback_hours": null
+      }
+    },
+    {
+      "branches": {
+        "no": "prostate_t_end",
+        "yes": "prostate_t_nomograms_yes_03"
+      },
+      "criterion_id": "prostate_high_grade_risk_gt_20_percent",
+      "criterion_type": "numeric_threshold",
+      "node_id": "prostate_nomograms_n03_risk_of_high_grade_prostate_cancer_is_greater_than_20_percent",
+      "node_type": "criterion",
+      "normalization_metadata": {
+        "legacy_name": "Risk of high-grade prostate cancer is greater than 20 percent",
+        "legacy_section": "nomograms",
+        "requires_domain_temporal_freeze": true,
+        "yes_is_section_continuation": false
+      },
+      "question": "Does the available evidence satisfy the encoded criterion: Risk of high-grade prostate cancer is greater than 20 percent?",
+      "source_reference": "trees/pc_tree.json:nomograms/nodes[2]",
+      "state_branch_map": {
+        "ABSENT_EXPLICIT": [
+          "no"
+        ],
+        "CONFLICTING": [
+          "no",
+          "yes"
+        ],
+        "FAMILY_HISTORY_OR_OTHER_EXPERIENCER": [
+          "no",
+          "yes"
+        ],
+        "HISTORICAL": [
+          "no",
+          "yes"
+        ],
+        "INFERENCE_FAILURE": [
+          "no",
+          "yes"
+        ],
+        "MODEL_ABSTENTION": [
+          "no",
+          "yes"
+        ],
+        "NOT_DOCUMENTED": [
+          "no",
+          "yes"
+        ],
+        "PARSE_FAILURE": [
+          "no",
+          "yes"
+        ],
+        "POST_CUTOFF_ONLY": [
+          "no",
+          "yes"
+        ],
+        "PRESENT_CURRENT": [
+          "yes"
+        ],
+        "UNCERTAIN": [
+          "no",
+          "yes"
+        ]
+      },
+      "temporal_rule": {
+        "cutoff_relation": "at_or_before",
+        "lookback_hours": null
+      }
+    },
+    {
+      "node_id": "prostate_t_actions_for_patients_with_unexplained_symptoms_of_metastatic_prostate_cancer_yes_01",
+      "node_type": "terminal",
+      "source_reference": "trees/pc_tree.json:actions for patients with unexplained symptoms of metastatic prostate cancer/nodes[0].yes_action",
+      "terminal_action_id": "prostate_action_urgent_referral_with_additional_communication_and_expect_consultation_with_a_urologist_or_a_prostate_cancer_dap_within_1_week",
+      "terminal_action_label": "Urgent referral with additional communication and expect consultation with a urologist or a prostate cancer DAP within 1 week"
+    },
+    {
+      "node_id": "prostate_t_actions_for_patients_with_unexplained_symptoms_of_metastatic_prostate_cancer_yes_02",
+      "node_type": "terminal",
+      "source_reference": "trees/pc_tree.json:actions for patients with unexplained symptoms of metastatic prostate cancer/nodes[1].yes_action",
+      "terminal_action_id": "prostate_action_urgent_referral_with_additional_communication_and_expect_consultation_with_a_urologist_or_a_prostate_cancer_dap_within_1_week",
+      "terminal_action_label": "Urgent referral with additional communication and expect consultation with a urologist or a prostate cancer DAP within 1 week"
+    },
+    {
+      "node_id": "prostate_t_actions_for_patients_with_unexplained_symptoms_of_metastatic_prostate_cancer_yes_03",
+      "node_type": "terminal",
+      "source_reference": "trees/pc_tree.json:actions for patients with unexplained symptoms of metastatic prostate cancer/nodes[2].yes_action",
+      "terminal_action_id": "prostate_action_semiurgent_referral_and_expect_consultation_with_a_urologist_or_a_prostate_cancer_dap_within_2_weeks",
+      "terminal_action_label": "Semiurgent referral and expect consultation with a urologist or a prostate cancer DAP within 2 weeks"
+    },
+    {
+      "node_id": "prostate_t_actions_for_patients_with_unexplained_symptoms_of_metastatic_prostate_cancer_yes_04",
+      "node_type": "terminal",
+      "source_reference": "trees/pc_tree.json:actions for patients with unexplained symptoms of metastatic prostate cancer/nodes[3].yes_action",
+      "terminal_action_id": "prostate_action_consider_other_metastatic_cancers_if_suspicion_of_prostate_cancer_remains_nonurgent_referral_and_expect_consultation_with_a_urologist_or_a_prostate_cancer_dap_within_4_weeks",
+      "terminal_action_label": "Consider other metastatic cancers. If suspicion of prostate cancer remains, nonurgent referral and expect consultation with a urologist or a prostate cancer DAP within 4 weeks"
+    },
+    {
+      "node_id": "prostate_t_actions_for_patients_with_luts_yes_01",
+      "node_type": "terminal",
+      "source_reference": "trees/pc_tree.json:actions for patients with luts/nodes[0].yes_action",
+      "terminal_action_id": "prostate_action_order_psa_test_and_provide_nonurgent_referral_for_consultation_with_a_urologist_or_prostate_cancer_dap_within_4_weeks",
+      "terminal_action_label": "Order PSA test and provide nonurgent referral for consultation with a urologist or prostate cancer DAP within 4 weeks"
+    },
+    {
+      "node_id": "prostate_t_actions_for_patients_with_luts_yes_02",
+      "node_type": "terminal",
+      "source_reference": "trees/pc_tree.json:actions for patients with luts/nodes[1].yes_action",
+      "terminal_action_id": "prostate_action_nonurgent_referral_for_consultation_with_a_urologist_or_prostate_cancer_dap_within_4_weeks",
+      "terminal_action_label": "Nonurgent referral for consultation with a urologist or prostate cancer DAP within 4 weeks"
+    },
+    {
+      "node_id": "prostate_t_actions_for_patients_with_luts_yes_03",
+      "node_type": "terminal",
+      "source_reference": "trees/pc_tree.json:actions for patients with luts/nodes[2].yes_action",
+      "terminal_action_id": "prostate_action_urgent_referral_potentially_with_additional_communication_methods_for_consultation_with_a_urologist_or_prostate_cancer_dap_within_1_week",
+      "terminal_action_label": "Urgent referral, potentially with additional communication methods, for consultation with a urologist or prostate cancer DAP within 1 week"
+    },
+    {
+      "node_id": "prostate_t_actions_for_patients_with_luts_yes_04",
+      "node_type": "terminal",
+      "source_reference": "trees/pc_tree.json:actions for patients with luts/nodes[3].yes_action",
+      "terminal_action_id": "prostate_action_urgent_referral_potentially_with_additional_communication_methods_for_consultation_with_a_urologist_or_prostate_cancer_dap_within_1_week",
+      "terminal_action_label": "Urgent referral, potentially with additional communication methods, for consultation with a urologist or prostate cancer DAP within 1 week"
+    },
+    {
+      "node_id": "prostate_t_actions_for_patients_with_luts_yes_05",
+      "node_type": "terminal",
+      "source_reference": "trees/pc_tree.json:actions for patients with luts/nodes[4].yes_action",
+      "terminal_action_id": "prostate_action_semiurgent_referral_for_consultation_with_a_urologist_or_prostate_cancer_dap_within_2_weeks",
+      "terminal_action_label": "Semiurgent referral for consultation with a urologist or prostate cancer DAP within 2 weeks"
+    },
+    {
+      "node_id": "prostate_t_actions_for_patients_with_incidental_elevated_psa_results_yes_01",
+      "node_type": "terminal",
+      "source_reference": "trees/pc_tree.json:actions for patients with incidental elevated psa results/nodes[0].yes_action",
+      "terminal_action_id": "prostate_action_nonurgent_referral_for_consultation_with_a_urologist_or_prostate_cancer_dap_within_4_weeks",
+      "terminal_action_label": "Nonurgent referral for consultation with a urologist or prostate cancer DAP within 4 weeks"
+    },
+    {
+      "node_id": "prostate_t_actions_for_patients_with_incidental_elevated_psa_results_yes_02",
+      "node_type": "terminal",
+      "source_reference": "trees/pc_tree.json:actions for patients with incidental elevated psa results/nodes[1].yes_action",
+      "terminal_action_id": "prostate_action_urgent_referral_potentially_with_additional_communication_methods_for_consultation_with_a_urologist_or_prostate_cancer_dap_within_1_week",
+      "terminal_action_label": "Urgent referral, potentially with additional communication methods, for consultation with a urologist or prostate cancer DAP within 1 week"
+    },
+    {
+      "node_id": "prostate_t_actions_for_patients_with_incidental_elevated_psa_results_yes_03",
+      "node_type": "terminal",
+      "source_reference": "trees/pc_tree.json:actions for patients with incidental elevated psa results/nodes[2].yes_action",
+      "terminal_action_id": "prostate_action_urgent_referral_potentially_with_additional_communication_methods_for_consultation_with_a_urologist_or_prostate_cancer_dap_within_1_week",
+      "terminal_action_label": "Urgent referral, potentially with additional communication methods, for consultation with a urologist or prostate cancer DAP within 1 week"
+    },
+    {
+      "node_id": "prostate_t_actions_for_patients_with_incidental_elevated_psa_results_yes_04",
+      "node_type": "terminal",
+      "source_reference": "trees/pc_tree.json:actions for patients with incidental elevated psa results/nodes[3].yes_action",
+      "terminal_action_id": "prostate_action_semiurgent_referral_for_consultation_with_a_urologist_or_prostate_cancer_dap_within_2_weeks",
+      "terminal_action_label": "Semiurgent referral for consultation with a urologist or prostate cancer DAP within 2 weeks"
+    },
+    {
+      "node_id": "prostate_t_nomograms_yes_01",
+      "node_type": "terminal",
+      "source_reference": "trees/pc_tree.json:nomograms/nodes[0].yes_action",
+      "terminal_action_id": "prostate_action_annual_monitoring_of_psa_level_and_dre_is_recommended_assuming_repeated_psa_testing_is_supported_by_the_patient_and_family_physician_or_other_primary_care_provider",
+      "terminal_action_label": "Annual monitoring of PSA level and DRE is recommended, assuming repeated PSA testing is supported by the patient and family physician or other primary care provider"
+    },
+    {
+      "node_id": "prostate_t_nomograms_yes_02",
+      "node_type": "terminal",
+      "source_reference": "trees/pc_tree.json:nomograms/nodes[1].yes_action",
+      "terminal_action_id": "prostate_action_discussion_about_other_management_options_should_occur_with_the_patient_based_on_patient_preference_this_could_include_referral_to_a_urologist_or_a_prostate_diagnostic_assessment_program_or_annual_or_more_frequent_follow_up_of_psa_testing_and_dre_assuming_repeated_psa_testing_is_supported_by_the_patient_and_family_physician_or_other_primary_care_provider",
+      "terminal_action_label": "Discussion about other management options should occur with the patient. Based on patient preference, this could include referral to a urologist or a prostate diagnostic assessment program or annual or more frequent follow-up of PSA testing and DRE, assuming repeated PSA testing is supported by the patient and family physician or other primary care provider"
+    },
+    {
+      "node_id": "prostate_t_nomograms_yes_03",
+      "node_type": "terminal",
+      "source_reference": "trees/pc_tree.json:nomograms/nodes[2].yes_action",
+      "terminal_action_id": "prostate_action_the_patient_should_receive_a_nonurgent_referral_and_expect_a_consultation_with_a_urologist_or_a_prostate_cancer_diagnostic_assessment_program_within_4_weeks",
+      "terminal_action_label": "The patient should receive a nonurgent referral and expect a consultation with a urologist or a prostate cancer diagnostic assessment program within 4 weeks"
+    },
+    {
+      "node_id": "prostate_t_end",
+      "node_type": "terminal",
+      "source_reference": "trees/pc_tree.json:End of Decision Tree",
+      "terminal_action_id": "prostate_action_end_of_decision_tree",
+      "terminal_action_label": "End of Decision Tree"
+    }
+  ],
+  "normalization_metadata": {
+    "exact_section_name_yes_actions_are_routing_edges": true,
+    "normalizer_version": "legacy-domain-normalizer-1.0",
+    "other_yes_actions_are_terminal": true,
+    "repeated_semantic_predicates_share_criterion_ids": true,
+    "source_reference": "trees/pc_tree.json"
+  },
+  "root_id": "prostate_symptoms_n01_suspicious_low_back_pain_such_as_that_associated_with_reproducible_percussion_tenderness",
+  "tree_id": "prostate_cancer",
+  "version": "1.0-engineering-normalization"
+}

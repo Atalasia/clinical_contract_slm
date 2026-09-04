@@ -1,0 +1,249 @@
+{
+  "schema_version": "1.0",
+  "suite_id": "slm_benchmark_compatibility_gate_v1",
+  "purpose": "compatibility_gate",
+  "freeze_status": "FROZEN",
+  "contains_patient_data": false,
+  "cases": [
+    {
+      "case_id": "typed_present_01", "task": "typed_state", "category": "present", "synthetic": true,
+      "input": {"criterion_id": "current_fever", "criterion_text": "Current fever", "text": "Temperature is 39.1 C today."},
+      "expected": {"state": "PRESENT_CURRENT"}
+    },
+    {
+      "case_id": "typed_present_02", "task": "typed_state", "category": "present", "synthetic": true,
+      "input": {"criterion_id": "current_cough", "criterion_text": "Current cough", "text": "The patient has a persistent cough."},
+      "expected": {"state": "PRESENT_CURRENT"}
+    },
+    {
+      "case_id": "typed_present_03", "task": "typed_state", "category": "present", "synthetic": true,
+      "input": {"criterion_id": "current_rash", "criterion_text": "Current rash", "text": "A diffuse rash is present on both arms."},
+      "expected": {"state": "PRESENT_CURRENT"}
+    },
+    {
+      "case_id": "typed_present_04", "task": "typed_state", "category": "present", "synthetic": true,
+      "input": {"criterion_id": "current_weakness", "criterion_text": "Current weakness", "text": "She reports new generalized weakness this morning."},
+      "expected": {"state": "PRESENT_CURRENT"}
+    },
+    {
+      "case_id": "typed_absent_01", "task": "typed_state", "category": "explicit_absence", "synthetic": true,
+      "input": {"criterion_id": "current_fever", "criterion_text": "Current fever", "text": "The patient is afebrile."},
+      "expected": {"state": "ABSENT_EXPLICIT"}
+    },
+    {
+      "case_id": "typed_absent_02", "task": "typed_state", "category": "explicit_absence", "synthetic": true,
+      "input": {"criterion_id": "current_cough", "criterion_text": "Current cough", "text": "She denies any cough."},
+      "expected": {"state": "ABSENT_EXPLICIT"}
+    },
+    {
+      "case_id": "typed_absent_03", "task": "typed_state", "category": "explicit_absence", "synthetic": true,
+      "input": {"criterion_id": "current_rash", "criterion_text": "Current rash", "text": "No rash is visible."},
+      "expected": {"state": "ABSENT_EXPLICIT"}
+    },
+    {
+      "case_id": "typed_absent_04", "task": "typed_state", "category": "explicit_absence", "synthetic": true,
+      "input": {"criterion_id": "current_weakness", "criterion_text": "Current weakness", "text": "Strength is normal and the patient denies weakness."},
+      "expected": {"state": "ABSENT_EXPLICIT"}
+    },
+    {
+      "case_id": "typed_historical_01", "task": "typed_state", "category": "historical", "synthetic": true,
+      "input": {"criterion_id": "current_fever", "criterion_text": "Current fever", "text": "A febrile illness occurred last winter and resolved."},
+      "expected": {"state": "HISTORICAL"}
+    },
+    {
+      "case_id": "typed_historical_02", "task": "typed_state", "category": "historical", "synthetic": true,
+      "input": {"criterion_id": "current_cough", "criterion_text": "Current cough", "text": "The cough was present two months ago but has resolved."},
+      "expected": {"state": "HISTORICAL"}
+    },
+    {
+      "case_id": "typed_historical_03", "task": "typed_state", "category": "historical", "synthetic": true,
+      "input": {"criterion_id": "current_rash", "criterion_text": "Current rash", "text": "There was a childhood rash with penicillin; none is described now."},
+      "expected": {"state": "HISTORICAL"}
+    },
+    {
+      "case_id": "typed_historical_04", "task": "typed_state", "category": "historical", "synthetic": true,
+      "input": {"criterion_id": "current_weakness", "criterion_text": "Current weakness", "text": "Transient weakness occurred after surgery in 2020 and resolved."},
+      "expected": {"state": "HISTORICAL"}
+    },
+    {
+      "case_id": "typed_other_01", "task": "typed_state", "category": "other_experiencer", "synthetic": true,
+      "input": {"criterion_id": "current_fever", "criterion_text": "Current fever", "text": "Her child has a fever at home."},
+      "expected": {"state": "FAMILY_HISTORY_OR_OTHER_EXPERIENCER"}
+    },
+    {
+      "case_id": "typed_other_02", "task": "typed_state", "category": "other_experiencer", "synthetic": true,
+      "input": {"criterion_id": "current_cough", "criterion_text": "Current cough", "text": "The patient's roommate has been coughing."},
+      "expected": {"state": "FAMILY_HISTORY_OR_OTHER_EXPERIENCER"}
+    },
+    {
+      "case_id": "typed_other_03", "task": "typed_state", "category": "other_experiencer", "synthetic": true,
+      "input": {"criterion_id": "current_rash", "criterion_text": "Current rash", "text": "Her father developed a rash yesterday."},
+      "expected": {"state": "FAMILY_HISTORY_OR_OTHER_EXPERIENCER"}
+    },
+    {
+      "case_id": "typed_other_04", "task": "typed_state", "category": "other_experiencer", "synthetic": true,
+      "input": {"criterion_id": "current_weakness", "criterion_text": "Current weakness", "text": "The patient's partner reports weakness after chemotherapy."},
+      "expected": {"state": "FAMILY_HISTORY_OR_OTHER_EXPERIENCER"}
+    },
+    {
+      "case_id": "typed_uncertain_01", "task": "typed_state", "category": "uncertain", "synthetic": true,
+      "input": {"criterion_id": "current_fever", "criterion_text": "Current fever", "text": "A fever is possible, but no temperature has been measured."},
+      "expected": {"state": "UNCERTAIN"}
+    },
+    {
+      "case_id": "typed_uncertain_02", "task": "typed_state", "category": "uncertain", "synthetic": true,
+      "input": {"criterion_id": "current_cough", "criterion_text": "Current cough", "text": "The sound may be a cough or throat clearing."},
+      "expected": {"state": "UNCERTAIN"}
+    },
+    {
+      "case_id": "typed_uncertain_03", "task": "typed_state", "category": "uncertain", "synthetic": true,
+      "input": {"criterion_id": "current_rash", "criterion_text": "Current rash", "text": "Possible early rash; continue observation."},
+      "expected": {"state": "UNCERTAIN"}
+    },
+    {
+      "case_id": "typed_uncertain_04", "task": "typed_state", "category": "uncertain", "synthetic": true,
+      "input": {"criterion_id": "current_weakness", "criterion_text": "Current weakness", "text": "Questionable weakness is being evaluated."},
+      "expected": {"state": "UNCERTAIN"}
+    },
+    {
+      "case_id": "typed_conflict_01", "task": "typed_state", "category": "conflicting", "synthetic": true,
+      "input": {"criterion_id": "current_fever", "criterion_text": "Current fever", "text": "The patient is afebrile, although fever is suspected clinically."},
+      "expected": {"state": "UNCERTAIN"}
+    },
+    {
+      "case_id": "typed_conflict_02", "task": "typed_state", "category": "conflicting", "synthetic": true,
+      "input": {"criterion_id": "current_cough", "criterion_text": "Current cough", "text": "She denies cough but is heard coughing during the interview."},
+      "expected": {"state": "UNCERTAIN"}
+    },
+    {
+      "case_id": "typed_conflict_03", "task": "typed_state", "category": "conflicting", "synthetic": true,
+      "input": {"criterion_id": "current_rash", "criterion_text": "Current rash", "text": "No rash is seen, but the erythema may represent a developing rash."},
+      "expected": {"state": "UNCERTAIN"}
+    },
+    {
+      "case_id": "typed_conflict_04", "task": "typed_state", "category": "conflicting", "synthetic": true,
+      "input": {"criterion_id": "current_weakness", "criterion_text": "Current weakness", "text": "The patient denies weakness, though the examination raises concern for weakness."},
+      "expected": {"state": "UNCERTAIN"}
+    },
+    {
+      "case_id": "typed_not_documented_01", "task": "typed_state", "category": "not_documented", "synthetic": true,
+      "input": {"criterion_id": "current_fever", "criterion_text": "Current fever", "text": "The patient drank water before arrival."},
+      "expected": {"state": "NOT_DOCUMENTED"}
+    },
+    {
+      "case_id": "typed_not_documented_02", "task": "typed_state", "category": "not_documented", "synthetic": true,
+      "input": {"criterion_id": "current_cough", "criterion_text": "Current cough", "text": "The left ankle is mildly swollen."},
+      "expected": {"state": "NOT_DOCUMENTED"}
+    },
+    {
+      "case_id": "typed_not_documented_03", "task": "typed_state", "category": "not_documented", "synthetic": true,
+      "input": {"criterion_id": "current_rash", "criterion_text": "Current rash", "text": "The medication list was reviewed."},
+      "expected": {"state": "NOT_DOCUMENTED"}
+    },
+    {
+      "case_id": "typed_composite_01", "task": "typed_state", "category": "composite_partial", "synthetic": true,
+      "input": {"criterion_id": "fever_and_rash", "criterion_text": "Current fever AND current rash", "text": "The patient has fever, and no rash is present."},
+      "expected": {"state": "ABSENT_EXPLICIT"}
+    },
+    {
+      "case_id": "typed_composite_02", "task": "typed_state", "category": "composite_partial", "synthetic": true,
+      "input": {"criterion_id": "cough_and_fever", "criterion_text": "Current cough AND current fever", "text": "A cough is documented; temperature status is not mentioned."},
+      "expected": {"state": "UNCERTAIN"}
+    },
+    {
+      "case_id": "typed_composite_03", "task": "typed_state", "category": "composite_partial", "synthetic": true,
+      "input": {"criterion_id": "rash_and_weakness", "criterion_text": "Current rash AND current weakness", "text": "Both a new rash and generalized weakness are present."},
+      "expected": {"state": "PRESENT_CURRENT"}
+    },
+    {
+      "case_id": "typed_distractor_01", "task": "typed_state", "category": "distractor", "synthetic": true,
+      "input": {"criterion_id": "current_cough", "criterion_text": "Current cough", "text": "There is no fever. The patient currently has a cough. A sibling has a rash."},
+      "expected": {"state": "PRESENT_CURRENT"}
+    },
+    {
+      "case_id": "typed_distractor_02", "task": "typed_state", "category": "distractor", "synthetic": true,
+      "input": {"criterion_id": "current_rash", "criterion_text": "Current rash", "text": "The patient denies rash. A remote cough and a family history of fever are also noted."},
+      "expected": {"state": "ABSENT_EXPLICIT"}
+    },
+    {
+      "case_id": "ext_detection_01", "task": "ext_notes_context", "category": "detection", "synthetic": true,
+      "input": {"note": "The patient reports dyspnea today.", "target_mention": "dyspnea", "candidate_concept": "Dyspnea", "semantic_type": "Sign or symptom"},
+      "expected": {"detection": "yes", "encounter": "yes", "negation": "no"}
+    },
+    {
+      "case_id": "ext_detection_02", "task": "ext_notes_context", "category": "detection", "synthetic": true,
+      "input": {"note": "The patient returned home after evaluation.", "target_mention": "home", "candidate_concept": "Homocystinuria", "semantic_type": "Disease or syndrome"},
+      "expected": {"detection": "no", "encounter": "not_applicable", "negation": "not_applicable"}
+    },
+    {
+      "case_id": "ext_detection_03", "task": "ext_notes_context", "category": "detection", "synthetic": true,
+      "input": {"note": "Mood is depressed today.", "target_mention": "depressed", "candidate_concept": "Depressive disorder", "semantic_type": "Mental or behavioral dysfunction"},
+      "expected": {"detection": "yes", "encounter": "yes", "negation": "no"}
+    },
+    {
+      "case_id": "ext_detection_04", "task": "ext_notes_context", "category": "detection", "synthetic": true,
+      "input": {"note": "The line remains patent.", "target_mention": "patent", "candidate_concept": "Patent ductus arteriosus", "semantic_type": "Disease or syndrome"},
+      "expected": {"detection": "no", "encounter": "not_applicable", "negation": "not_applicable"}
+    },
+    {
+      "case_id": "ext_encounter_01", "task": "ext_notes_context", "category": "encounter", "synthetic": true,
+      "input": {"note": "Remote asthma is listed in history; today's care concerns a wrist sprain.", "target_mention": "asthma", "candidate_concept": "Asthma", "semantic_type": "Disease or syndrome"},
+      "expected": {"detection": "yes", "encounter": "no", "negation": "no"}
+    },
+    {
+      "case_id": "ext_encounter_02", "task": "ext_notes_context", "category": "encounter", "synthetic": true,
+      "input": {"note": "Asthma symptoms are being treated during this visit.", "target_mention": "Asthma", "candidate_concept": "Asthma", "semantic_type": "Disease or syndrome"},
+      "expected": {"detection": "yes", "encounter": "yes", "negation": "no"}
+    },
+    {
+      "case_id": "ext_encounter_03", "task": "ext_notes_context", "category": "encounter", "synthetic": true,
+      "input": {"note": "Past panic attacks are noted, but today's visit is for a skin wound.", "target_mention": "panic attacks", "candidate_concept": "Panic disorder", "semantic_type": "Mental or behavioral dysfunction"},
+      "expected": {"detection": "yes", "encounter": "no", "negation": "no"}
+    },
+    {
+      "case_id": "ext_encounter_04", "task": "ext_notes_context", "category": "encounter", "synthetic": true,
+      "input": {"note": "Panic attacks prompted today's evaluation.", "target_mention": "Panic attacks", "candidate_concept": "Panic disorder", "semantic_type": "Mental or behavioral dysfunction"},
+      "expected": {"detection": "yes", "encounter": "yes", "negation": "no"}
+    },
+    {
+      "case_id": "ext_negation_01", "task": "ext_notes_context", "category": "negation", "synthetic": true,
+      "input": {"note": "The patient denies chest pain.", "target_mention": "chest pain", "candidate_concept": "Chest pain", "semantic_type": "Sign or symptom"},
+      "expected": {"detection": "yes", "encounter": "yes", "negation": "yes"}
+    },
+    {
+      "case_id": "ext_negation_02", "task": "ext_notes_context", "category": "negation", "synthetic": true,
+      "input": {"note": "Chest pain began this morning.", "target_mention": "Chest pain", "candidate_concept": "Chest pain", "semantic_type": "Sign or symptom"},
+      "expected": {"detection": "yes", "encounter": "yes", "negation": "no"}
+    },
+    {
+      "case_id": "ext_negation_03", "task": "ext_notes_context", "category": "negation", "synthetic": true,
+      "input": {"note": "It is unclear whether hallucinations occurred overnight.", "target_mention": "hallucinations", "candidate_concept": "Hallucinations", "semantic_type": "Mental or behavioral dysfunction"},
+      "expected": {"detection": "yes", "encounter": "yes", "negation": "unsure"}
+    },
+    {
+      "case_id": "ext_negation_04", "task": "ext_notes_context", "category": "negation", "synthetic": true,
+      "input": {"note": "No vomiting occurred during this encounter.", "target_mention": "vomiting", "candidate_concept": "Vomiting", "semantic_type": "Sign or symptom"},
+      "expected": {"detection": "yes", "encounter": "yes", "negation": "yes"}
+    },
+    {
+      "case_id": "ext_schema_01", "task": "ext_notes_context", "category": "schema", "synthetic": true,
+      "input": {"note": "The patient has nausea.", "target_mention": "nausea", "candidate_concept": "Nausea", "semantic_type": "Sign or symptom"},
+      "expected": {"detection": "yes", "encounter": "yes", "negation": "no"}
+    },
+    {
+      "case_id": "ext_schema_02", "task": "ext_notes_context", "category": "schema", "synthetic": true,
+      "input": {"note": "The word cold describes room temperature.", "target_mention": "cold", "candidate_concept": "Common cold", "semantic_type": "Disease or syndrome"},
+      "expected": {"detection": "no", "encounter": "not_applicable", "negation": "not_applicable"}
+    },
+    {
+      "case_id": "ext_schema_03", "task": "ext_notes_context", "category": "schema", "synthetic": true,
+      "input": {"note": "Anxiety is addressed in today's plan.", "target_mention": "Anxiety", "candidate_concept": "Anxiety disorder", "semantic_type": "Mental or behavioral dysfunction"},
+      "expected": {"detection": "yes", "encounter": "yes", "negation": "no"}
+    },
+    {
+      "case_id": "ext_schema_04", "task": "ext_notes_context", "category": "schema", "synthetic": true,
+      "input": {"note": "No seizure activity is reported.", "target_mention": "seizure", "candidate_concept": "Seizure", "semantic_type": "Sign or symptom"},
+      "expected": {"detection": "yes", "encounter": "yes", "negation": "yes"}
+    }
+  ]
+}

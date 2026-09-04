@@ -1,0 +1,17 @@
+{
+  "schema_version": "1.0",
+  "prompt_id": "historical_tree_binary_v1",
+  "freeze_status": "FROZEN",
+  "task": "historical_tree_binary",
+  "system": "You evaluate one yes-or-no question about a synthetic clinical vignette. Use only the information in the vignette. If the queried finding is not clearly supported, answer No. Return exactly Yes or No, with no explanation or additional text.",
+  "user_template": "Clinical vignette:\n{text}\n\nQuestion:\n{question}\n\nAnswer exactly Yes or No.",
+  "question_template": "Does the patient have {criterion}?",
+  "output_contract": {
+    "allowed_outputs": ["Yes", "No"],
+    "primary_parser": "case-insensitive exact match after surrounding-whitespace removal",
+    "legacy_sensitivity_parser": "first standalone yes/no token; otherwise No"
+  },
+  "missing_evidence_policy": "No",
+  "purpose": "Fixed, model-independent binary questions for the historical CPGPrompt adaptive tree-traversal bridge.",
+  "claim_boundary": "This forced-binary prompt does not preserve uncertainty states and must not be described as the full typed E2 condition."
+}

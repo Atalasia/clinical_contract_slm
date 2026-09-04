@@ -1,0 +1,53 @@
+{
+  "schema_version": "1.0",
+  "domain": "headache",
+  "retrieval": {"version": "headache_exact_sentence_terms_v1", "top_k_per_note": 1},
+  "targets": [
+    {
+      "criterion_id": "headache_thunderclap",
+      "source_ids": ["mimiciv_ed.triage_chiefcomplaint", "mimiciv_note.radiology"],
+      "query_terms": ["thunderclap", "sudden headache", "sudden onset headache", "worst headache", "worst-ever headache"]
+    },
+    {
+      "criterion_id": "headache_fever_neck_stiffness",
+      "criterion_definition": "Current headache AND current fever AND current neck stiffness. All three are required; an explicitly supple neck makes the complete criterion ABSENT_EXPLICIT.",
+      "source_ids": ["mimiciv_ed.triage_chiefcomplaint", "mimiciv_note.radiology"],
+      "query_terms": ["neck stiff", "nuchal rigid", "meningismus", "headache and fever", "febrile headache"]
+    },
+    {
+      "criterion_id": "headache_papilledema_altered_or_focal",
+      "criterion_definition": "Current papilledema AND either altered consciousness or focal neurological signs. Papilledema plus at least one of the latter findings is required.",
+      "source_ids": ["mimiciv_ed.triage_chiefcomplaint", "mimiciv_note.radiology"],
+      "query_terms": ["papilledema", "papilloedema", "optic disc edema", "optic disc oedema"]
+    },
+    {
+      "criterion_id": "headache_acute_angle_closure_glaucoma",
+      "source_ids": ["mimiciv_ed.triage_chiefcomplaint", "mimiciv_note.radiology"],
+      "query_terms": ["angle closure", "angle-closure", "painful red eye", "mid-dilated pupil", "acute glaucoma"]
+    },
+    {
+      "criterion_id": "headache_systemic_illness_new_onset",
+      "criterion_definition": "Current signs of a systemic illness AND an explicitly new-onset headache. Both are required.",
+      "source_ids": ["mimiciv_ed.triage_chiefcomplaint", "mimiciv_note.radiology"],
+      "query_terms": ["new headache", "new onset headache", "new-onset headache", "systemic illness", "immunocomprom", "malignancy and headache"]
+    },
+    {
+      "criterion_id": "headache_over_50_temporal_arteritis_features",
+      "criterion_definition": "New headache in a patient explicitly described as over 50 or elderly, together with temporal-arteritis features such as jaw claudication, scalp tenderness, or temporal artery abnormality.",
+      "source_ids": ["mimiciv_ed.triage_chiefcomplaint", "mimiciv_note.radiology"],
+      "query_terms": ["temporal arteritis", "giant cell arteritis", "jaw claudication", "scalp tenderness", "temporal artery"]
+    },
+    {
+      "criterion_id": "headache_papilledema_alert_no_focal",
+      "criterion_definition": "Current papilledema in a patient explicitly described as alert and without focal neurological signs. All conditions are required.",
+      "source_ids": ["mimiciv_ed.triage_chiefcomplaint", "mimiciv_note.radiology"],
+      "query_terms": ["papilledema", "papilloedema", "optic disc edema", "optic disc oedema"]
+    },
+    {
+      "criterion_id": "headache_elderly_subacute_cognitive_change",
+      "criterion_definition": "Explicitly new headache with subacute cognitive change in a patient described as elderly. All conditions are required.",
+      "source_ids": ["mimiciv_ed.triage_chiefcomplaint", "mimiciv_note.radiology"],
+      "query_terms": ["subacute cognitive", "new headache and confusion", "new headache with confusion", "elderly headache"]
+    }
+  ]
+}

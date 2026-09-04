@@ -1,0 +1,133 @@
+{
+  "schema_version": "2.0",
+  "experiment_id": "sub5b_slm_benchmark_v2",
+  "freeze_status": "FROZEN",
+  "design_document": "../../docs/design/sub5b-slm-benchmark.md",
+  "declaration_review": "../../docs/design/model-panel-declaration.md",
+  "authorization": {
+    "inference": true,
+    "authorized_experiments": ["E0"],
+    "model_downloads": false,
+    "full_p2": false,
+    "approved_on": "2026-08-28",
+    "note": "E0 non-patient compatibility inference only. E1, E3, E4, and E5 remain separate staged decisions."
+  },
+  "primary_question": "staged synthetic-to-real-EHR transfer and failure localization",
+  "panel": {
+    "core_pilot": [
+      "q15_pt_v1",
+      "q15_it_v1",
+      "q3_pt_v1",
+      "q3_it_v1",
+      "g4_it_v1",
+      "mg4_it_v1"
+    ],
+    "contemporary_references": [
+      "mg15_it_v1",
+      "q35_ref_v1"
+    ]
+  },
+  "contrasts": [
+    {
+      "contrast_id": "qwen_instruction_small",
+      "models": ["q15_pt_v1", "q15_it_v1"],
+      "claim_type": "matched_mechanistic",
+      "factor": "instruction tuning within Qwen2.5 small class",
+      "interpretation": "Separates the instruction-tuned artifact from its matched 1.5B pretrained counterpart; format and conditional semantics remain separate outcomes."
+    },
+    {
+      "contrast_id": "qwen_instruction_medium",
+      "models": ["q3_pt_v1", "q3_it_v1"],
+      "claim_type": "matched_mechanistic",
+      "factor": "instruction tuning within Qwen2.5 medium class",
+      "interpretation": "Separates the instruction-tuned artifact from its matched 3B pretrained counterpart; format and conditional semantics remain separate outcomes."
+    },
+    {
+      "contrast_id": "qwen_size_pretrained",
+      "models": ["q15_pt_v1", "q3_pt_v1"],
+      "claim_type": "matched_mechanistic",
+      "factor": "approximate size class within Qwen2.5 pretrained models",
+      "interpretation": "Tests the small-versus-medium size class within one pretrained family; it does not estimate a continuous scaling law."
+    },
+    {
+      "contrast_id": "qwen_size_instruction",
+      "models": ["q15_it_v1", "q3_it_v1"],
+      "claim_type": "matched_mechanistic",
+      "factor": "approximate size class within Qwen2.5 instruction-tuned models",
+      "interpretation": "Tests the small-versus-medium size class within one instruction-tuned family; it does not estimate a continuous scaling law."
+    },
+    {
+      "contrast_id": "gemma_medical_adaptation_it",
+      "models": ["g4_it_v1", "mg4_it_v1"],
+      "claim_type": "comparative_not_causal",
+      "factor": "general versus medical post-training package at approximately 4B",
+      "interpretation": "Matched-parent-family IT comparison, but not a pure causal effect of medical pretraining because the complete post-training packages may differ."
+    },
+    {
+      "contrast_id": "medgemma_release_reference",
+      "models": ["mg4_it_v1", "mg15_it_v1"],
+      "claim_type": "descriptive",
+      "factor": "MedGemma release generation",
+      "interpretation": "Descriptive current-release sensitivity; architecture, data, and post-training changes are not isolated."
+    },
+    {
+      "contrast_id": "contemporary_general_reference",
+      "models": ["q3_it_v1", "q35_ref_v1"],
+      "claim_type": "descriptive",
+      "factor": "older controlled Qwen family versus contemporary general reference",
+      "interpretation": "Deployment-oriented descriptive comparison only; architecture, modality, release age, and post-training are confounded."
+    }
+  ],
+  "model_manifests": [
+    "models/qwen2_5_1_5b_pt.v1.json",
+    "models/qwen2_5_1_5b_it.v1.json",
+    "models/qwen2_5_3b_pt.v1.json",
+    "models/qwen2_5_3b_it.v1.json",
+    "models/gemma3_4b_it.v1.json",
+    "models/medgemma1_4b_it.v1.json",
+    "models/medgemma1_5_4b_it.v1.json",
+    "models/qwen3_5_4b_ref.v1.json"
+  ],
+  "prompts": {
+    "typed_state": "prompts/typed_state.v1.json",
+    "ext_notes_context": "prompts/ext_notes_context.v1.json"
+  },
+  "gate_suites": {
+    "development": "gates/development.v1.json",
+    "compatibility_gate": "gates/compatibility.v1.json"
+  },
+  "fair_inference": {
+    "primary_dtype": "bfloat16",
+    "temperature": 0,
+    "seed": 2026,
+    "identical_semantic_prompt_with_model_specific_official_wrapping": true,
+    "invalid_output_is_never_coerced_to_no": true,
+    "raw_output_retained_locally": true
+  },
+  "e0_protocol": {
+    "development_wrapper_repairs_max": 2,
+    "semantic_prompt_repairs_allowed": false,
+    "constrained_decoding": false,
+    "deterministic_rerun_case_ids": ["typed_present_01", "ext_detection_01"],
+    "gpu_memory_utilization": 0.85,
+    "max_num_seqs": 8,
+    "trust_remote_code": false,
+    "multimodal_text_only": true,
+    "qwen3_5_enable_thinking": false
+  },
+  "provisional_decisions": {
+    "panel": "six core models plus two contemporary E0 references",
+    "medgemma_pilot_release": "google/medgemma-4b-it version 1.0",
+    "contemporary_general_reference": "Qwen/Qwen3.5-4B",
+    "contemporary_general_fallback": "Qwen/Qwen3-4B-Instruct-2507",
+    "e3_request_unit": "one candidate per note request",
+    "e3_context_policy": "complete note under shared cap; shared span window only when overlength"
+  },
+  "model_change_policy": {
+    "before_held_out_scoring": "Technical E0 substitution is allowed only after the documented repair budget is exhausted.",
+    "low_performance": "A model that loads and completes requests is retained even when semantic or schema performance is poor.",
+    "after_held_out_scoring": "Any panel change creates a new exploratory benchmark version and cannot replace the approved primary results."
+  },
+  "artifact_root": "../../outputs/local_restricted/slm_benchmark_v2",
+  "claim_boundary": "E0 is a technical compatibility gate, not a semantic model leaderboard."
+}

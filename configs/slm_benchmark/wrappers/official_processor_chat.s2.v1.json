@@ -1,0 +1,15 @@
+{
+  "schema_version": "1.0",
+  "wrapper_id": "official_processor_chat_s2_v1",
+  "freeze_status": "FROZEN",
+  "mode": "official_processor_chat_template",
+  "messages": [
+    {"role": "system", "content": "{system}"},
+    {"role": "user", "content": "{user}"}
+  ],
+  "add_generation_prompt": true,
+  "text_only_input": true,
+  "purpose": "E1-S2 format-only sensitivity: use the official processor template without the primary Gemma opening-brace prefill because schema-constrained decoding generates the complete JSON object.",
+  "sensitivity_only": true,
+  "semantic_prompt_changed": false
+}

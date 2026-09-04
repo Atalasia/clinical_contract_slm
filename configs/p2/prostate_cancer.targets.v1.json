@@ -1,0 +1,40 @@
+{
+  "schema_version": "1.0",
+  "domain": "prostate_cancer",
+  "retrieval": {"version": "prostate_exact_sentence_terms_v1", "top_k_per_note": 1},
+  "targets": [
+    {
+      "criterion_id": "prostate_suspicious_low_back_pain_percussion_tenderness",
+      "criterion_definition": "Current low-back pain with explicitly reproducible percussion tenderness. Both are required.",
+      "source_ids": ["mimiciv_ed.triage_chiefcomplaint", "mimiciv_note.radiology"],
+      "query_terms": ["percussion tenderness", "vertebral tenderness", "spinal tenderness", "back tenderness"]
+    },
+    {
+      "criterion_id": "prostate_severe_bone_pain",
+      "source_ids": ["mimiciv_ed.triage_chiefcomplaint", "mimiciv_note.radiology"],
+      "query_terms": ["severe bone pain", "osseous pain", "bony pain"]
+    },
+    {
+      "criterion_id": "prostate_weight_loss_elderly",
+      "criterion_definition": "Unexplained weight loss in a patient explicitly described as elderly. Both are required.",
+      "source_ids": ["mimiciv_ed.triage_chiefcomplaint", "mimiciv_note.radiology"],
+      "query_terms": ["weight loss", "cachexia", "cachectic"]
+    },
+    {
+      "criterion_id": "prostate_luts_without_uti",
+      "criterion_definition": "Current lower urinary tract symptoms AND explicit absence of urinary tract infection. Both are required; urinary symptoms alone are insufficient.",
+      "source_ids": ["mimiciv_ed.triage_chiefcomplaint"],
+      "query_terms": ["lower urinary tract", "luts", "urinary frequency", "urinary urgency", "weak stream", "hesitancy", "nocturia"]
+    },
+    {
+      "criterion_id": "prostate_incidental_elevated_psa",
+      "source_ids": ["mimiciv_ed.triage_chiefcomplaint", "mimiciv_note.radiology"],
+      "query_terms": ["elevated psa", "high psa", "raised psa", "prostate specific antigen"]
+    },
+    {
+      "criterion_id": "prostate_hard_or_irregular_dre",
+      "source_ids": ["mimiciv_ed.triage_chiefcomplaint", "mimiciv_note.radiology"],
+      "query_terms": ["hard prostate", "irregular prostate", "abnormal dre", "digital rectal exam", "digital rectal examination"]
+    }
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "schema_version": "1.0",
+  "prompt_id": "ext_notes_candidate_context_v1",
+  "task": "ext_notes_context",
+  "freeze_status": "FROZEN",
+  "label_definitions_verified": true,
+  "system": "Evaluate one MetaMap-proposed clinical concept in one clinical note using the MIMIC-III-Ext-Notes label hierarchy. Detection=yes means the target mention correctly expresses the proposed concept; detection=no means it does not. Only for detection=yes, encounter=yes means the correctly detected concept is being dealt with in the current encounter and encounter=no means it is not. Only for detection=yes, negation=yes means the correctly detected condition should be negated in the note context, negation=no means it should not be negated, and negation=unsure means the native annotation is uncertain. If detection is no, set encounter and negation to not_applicable. Use unsure only as the dataset negation label; use abstain only when you cannot make a model prediction. If detection is abstain, set both downstream fields to abstain. Return only the required JSON object without markdown or chain-of-thought.",
+  "user_template": "Clinical note:\n{note}\n\nTarget mention:\n<TARGET>{target_mention}</TARGET>\n\nCandidate concept:\n{candidate_concept}\n\nSemantic type:\n{semantic_type}\n\nReturn exactly one JSON object matching this schema:\n{output_schema_json}",
+  "output_schema": {
+    "type": "object",
+    "properties": {
+      "detection": {"enum": ["yes", "no", "abstain"]},
+      "encounter": {"enum": ["yes", "no", "not_applicable", "abstain"]},
+      "negation": {"enum": ["yes", "no", "unsure", "not_applicable", "abstain"]}
+    },
+    "required": ["detection", "encounter", "negation"],
+    "additionalProperties": false
+  },
+  "source": {
+    "dataset": "MIMIC-III-Ext-Notes",
+    "version": "1.0.0",
+    "doi": "10.13026/9tfx-yx07",
+    "documentation": "https://physionet.org/content/mimic-iii-ext-notes/1.0.0/",
+    "verified_on": "2026-08-28"
+  },
+  "review_note": "Frozen before E0 against the official version 1.0.0 documentation. Downstream evaluation is conditional on gold detection=yes. The local audit preserves, but does not rewrite, 19 rows whose downstream values conflict with the documented '-' encoding for detection=no."
+}

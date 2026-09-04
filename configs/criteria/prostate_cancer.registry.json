@@ -1,0 +1,625 @@
+{
+  "criteria": [
+    {
+      "anchor_eligible": false,
+      "counterfactual_types": [],
+      "criterion_id": "prostate_suspicious_low_back_pain_percussion_tenderness",
+      "criterion_text": "Suspicious low back pain such as that associated with reproducible percussion tenderness",
+      "criterion_type": "legacy_semantic_temporal",
+      "domain": "prostate_cancer",
+      "missing_policy": "unresolved",
+      "node_ids": [
+        "prostate_symptoms_n01_suspicious_low_back_pain_such_as_that_associated_with_reproducible_percussion_tenderness"
+      ],
+      "normalization_status": "requires_ehr_mapping_and_domain_review",
+      "note_search_terms": [],
+      "resolution_mode": "UNSUPPORTED_IN_EHR",
+      "source_reference": "trees/pc_tree.json:symptoms/nodes[0]",
+      "state_space": [
+        "PRESENT_CURRENT",
+        "ABSENT_EXPLICIT",
+        "HISTORICAL",
+        "FAMILY_HISTORY_OR_OTHER_EXPERIENCER",
+        "UNCERTAIN",
+        "CONFLICTING",
+        "NOT_DOCUMENTED",
+        "POST_CUTOFF_ONLY",
+        "MODEL_ABSTENTION",
+        "PARSE_FAILURE",
+        "INFERENCE_FAILURE"
+      ],
+      "structured_sources": [],
+      "temporal_rule": {
+        "cutoff_relation": "at_or_before",
+        "lookback_hours": null
+      }
+    },
+    {
+      "anchor_eligible": false,
+      "counterfactual_types": [],
+      "criterion_id": "prostate_severe_bone_pain",
+      "criterion_text": "Severe bone pain",
+      "criterion_type": "legacy_semantic_temporal",
+      "domain": "prostate_cancer",
+      "missing_policy": "unresolved",
+      "node_ids": [
+        "prostate_symptoms_n02_severe_bone_pain"
+      ],
+      "normalization_status": "requires_ehr_mapping_and_domain_review",
+      "note_search_terms": [],
+      "resolution_mode": "UNSUPPORTED_IN_EHR",
+      "source_reference": "trees/pc_tree.json:symptoms/nodes[1]",
+      "state_space": [
+        "PRESENT_CURRENT",
+        "ABSENT_EXPLICIT",
+        "HISTORICAL",
+        "FAMILY_HISTORY_OR_OTHER_EXPERIENCER",
+        "UNCERTAIN",
+        "CONFLICTING",
+        "NOT_DOCUMENTED",
+        "POST_CUTOFF_ONLY",
+        "MODEL_ABSTENTION",
+        "PARSE_FAILURE",
+        "INFERENCE_FAILURE"
+      ],
+      "structured_sources": [],
+      "temporal_rule": {
+        "cutoff_relation": "at_or_before",
+        "lookback_hours": null
+      }
+    },
+    {
+      "anchor_eligible": false,
+      "counterfactual_types": [],
+      "criterion_id": "prostate_weight_loss_elderly",
+      "criterion_text": "Weight loss, especially in the elderly",
+      "criterion_type": "legacy_semantic_temporal",
+      "domain": "prostate_cancer",
+      "missing_policy": "unresolved",
+      "node_ids": [
+        "prostate_symptoms_n03_weight_loss_especially_in_the_elderly"
+      ],
+      "normalization_status": "requires_ehr_mapping_and_domain_review",
+      "note_search_terms": [],
+      "resolution_mode": "UNSUPPORTED_IN_EHR",
+      "source_reference": "trees/pc_tree.json:symptoms/nodes[2]",
+      "state_space": [
+        "PRESENT_CURRENT",
+        "ABSENT_EXPLICIT",
+        "HISTORICAL",
+        "FAMILY_HISTORY_OR_OTHER_EXPERIENCER",
+        "UNCERTAIN",
+        "CONFLICTING",
+        "NOT_DOCUMENTED",
+        "POST_CUTOFF_ONLY",
+        "MODEL_ABSTENTION",
+        "PARSE_FAILURE",
+        "INFERENCE_FAILURE"
+      ],
+      "structured_sources": [],
+      "temporal_rule": {
+        "cutoff_relation": "at_or_before",
+        "lookback_hours": null
+      }
+    },
+    {
+      "anchor_eligible": false,
+      "counterfactual_types": [],
+      "criterion_id": "prostate_luts_without_uti",
+      "criterion_text": "LUTS symptoms with no urinary tract infection",
+      "criterion_type": "legacy_semantic_temporal",
+      "domain": "prostate_cancer",
+      "missing_policy": "unresolved",
+      "node_ids": [
+        "prostate_symptoms_n04_luts_symptoms_with_no_urinary_tract_infection"
+      ],
+      "normalization_status": "requires_ehr_mapping_and_domain_review",
+      "note_search_terms": [],
+      "resolution_mode": "UNSUPPORTED_IN_EHR",
+      "source_reference": "trees/pc_tree.json:symptoms/nodes[3]",
+      "state_space": [
+        "PRESENT_CURRENT",
+        "ABSENT_EXPLICIT",
+        "HISTORICAL",
+        "FAMILY_HISTORY_OR_OTHER_EXPERIENCER",
+        "UNCERTAIN",
+        "CONFLICTING",
+        "NOT_DOCUMENTED",
+        "POST_CUTOFF_ONLY",
+        "MODEL_ABSTENTION",
+        "PARSE_FAILURE",
+        "INFERENCE_FAILURE"
+      ],
+      "structured_sources": [],
+      "temporal_rule": {
+        "cutoff_relation": "at_or_before",
+        "lookback_hours": null
+      }
+    },
+    {
+      "anchor_eligible": false,
+      "counterfactual_types": [],
+      "criterion_id": "prostate_incidental_elevated_psa",
+      "criterion_text": "Incidental elevated PSA results",
+      "criterion_type": "legacy_semantic_temporal",
+      "domain": "prostate_cancer",
+      "missing_policy": "unresolved",
+      "node_ids": [
+        "prostate_symptoms_n05_incidental_elevated_psa_results"
+      ],
+      "normalization_status": "requires_ehr_mapping_and_domain_review",
+      "note_search_terms": [],
+      "resolution_mode": "UNSUPPORTED_IN_EHR",
+      "source_reference": "trees/pc_tree.json:symptoms/nodes[4]",
+      "state_space": [
+        "PRESENT_CURRENT",
+        "ABSENT_EXPLICIT",
+        "HISTORICAL",
+        "FAMILY_HISTORY_OR_OTHER_EXPERIENCER",
+        "UNCERTAIN",
+        "CONFLICTING",
+        "NOT_DOCUMENTED",
+        "POST_CUTOFF_ONLY",
+        "MODEL_ABSTENTION",
+        "PARSE_FAILURE",
+        "INFERENCE_FAILURE"
+      ],
+      "structured_sources": [],
+      "temporal_rule": {
+        "cutoff_relation": "at_or_before",
+        "lookback_hours": null
+      }
+    },
+    {
+      "anchor_eligible": false,
+      "counterfactual_types": [],
+      "criterion_id": "prostate_hard_or_irregular_dre",
+      "criterion_text": "Prostate is hard or irregular on DRE",
+      "criterion_type": "legacy_semantic_temporal",
+      "domain": "prostate_cancer",
+      "missing_policy": "unresolved",
+      "node_ids": [
+        "prostate_actions_for_patients_with_unexplained_symptoms_of_metastatic_prostate_cancer_n01_prostate_is_hard_or_irregular_on_dre",
+        "prostate_actions_for_patients_with_luts_n01_prostate_is_hard_or_irregular_on_dre"
+      ],
+      "normalization_metadata": {
+        "shared_across_legacy_sections": true,
+        "source_references": [
+          "trees/pc_tree.json:actions for patients with unexplained symptoms of metastatic prostate cancer/nodes[0]",
+          "trees/pc_tree.json:actions for patients with luts/nodes[0]"
+        ]
+      },
+      "normalization_status": "requires_ehr_mapping_and_domain_review",
+      "note_search_terms": [],
+      "resolution_mode": "UNSUPPORTED_IN_EHR",
+      "source_reference": "trees/pc_tree.json:actions for patients with unexplained symptoms of metastatic prostate cancer/nodes[0]",
+      "state_space": [
+        "PRESENT_CURRENT",
+        "ABSENT_EXPLICIT",
+        "HISTORICAL",
+        "FAMILY_HISTORY_OR_OTHER_EXPERIENCER",
+        "UNCERTAIN",
+        "CONFLICTING",
+        "NOT_DOCUMENTED",
+        "POST_CUTOFF_ONLY",
+        "MODEL_ABSTENTION",
+        "PARSE_FAILURE",
+        "INFERENCE_FAILURE"
+      ],
+      "structured_sources": [],
+      "temporal_rule": {
+        "cutoff_relation": "at_or_before",
+        "lookback_hours": null
+      }
+    },
+    {
+      "anchor_eligible": false,
+      "counterfactual_types": [],
+      "criterion_id": "prostate_psa_ge_20_ug_l",
+      "criterion_text": "PSA level greater than or equal to 20 micrograms per liter",
+      "criterion_type": "numeric_threshold",
+      "domain": "prostate_cancer",
+      "missing_policy": "unresolved",
+      "node_ids": [
+        "prostate_actions_for_patients_with_unexplained_symptoms_of_metastatic_prostate_cancer_n02_psa_level_greater_than_or_equal_to_20_micrograms_per_liter",
+        "prostate_actions_for_patients_with_luts_n04_psa_level_is_greater_than_or_equal_to_20_micrograms_per_liter",
+        "prostate_actions_for_patients_with_incidental_elevated_psa_results_n03_psa_level_is_greater_than_or_equal_to_20_micrograms_per_liter"
+      ],
+      "normalization_metadata": {
+        "shared_across_legacy_sections": true,
+        "source_references": [
+          "trees/pc_tree.json:actions for patients with unexplained symptoms of metastatic prostate cancer/nodes[1]",
+          "trees/pc_tree.json:actions for patients with luts/nodes[3]",
+          "trees/pc_tree.json:actions for patients with incidental elevated psa results/nodes[2]"
+        ]
+      },
+      "normalization_status": "requires_ehr_mapping_and_domain_review",
+      "note_search_terms": [],
+      "numeric_rule": {
+        "canonical_unit": "microgram/L",
+        "operator": ">=",
+        "threshold": 20
+      },
+      "resolution_mode": "UNSUPPORTED_IN_EHR",
+      "source_reference": "trees/pc_tree.json:actions for patients with unexplained symptoms of metastatic prostate cancer/nodes[1]",
+      "state_space": [
+        "PRESENT_CURRENT",
+        "ABSENT_EXPLICIT",
+        "HISTORICAL",
+        "FAMILY_HISTORY_OR_OTHER_EXPERIENCER",
+        "UNCERTAIN",
+        "CONFLICTING",
+        "NOT_DOCUMENTED",
+        "POST_CUTOFF_ONLY",
+        "MODEL_ABSTENTION",
+        "PARSE_FAILURE",
+        "INFERENCE_FAILURE"
+      ],
+      "structured_sources": [],
+      "temporal_rule": {
+        "cutoff_relation": "at_or_before",
+        "lookback_hours": null
+      }
+    },
+    {
+      "anchor_eligible": false,
+      "counterfactual_types": [],
+      "criterion_id": "prostate_psa_between_10_and_20_ug_l",
+      "criterion_text": "PSA level between 10 and 20 micrograms per liter",
+      "criterion_type": "legacy_semantic_temporal",
+      "domain": "prostate_cancer",
+      "missing_policy": "unresolved",
+      "node_ids": [
+        "prostate_actions_for_patients_with_unexplained_symptoms_of_metastatic_prostate_cancer_n03_psa_level_between_10_and_20_micrograms_per_liter"
+      ],
+      "normalization_status": "requires_ehr_mapping_and_domain_review",
+      "note_search_terms": [],
+      "resolution_mode": "UNSUPPORTED_IN_EHR",
+      "source_reference": "trees/pc_tree.json:actions for patients with unexplained symptoms of metastatic prostate cancer/nodes[2]",
+      "state_space": [
+        "PRESENT_CURRENT",
+        "ABSENT_EXPLICIT",
+        "HISTORICAL",
+        "FAMILY_HISTORY_OR_OTHER_EXPERIENCER",
+        "UNCERTAIN",
+        "CONFLICTING",
+        "NOT_DOCUMENTED",
+        "POST_CUTOFF_ONLY",
+        "MODEL_ABSTENTION",
+        "PARSE_FAILURE",
+        "INFERENCE_FAILURE"
+      ],
+      "structured_sources": [],
+      "temporal_rule": {
+        "cutoff_relation": "at_or_before",
+        "lookback_hours": null
+      }
+    },
+    {
+      "anchor_eligible": false,
+      "counterfactual_types": [],
+      "criterion_id": "prostate_psa_lt_10_ug_l",
+      "criterion_text": "PSA level less than 10 micrograms per liter",
+      "criterion_type": "numeric_threshold",
+      "domain": "prostate_cancer",
+      "missing_policy": "unresolved",
+      "node_ids": [
+        "prostate_actions_for_patients_with_unexplained_symptoms_of_metastatic_prostate_cancer_n04_psa_level_less_than_10_micrograms_per_liter"
+      ],
+      "normalization_status": "requires_ehr_mapping_and_domain_review",
+      "note_search_terms": [],
+      "numeric_rule": {
+        "canonical_unit": "microgram/L",
+        "operator": "<",
+        "threshold": 10
+      },
+      "resolution_mode": "UNSUPPORTED_IN_EHR",
+      "source_reference": "trees/pc_tree.json:actions for patients with unexplained symptoms of metastatic prostate cancer/nodes[3]",
+      "state_space": [
+        "PRESENT_CURRENT",
+        "ABSENT_EXPLICIT",
+        "HISTORICAL",
+        "FAMILY_HISTORY_OR_OTHER_EXPERIENCER",
+        "UNCERTAIN",
+        "CONFLICTING",
+        "NOT_DOCUMENTED",
+        "POST_CUTOFF_ONLY",
+        "MODEL_ABSTENTION",
+        "PARSE_FAILURE",
+        "INFERENCE_FAILURE"
+      ],
+      "structured_sources": [],
+      "temporal_rule": {
+        "cutoff_relation": "at_or_before",
+        "lookback_hours": null
+      }
+    },
+    {
+      "anchor_eligible": false,
+      "counterfactual_types": [],
+      "criterion_id": "prostate_abnormal_dre_and_age_psa_elevated_lt_10_ug_l",
+      "criterion_text": "Prostate is hard or irregular on DRE and the age-based PSA level is elevated but less than 10 micrograms per liter",
+      "criterion_type": "legacy_semantic_temporal",
+      "domain": "prostate_cancer",
+      "missing_policy": "unresolved",
+      "node_ids": [
+        "prostate_actions_for_patients_with_luts_n02_prostate_is_hard_or_irregular_on_dre_and_the_age_based_psa_level_is_elevated_but_less_than_10_micrograms_per_liter",
+        "prostate_actions_for_patients_with_incidental_elevated_psa_results_n01_prostate_is_hard_or_irregular_on_dre_and_the_age_based_psa_level_is_elevated_but_less_than_10_micrograms_per_liter"
+      ],
+      "normalization_metadata": {
+        "shared_across_legacy_sections": true,
+        "source_references": [
+          "trees/pc_tree.json:actions for patients with luts/nodes[1]",
+          "trees/pc_tree.json:actions for patients with incidental elevated psa results/nodes[0]"
+        ]
+      },
+      "normalization_status": "requires_ehr_mapping_and_domain_review",
+      "note_search_terms": [],
+      "resolution_mode": "UNSUPPORTED_IN_EHR",
+      "source_reference": "trees/pc_tree.json:actions for patients with luts/nodes[1]",
+      "state_space": [
+        "PRESENT_CURRENT",
+        "ABSENT_EXPLICIT",
+        "HISTORICAL",
+        "FAMILY_HISTORY_OR_OTHER_EXPERIENCER",
+        "UNCERTAIN",
+        "CONFLICTING",
+        "NOT_DOCUMENTED",
+        "POST_CUTOFF_ONLY",
+        "MODEL_ABSTENTION",
+        "PARSE_FAILURE",
+        "INFERENCE_FAILURE"
+      ],
+      "structured_sources": [],
+      "temporal_rule": {
+        "cutoff_relation": "at_or_before",
+        "lookback_hours": null
+      }
+    },
+    {
+      "anchor_eligible": false,
+      "counterfactual_types": [],
+      "criterion_id": "prostate_abnormal_dre_and_psa_between_10_and_20_ug_l",
+      "criterion_text": "Prostate is hard or irregular on DRE and the PSA level is between 10 and 20 micrograms per liter",
+      "criterion_type": "legacy_semantic_temporal",
+      "domain": "prostate_cancer",
+      "missing_policy": "unresolved",
+      "node_ids": [
+        "prostate_actions_for_patients_with_luts_n03_prostate_is_hard_or_irregular_on_dre_and_the_psa_level_is_between_10_and_20_micrograms_per_liter",
+        "prostate_actions_for_patients_with_incidental_elevated_psa_results_n02_prostate_is_hard_or_irregular_on_dre_and_the_psa_level_is_between_10_and_20_micrograms_per_liter"
+      ],
+      "normalization_metadata": {
+        "shared_across_legacy_sections": true,
+        "source_references": [
+          "trees/pc_tree.json:actions for patients with luts/nodes[2]",
+          "trees/pc_tree.json:actions for patients with incidental elevated psa results/nodes[1]"
+        ]
+      },
+      "normalization_status": "requires_ehr_mapping_and_domain_review",
+      "note_search_terms": [],
+      "resolution_mode": "UNSUPPORTED_IN_EHR",
+      "source_reference": "trees/pc_tree.json:actions for patients with luts/nodes[2]",
+      "state_space": [
+        "PRESENT_CURRENT",
+        "ABSENT_EXPLICIT",
+        "HISTORICAL",
+        "FAMILY_HISTORY_OR_OTHER_EXPERIENCER",
+        "UNCERTAIN",
+        "CONFLICTING",
+        "NOT_DOCUMENTED",
+        "POST_CUTOFF_ONLY",
+        "MODEL_ABSTENTION",
+        "PARSE_FAILURE",
+        "INFERENCE_FAILURE"
+      ],
+      "structured_sources": [],
+      "temporal_rule": {
+        "cutoff_relation": "at_or_before",
+        "lookback_hours": null
+      }
+    },
+    {
+      "anchor_eligible": false,
+      "counterfactual_types": [],
+      "criterion_id": "prostate_normal_dre_and_psa_between_10_and_20_ug_l",
+      "criterion_text": "DRE findings are normal and the PSA level is between 10 and 20 micrograms per liter",
+      "criterion_type": "legacy_semantic_temporal",
+      "domain": "prostate_cancer",
+      "missing_policy": "unresolved",
+      "node_ids": [
+        "prostate_actions_for_patients_with_luts_n05_dre_findings_are_normal_and_the_psa_level_is_between_10_and_20_micrograms_per_liter",
+        "prostate_actions_for_patients_with_incidental_elevated_psa_results_n04_dre_findings_are_normal_and_the_psa_level_is_between_10_and_20_micrograms_per_liter"
+      ],
+      "normalization_metadata": {
+        "shared_across_legacy_sections": true,
+        "source_references": [
+          "trees/pc_tree.json:actions for patients with luts/nodes[4]",
+          "trees/pc_tree.json:actions for patients with incidental elevated psa results/nodes[3]"
+        ]
+      },
+      "normalization_status": "requires_ehr_mapping_and_domain_review",
+      "note_search_terms": [],
+      "resolution_mode": "UNSUPPORTED_IN_EHR",
+      "source_reference": "trees/pc_tree.json:actions for patients with luts/nodes[4]",
+      "state_space": [
+        "PRESENT_CURRENT",
+        "ABSENT_EXPLICIT",
+        "HISTORICAL",
+        "FAMILY_HISTORY_OR_OTHER_EXPERIENCER",
+        "UNCERTAIN",
+        "CONFLICTING",
+        "NOT_DOCUMENTED",
+        "POST_CUTOFF_ONLY",
+        "MODEL_ABSTENTION",
+        "PARSE_FAILURE",
+        "INFERENCE_FAILURE"
+      ],
+      "structured_sources": [],
+      "temporal_rule": {
+        "cutoff_relation": "at_or_before",
+        "lookback_hours": null
+      }
+    },
+    {
+      "anchor_eligible": false,
+      "counterfactual_types": [],
+      "criterion_id": "prostate_normal_dre_and_age_psa_elevated_lt_10_ug_l",
+      "criterion_text": "DRE findings are normal and the age-based PSA level is elevated but less than 10 micrograms per liter",
+      "criterion_type": "legacy_semantic_temporal",
+      "domain": "prostate_cancer",
+      "missing_policy": "unresolved",
+      "node_ids": [
+        "prostate_actions_for_patients_with_luts_n06_dre_findings_are_normal_and_the_age_based_psa_level_is_elevated_but_less_than_10_micrograms_per_liter",
+        "prostate_actions_for_patients_with_incidental_elevated_psa_results_n05_dre_findings_are_normal_and_the_age_based_psa_level_is_elevated_but_less_than_10_micrograms_per_liter"
+      ],
+      "normalization_metadata": {
+        "shared_across_legacy_sections": true,
+        "source_references": [
+          "trees/pc_tree.json:actions for patients with luts/nodes[5]",
+          "trees/pc_tree.json:actions for patients with incidental elevated psa results/nodes[4]"
+        ]
+      },
+      "normalization_status": "requires_ehr_mapping_and_domain_review",
+      "note_search_terms": [],
+      "resolution_mode": "UNSUPPORTED_IN_EHR",
+      "source_reference": "trees/pc_tree.json:actions for patients with luts/nodes[5]",
+      "state_space": [
+        "PRESENT_CURRENT",
+        "ABSENT_EXPLICIT",
+        "HISTORICAL",
+        "FAMILY_HISTORY_OR_OTHER_EXPERIENCER",
+        "UNCERTAIN",
+        "CONFLICTING",
+        "NOT_DOCUMENTED",
+        "POST_CUTOFF_ONLY",
+        "MODEL_ABSTENTION",
+        "PARSE_FAILURE",
+        "INFERENCE_FAILURE"
+      ],
+      "structured_sources": [],
+      "temporal_rule": {
+        "cutoff_relation": "at_or_before",
+        "lookback_hours": null
+      }
+    },
+    {
+      "anchor_eligible": false,
+      "counterfactual_types": [],
+      "criterion_id": "prostate_high_grade_risk_lt_5_percent",
+      "criterion_text": "Risk of high-grade prostate cancer is less than 5 percent",
+      "criterion_type": "numeric_threshold",
+      "domain": "prostate_cancer",
+      "missing_policy": "unresolved",
+      "node_ids": [
+        "prostate_nomograms_n01_risk_of_high_grade_prostate_cancer_is_less_than_5_percent"
+      ],
+      "normalization_status": "requires_ehr_mapping_and_domain_review",
+      "note_search_terms": [],
+      "numeric_rule": {
+        "canonical_unit": "%",
+        "operator": "<",
+        "threshold": 5
+      },
+      "resolution_mode": "UNSUPPORTED_IN_EHR",
+      "source_reference": "trees/pc_tree.json:nomograms/nodes[0]",
+      "state_space": [
+        "PRESENT_CURRENT",
+        "ABSENT_EXPLICIT",
+        "HISTORICAL",
+        "FAMILY_HISTORY_OR_OTHER_EXPERIENCER",
+        "UNCERTAIN",
+        "CONFLICTING",
+        "NOT_DOCUMENTED",
+        "POST_CUTOFF_ONLY",
+        "MODEL_ABSTENTION",
+        "PARSE_FAILURE",
+        "INFERENCE_FAILURE"
+      ],
+      "structured_sources": [],
+      "temporal_rule": {
+        "cutoff_relation": "at_or_before",
+        "lookback_hours": null
+      }
+    },
+    {
+      "anchor_eligible": false,
+      "counterfactual_types": [],
+      "criterion_id": "prostate_high_grade_risk_between_5_and_20_percent",
+      "criterion_text": "Risk of high-grade prostate cancer is between 5 percent and 20 percent",
+      "criterion_type": "legacy_semantic_temporal",
+      "domain": "prostate_cancer",
+      "missing_policy": "unresolved",
+      "node_ids": [
+        "prostate_nomograms_n02_risk_of_high_grade_prostate_cancer_is_between_5_percent_and_20_percent"
+      ],
+      "normalization_status": "requires_ehr_mapping_and_domain_review",
+      "note_search_terms": [],
+      "resolution_mode": "UNSUPPORTED_IN_EHR",
+      "source_reference": "trees/pc_tree.json:nomograms/nodes[1]",
+      "state_space": [
+        "PRESENT_CURRENT",
+        "ABSENT_EXPLICIT",
+        "HISTORICAL",
+        "FAMILY_HISTORY_OR_OTHER_EXPERIENCER",
+        "UNCERTAIN",
+        "CONFLICTING",
+        "NOT_DOCUMENTED",
+        "POST_CUTOFF_ONLY",
+        "MODEL_ABSTENTION",
+        "PARSE_FAILURE",
+        "INFERENCE_FAILURE"
+      ],
+      "structured_sources": [],
+      "temporal_rule": {
+        "cutoff_relation": "at_or_before",
+        "lookback_hours": null
+      }
+    },
+    {
+      "anchor_eligible": false,
+      "counterfactual_types": [],
+      "criterion_id": "prostate_high_grade_risk_gt_20_percent",
+      "criterion_text": "Risk of high-grade prostate cancer is greater than 20 percent",
+      "criterion_type": "numeric_threshold",
+      "domain": "prostate_cancer",
+      "missing_policy": "unresolved",
+      "node_ids": [
+        "prostate_nomograms_n03_risk_of_high_grade_prostate_cancer_is_greater_than_20_percent"
+      ],
+      "normalization_status": "requires_ehr_mapping_and_domain_review",
+      "note_search_terms": [],
+      "numeric_rule": {
+        "canonical_unit": "%",
+        "operator": ">",
+        "threshold": 20
+      },
+      "resolution_mode": "UNSUPPORTED_IN_EHR",
+      "source_reference": "trees/pc_tree.json:nomograms/nodes[2]",
+      "state_space": [
+        "PRESENT_CURRENT",
+        "ABSENT_EXPLICIT",
+        "HISTORICAL",
+        "FAMILY_HISTORY_OR_OTHER_EXPERIENCER",
+        "UNCERTAIN",
+        "CONFLICTING",
+        "NOT_DOCUMENTED",
+        "POST_CUTOFF_ONLY",
+        "MODEL_ABSTENTION",
+        "PARSE_FAILURE",
+        "INFERENCE_FAILURE"
+      ],
+      "structured_sources": [],
+      "temporal_rule": {
+        "cutoff_relation": "at_or_before",
+        "lookback_hours": null
+      }
+    }
+  ],
+  "normalization_metadata": {
+    "ambiguous_between_ranges_remain_semantic": true,
+    "normalizer_version": "legacy-domain-normalizer-1.0",
+    "repeated_predicates_share_registry_entries": true,
+    "resolution_modes_remain_unsupported_until_project_owner_mapping": true
+  },
+  "version": "1.0-engineering-normalization"
+}

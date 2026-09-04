@@ -1,0 +1,14 @@
+{
+  "schema_version": "1.0",
+  "wrapper_id": "official_processor_chat_template_v1",
+  "freeze_status": "FROZEN",
+  "mode": "official_processor_chat_template",
+  "messages": [
+    {"role": "system", "content": "{system}"},
+    {"role": "user", "content": "{user}"}
+  ],
+  "add_generation_prompt": true,
+  "text_only_input": true,
+  "purpose": "Use the artifact's official processor/template for text-only requests without adding images.",
+  "repair_cycle": 0
+}

@@ -1,0 +1,161 @@
+{
+  "schema_version": "1.0",
+  "experiment_id": "sub5b_slm_e2a_historical_tree_binary_v1",
+  "experiment_label": "E2-A",
+  "freeze_status": "FROZEN",
+  "authorization": {
+    "inference": true,
+    "authorized_experiments": ["E2-A"],
+    "approved_on": "2026-09-01",
+    "note": "Project-owner authorization to set up and run the historical forced-binary tree-traversal bridge over the unchanged eight-model panel. No model downloads or typed all-node E2 condition are authorized by this contract."
+  },
+  "design_document": "../../docs/design/e2-legacy-binary-protocol-v1.md",
+  "benchmark_config": "benchmark.v2.json",
+  "benchmark_config_sha256": "2b466e8b8708441cc57a788321ce24efa190533a823dddba516c7781f48c14f8",
+  "prompt": "prompts/historical_tree_binary.v1.json",
+  "prompt_sha256": "5ffdd148b2b292b12d3cfeb62f8fe972719d700e6ecb4107e582d3f7b946e69c",
+  "wrapper_overrides": {
+    "q15_pt_v1": {
+      "wrapper": "wrappers/plain_completion.binary.v1.json",
+      "wrapper_sha256": "459edec29a878f2fe46d447ab7fe214d75f1158c8e484ccb5ad827ef0e322d9e"
+    },
+    "q3_pt_v1": {
+      "wrapper": "wrappers/plain_completion.binary.v1.json",
+      "wrapper_sha256": "459edec29a878f2fe46d447ab7fe214d75f1158c8e484ccb5ad827ef0e322d9e"
+    },
+    "g4_it_v1": {
+      "wrapper": "wrappers/official_processor_chat.binary.v1.json",
+      "wrapper_sha256": "fbe2ef4d12715f538f9cfb6474d0dddebb42b03905b7ad81d8668fbae7e9d9af"
+    },
+    "mg4_it_v1": {
+      "wrapper": "wrappers/official_processor_chat.binary.v1.json",
+      "wrapper_sha256": "fbe2ef4d12715f538f9cfb6474d0dddebb42b03905b7ad81d8668fbae7e9d9af"
+    },
+    "mg15_it_v1": {
+      "wrapper": "wrappers/official_processor_chat.binary.v1.json",
+      "wrapper_sha256": "fbe2ef4d12715f538f9cfb6474d0dddebb42b03905b7ad81d8668fbae7e9d9af"
+    }
+  },
+  "construction": {
+    "version": "historical_source_tree_adaptive_binary_v1",
+    "question_template": "Does the patient have {criterion}?",
+    "question_rephrasing": false,
+    "ordinary_reference_answer": "Yes only when the exact node name occurs in recursively parsed positive_features; otherwise No",
+    "aggregate_reference_answer": "Yes only when the exact ordered subcriterion occurs in recursively parsed criteria; otherwise No",
+    "aggregate_evaluation": "stored order with immediate exit when min_criteria is reached",
+    "prostate_subtree_transition": "yes_action strip/casefold exact match to a source-tree section key",
+    "terminal_normalization": {
+      "End": "End of Decision Tree",
+      "No specific action required": "End of Decision Tree"
+    },
+    "gold_terminal": "normalized source CSV action",
+    "reference_route_role": "integrity and first-divergence diagnostic only; not an independently annotated gold path"
+  },
+  "domains": [
+    {
+      "domain": "headache",
+      "tree_format": "linear_threshold",
+      "historical_tree": "../../data/cpgprompt/headache/merged_decision_tree.json",
+      "historical_tree_sha256": "1112c08d202ef151a46157d71fdaed477814b8231b46da389b123e8e405e126a",
+      "vignettes": "../../data/cpgprompt/headache/vignettes_data.csv",
+      "vignettes_sha256": "20352f593ce1da95ae5f404b39da2808f57a4f748b87ef0c910a7c3cafc8fd87",
+      "positive_features_column": "positive_features",
+      "negative_features_column": "negative_features",
+      "aggregate_criteria_column": "criteria",
+      "action_column": "action",
+      "text_column": "text"
+    },
+    {
+      "domain": "low_back_pain",
+      "tree_format": "linear_threshold",
+      "historical_tree": "../../data/cpgprompt/lower_back_pain/decision_tree_lower_back_pain.json",
+      "historical_tree_sha256": "48a2b1820dc2c51acd278324d7a83c41b03dec419e73a557b3029cf5a2443b01",
+      "vignettes": "../../data/cpgprompt/lower_back_pain/lower_back_pain_results_short.csv",
+      "vignettes_sha256": "c0a29cf99e529ee663d5240d8e60f3e32cf5691328b8c42ab184c56777c395e0",
+      "positive_features_column": "positive_features",
+      "negative_features_column": "negative_features",
+      "aggregate_criteria_column": "criteria",
+      "action_column": "action",
+      "text_column": "text"
+    },
+    {
+      "domain": "prostate_cancer",
+      "tree_format": "sectioned",
+      "historical_tree": "../../data/cpgprompt/prostate_cancer/decision_trees_output_text.json",
+      "historical_tree_sha256": "04c47e61befd77b8c3fe4b3d414ffd158af07c53ba1ef7595b6a788022824415",
+      "vignettes": "../../data/cpgprompt/prostate_cancer/vignettes_data_pc_test.csv",
+      "vignettes_sha256": "6f83e09cf6b2f10c3f07f3b4b40fe7f8d601c665003e01d56a596373f01f5768",
+      "positive_features_column": "positive_features",
+      "negative_features_column": "negative_features",
+      "aggregate_criteria_column": null,
+      "action_column": "action",
+      "text_column": "text"
+    }
+  ],
+  "expected_dataset": {
+    "source_rows": 323,
+    "cases": 323,
+    "domain_case_counts": {
+      "headache": 128,
+      "low_back_pain": 99,
+      "prostate_cancer": 96
+    },
+    "query_definitions": 68,
+    "reference_route_queries": 3778,
+    "domain_reference_route_queries": {
+      "headache": 2459,
+      "low_back_pain": 564,
+      "prostate_cancer": 755
+    },
+    "reference_terminal_classes": {
+      "headache": 24,
+      "low_back_pain": 7,
+      "prostate_cancer": 11
+    },
+    "positive_negative_conflicts": 0,
+    "reference_terminal_matches": 323
+  },
+  "inference": {
+    "use_declared_eight_model_panel": true,
+    "primary_dtype": "bfloat16",
+    "temperature": 0,
+    "seed": 2026,
+    "max_output_tokens": 8,
+    "constrained_decoding": false,
+    "adaptive_batching": "one query per active legacy-shadow case per breadth-first round",
+    "strict_parser": "stripped whole output must case-insensitively equal Yes or No",
+    "strict_invalid_policy": "stop strict path and score the case incorrect",
+    "legacy_parser": "first standalone yes/no token, case-insensitive",
+    "legacy_no_token_policy": "coerce to No and continue",
+    "runtime_failure_policy": "failure in both policies; never coerce",
+    "raw_output_retained_locally": true
+  },
+  "statistics": {
+    "primary_endpoint": "equal-weight mean of the three domain terminal-action exact accuracies under the strict parser",
+    "secondary_endpoints": [
+      "pooled terminal-action exact accuracy",
+      "per-domain fixed-reference-label macro F1",
+      "binary action-versus-End performance",
+      "path and output-validity diagnostics",
+      "legacy-coercion sensitivity"
+    ],
+    "bootstrap_unit": "vignette within domain",
+    "bootstrap_replicates": 10000,
+    "bootstrap_seed": 2026,
+    "confidence_level": 0.95,
+    "paired_contrasts": "all benchmark.v2.json contrasts; first five mechanistic/core and final two descriptive",
+    "baselines": ["in-sample per-domain majority terminal", "deterministic all-No traversal"]
+  },
+  "artifact_root": "../../outputs/local_restricted/slm_benchmark_v2/e2a",
+  "scope_status": {
+    "completed_by_this_run": "historical forced-binary adaptive traversal only",
+    "not_run": "full typed uncertainty-preserving all-node E2 condition",
+    "typed_companion": "E1 supplies criterion-level typed grounding but is not a substitute for a full typed adaptive traversal"
+  },
+  "prior_exposure": {
+    "blinded_holdout": false,
+    "same_vignettes_as_e1_source": true,
+    "note": "These are the previously used CPGPrompt synthetic vignettes. E2-A is a historical-task bridge and must not be presented as independent generalization."
+  },
+  "claim_boundary": "E2-A supports terminal-action tree-execution comparisons on the historical synthetic task. It is secondary to E1/E3, shares the synthetic source vignettes, and does not establish clinical safety or complete the deferred typed all-node E2 condition."
+}

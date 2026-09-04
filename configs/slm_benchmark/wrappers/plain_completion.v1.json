@@ -1,0 +1,10 @@
+{
+  "schema_version": "1.0",
+  "wrapper_id": "plain_completion_v1",
+  "freeze_status": "FROZEN",
+  "mode": "plain_completion",
+  "template": "Task instructions:\n{system}\n\nTask input:\n{user}\n\nJSON response:\n",
+  "add_generation_prompt": false,
+  "purpose": "Give pretrained/base models the shared semantic task without an invented chat persona.",
+  "repair_cycle": 0
+}

@@ -1,0 +1,22 @@
+{
+  "schema_version": "1.0",
+  "wrapper_id": "gemma_processor_json_prefill_v1",
+  "freeze_status": "FROZEN",
+  "mode": "official_processor_chat_template",
+  "messages": [
+    {"role": "system", "content": "{system}"},
+    {"role": "user", "content": "{user}"}
+  ],
+  "assistant_prefill": "{",
+  "add_generation_prompt": false,
+  "continue_final_message": true,
+  "text_only_input": true,
+  "purpose": "Use the official Gemma processor/template and a fixed JSON opening delimiter after cycle-0 development outputs consistently added Markdown fences.",
+  "repair_cycle": 1,
+  "semantic_prompt_changed": false,
+  "trigger_audits": [
+    "outputs/local_restricted/slm_benchmark_v2/gate/g4_it_v1/development.cycle0.audit.json",
+    "outputs/local_restricted/slm_benchmark_v2/gate/mg4_it_v1/development.cycle0.audit.json",
+    "outputs/local_restricted/slm_benchmark_v2/gate/mg15_it_v1/development.cycle0.audit.json"
+  ]
+}

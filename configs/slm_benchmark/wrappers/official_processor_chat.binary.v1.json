@@ -1,0 +1,21 @@
+{
+  "schema_version": "1.0",
+  "wrapper_id": "official_processor_chat_binary_v1",
+  "freeze_status": "FROZEN",
+  "mode": "official_processor_chat_template",
+  "messages": [
+    {
+      "role": "system",
+      "content": "{system}"
+    },
+    {
+      "role": "user",
+      "content": "{user}"
+    }
+  ],
+  "add_generation_prompt": true,
+  "text_only_input": true,
+  "task_scope": ["historical_tree_binary"],
+  "semantic_prompt_changed": false,
+  "purpose": "Use the official processor/template for binary E2 requests without the JSON opening-brace prefill used by typed-state tasks."
+}

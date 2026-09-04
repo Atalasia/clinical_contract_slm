@@ -1,0 +1,20 @@
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+*.egg-info/
+build/
+dist/
+.coverage
+htmlcov/
+
+# Never commit source data, model snapshots, or model-level outputs.
+data/
+models/
+outputs/
+paper_artifacts/
+
+# Local execution noise.
+*.log
+*.tmp
+.DS_Store

@@ -1,0 +1,13 @@
+{
+  "schema_version": "1.0",
+  "wrapper_id": "official_chat_template_v1",
+  "freeze_status": "FROZEN",
+  "mode": "official_chat_template",
+  "messages": [
+    {"role": "system", "content": "{system}"},
+    {"role": "user", "content": "{user}"}
+  ],
+  "add_generation_prompt": true,
+  "purpose": "Use the artifact's official tokenizer chat template without model-specific semantic changes.",
+  "repair_cycle": 0
+}

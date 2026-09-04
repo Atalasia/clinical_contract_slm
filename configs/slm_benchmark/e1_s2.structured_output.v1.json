@@ -1,0 +1,56 @@
+{
+  "schema_version": "1.0",
+  "experiment_id": "sub5b_slm_e1_s2_structured_output_v1",
+  "freeze_status": "FROZEN",
+  "status": "EXPLORATORY_SENSITIVITY",
+  "authorization": {
+    "inference": true,
+    "authorized_experiments": ["E1-S2"],
+    "approved_on": "2026-08-28",
+    "note": "Authorization to continue with the unchanged eight-model panel after primary E1. E3, E4, model downloads, and full P2/E5 remain unauthorized."
+  },
+  "primary_e1_config": "e1.synthetic_typed.v1.json",
+  "primary_e1_config_sha256": "d5cb16b5cdbe6ca329c3d8289dff30e9fc9d3b108d10db821d2375e1214cc682",
+  "dataset_manifest": "../../outputs/local_restricted/slm_benchmark_v2/e1/dataset/manifest.json",
+  "dataset_manifest_sha256": "2d28a056c8a53dc1cbaaf0ea297d093768a0c8e46de3e345e926045f0cfe48ef",
+  "primary_results": "../../outputs/local_restricted/slm_benchmark_v2/e1/aggregate/results.json",
+  "primary_results_sha256": "3af854c029a1c0d30a78493cfa0b25eaa74fa376db568c4e6ef86817ec547b2b",
+  "intervention": {
+    "factor": "schema-constrained decoding",
+    "vllm_parameter": "SamplingParams.structured_outputs",
+    "constraint": "frozen typed_state.v1.json output_schema",
+    "backend": "auto",
+    "disable_additional_properties": true,
+    "complete_json_object_generated": true,
+    "semantic_prompt_changed": false,
+    "model_revisions_changed": false,
+    "dtype_or_sampling_changed": false,
+    "output_token_budget_changed": false
+  },
+  "wrapper_overrides": {
+    "g4_it_v1": {
+      "wrapper": "wrappers/official_processor_chat.s2.v1.json",
+      "wrapper_sha256": "6329fd69a322fd4372f9ba6ed5e095bfdeafd9e82e7e174151bb850d74b0a7b5",
+      "reason": "The primary opening-brace prefill must be removed because constrained decoding emits the complete JSON object."
+    },
+    "mg4_it_v1": {
+      "wrapper": "wrappers/official_processor_chat.s2.v1.json",
+      "wrapper_sha256": "6329fd69a322fd4372f9ba6ed5e095bfdeafd9e82e7e174151bb850d74b0a7b5",
+      "reason": "The primary opening-brace prefill must be removed because constrained decoding emits the complete JSON object."
+    },
+    "mg15_it_v1": {
+      "wrapper": "wrappers/official_processor_chat.s2.v1.json",
+      "wrapper_sha256": "6329fd69a322fd4372f9ba6ed5e095bfdeafd9e82e7e174151bb850d74b0a7b5",
+      "reason": "The primary opening-brace prefill must be removed because constrained decoding emits the complete JSON object."
+    }
+  },
+  "statistics": {
+    "primary_comparison": "within-model S2 strict agreement minus primary E1 strict agreement",
+    "bootstrap_cluster": "vignette case_id",
+    "bootstrap_replicates": 10000,
+    "bootstrap_seed": 12026,
+    "confidence_level": 0.95,
+    "paired_test": "exact McNemar"
+  },
+  "claim_boundary": "E1-S2 isolates the effect of schema-constrained generation on the fixed E1 requests. It is exploratory because primary E1 results were already viewed. It does not replace primary E1, establish real-EHR performance, or authorize E3, E4, or full P2/E5."
+}

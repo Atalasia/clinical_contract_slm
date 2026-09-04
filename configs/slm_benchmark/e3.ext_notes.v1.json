@@ -1,0 +1,123 @@
+{
+  "schema_version": "1.0",
+  "experiment_id": "sub5b_slm_e3_ext_notes_v1",
+  "freeze_status": "FROZEN",
+  "authorization": {
+    "inference": true,
+    "authorized_experiments": ["E3"],
+    "model_downloads": false,
+    "full_p2": false,
+    "approved_on": "2026-08-28",
+    "note": "Project-owner authorization to proceed with E3 on the unchanged eight-model panel. E4, model downloads, and full P2/E5 remain unauthorized."
+  },
+  "benchmark_config": "benchmark.v2.json",
+  "benchmark_config_sha256": "2b466e8b8708441cc57a788321ce24efa190533a823dddba516c7781f48c14f8",
+  "prompt": "prompts/ext_notes_context.v1.json",
+  "prompt_sha256": "ac12996341b8367656b904aa8331bbafdb6c53aa6a774d5f2132a626a2154c48",
+  "dataset": {
+    "name": "MIMIC-III-Ext-Notes",
+    "version": "1.0.0",
+    "root": "data/mimic-iii-ext-notes-1.0.0",
+    "notes_file": "notes.csv",
+    "notes_sha256": "571be2b7a45a907ee6b79a2c1ba0118175067a5b46720ddaeeb3adbf8ace5df1",
+    "labels_file": "labels.csv",
+    "labels_sha256": "96dd86e6ee3c7f07e503401c3e0f41a40c3a3cbaf1083296949d3d79d8fc08ef",
+    "source_audit": "../../outputs/local_restricted/slm_benchmark_v2/inventory/ext_notes_dataset_audit.json",
+    "source_audit_sha256": "86d4345a68a0815ab634e331f85f4feddd6be383cb889f222b6ef62b90ddd60e",
+    "expected_counts": {
+      "requests": 2288,
+      "notes": 150,
+      "admissions": 130,
+      "subjects": 130
+    }
+  },
+  "panel": [
+    "q15_pt_v1",
+    "q15_it_v1",
+    "q3_pt_v1",
+    "q3_it_v1",
+    "g4_it_v1",
+    "mg4_it_v1",
+    "mg15_it_v1",
+    "q35_ref_v1"
+  ],
+  "request_contract": {
+    "unit": "one MetaMap candidate in one note",
+    "order": "labels.csv source-row order",
+    "target_tags": ["<TARGET>", "</TARGET>"],
+    "semantic_type_mapping": {
+      "dsyn": "Disease or syndrome (dsyn)",
+      "sosy": "Sign or symptom (sosy)",
+      "mobd": "Mental or behavioral dysfunction (mobd)",
+      "": "Not supplied (dataset semtypes is null)"
+    },
+    "null_semantic_type_group": "not_supplied",
+    "gold_detection_no_policy": "Preserve raw source labels locally, normalize encounter and negation targets to not_applicable, and ignore downstream source values in evaluation.",
+    "gold_unsure_is_model_abstention": false
+  },
+  "context_policy": {
+    "max_context_tokens": 2048,
+    "output_reserve_tokens": 96,
+    "selection": "Use the complete tagged note only when it fits every declared tokenizer and wrapper; otherwise use one shared span-centered character window for every model.",
+    "window_strategy": "fixed maximum characters, centered on the complete target span, shifted at note boundaries",
+    "window_max_characters": 2500,
+    "shared_across_models": true,
+    "model_specific_truncation": false,
+    "over_context_action": "fail before inference"
+  },
+  "generation": {
+    "dtype": "bfloat16",
+    "temperature": 0,
+    "seed": 2026,
+    "max_output_tokens": 96,
+    "constrained_decoding": false,
+    "gpu_memory_utilization": 0.85,
+    "max_num_seqs": 8,
+    "trust_remote_code": false,
+    "multimodal_text_only": true,
+    "qwen3_5_enable_thinking": false
+  },
+  "metrics": {
+    "detection": ["macro_f1", "balanced_accuracy", "per_class_precision", "per_class_recall"],
+    "downstream_condition": "gold detection=yes",
+    "encounter": ["macro_f1", "balanced_accuracy"],
+    "negation": ["macro_f1", "balanced_accuracy"],
+    "hierarchical_joint_exact_match": true,
+    "invalid_or_abstained_prediction": "failure",
+    "conditional_metrics": "valid non-abstained predictions only, always reported with coverage",
+    "risk_coverage": "one observed abstention operating point per head; no confidence-ranked curve because the frozen output contract has no confidence field",
+    "semantic_groups": ["dsyn", "sosy", "mobd", "not_supplied"]
+  },
+  "statistics": {
+    "primary_cluster": "subject",
+    "sensitivity_cluster": "note",
+    "bootstrap_replicates": 2000,
+    "bootstrap_seed": 2026,
+    "confidence_level": 0.95,
+    "paired_contrasts": "benchmark.v2.json contrasts",
+    "confirmatory_endpoint": "hierarchical_joint_exact_match",
+    "confirmatory_contrast_ids": [
+      "qwen_instruction_small",
+      "qwen_instruction_medium",
+      "qwen_size_pretrained",
+      "qwen_size_instruction",
+      "gemma_medical_adaptation_it"
+    ],
+    "paired_test": "exact McNemar",
+    "multiplicity": "Holm correction across the five confirmatory contrasts only"
+  },
+  "baselines": {
+    "metamap_accept_all_detection": true,
+    "majority_class_per_eligible_head": true,
+    "deterministic_context_baseline": false
+  },
+  "privacy": {
+    "raw_notes_requests_and_responses": "outputs/local_restricted only, mode 0600 for JSONL",
+    "aggregate_contains_note_text": false,
+    "aggregate_contains_source_identifiers": false,
+    "external_transmission": false
+  },
+  "prior_exposure": "The dataset schema, aggregate label audit, and frozen prompt were inspected before E3. A non-inference tokenizer preflight rejected a 3,500-character draft window, so version 1 was frozen at 2,500 characters before any request artifact or E3 model output was generated.",
+  "claim_boundary": "E3 evaluates MetaMap-candidate validation, current-encounter relevance, and dataset-defined negation in single nursing notes. It is not end-to-end extraction, longitudinal patient-state inference, guideline-criterion grounding, or definitive clinical ground truth.",
+  "authorization_boundary": "E4, model downloads, and full P2/E5 are not authorized by this config."
+}

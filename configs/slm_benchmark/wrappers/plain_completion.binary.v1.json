@@ -1,0 +1,11 @@
+{
+  "schema_version": "1.0",
+  "wrapper_id": "plain_completion_binary_v1",
+  "freeze_status": "FROZEN",
+  "mode": "plain_completion",
+  "template": "Task instructions:\n{system}\n\nTask input:\n{user}\n\nAnswer:\n",
+  "add_generation_prompt": false,
+  "task_scope": ["historical_tree_binary"],
+  "semantic_prompt_changed": false,
+  "purpose": "Give pretrained/base models the shared binary task without the JSON-response suffix used by typed-state tasks."
+}

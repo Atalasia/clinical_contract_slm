@@ -1,0 +1,383 @@
+{
+  "criteria": [
+    {
+      "anchor_eligible": false,
+      "counterfactual_types": [],
+      "criterion_id": "low_back_pain_features_of_cauda_equina_syndrome_including_sudden_onset_or_loss_of_bladder_bowel_control_saddle_anaesthesia",
+      "criterion_text": "Features of Cauda Equina Syndrome including sudden onset or loss of bladder/bowel control, saddle anaesthesia",
+      "criterion_type": "legacy_semantic_temporal",
+      "domain": "low_back_pain",
+      "missing_policy": "unresolved",
+      "node_ids": [
+        "lbp_n01_features_of_cauda_equina_syndrome_including_sudden_onset_or_loss_of_bladder_bowel_control_saddle_anaesthesia"
+      ],
+      "normalization_status": "requires_ehr_mapping_and_domain_review",
+      "note_search_terms": [],
+      "resolution_mode": "UNSUPPORTED_IN_EHR",
+      "source_reference": "trees/lbp_tree.json:nodes[0]",
+      "state_space": [
+        "PRESENT_CURRENT",
+        "ABSENT_EXPLICIT",
+        "HISTORICAL",
+        "FAMILY_HISTORY_OR_OTHER_EXPERIENCER",
+        "UNCERTAIN",
+        "CONFLICTING",
+        "NOT_DOCUMENTED",
+        "POST_CUTOFF_ONLY",
+        "MODEL_ABSTENTION",
+        "PARSE_FAILURE",
+        "INFERENCE_FAILURE"
+      ],
+      "structured_sources": [],
+      "temporal_rule": {
+        "cutoff_relation": "at_or_before",
+        "lookback_hours": null
+      }
+    },
+    {
+      "anchor_eligible": false,
+      "counterfactual_types": [],
+      "criterion_id": "low_back_pain_severe_worsening_pain_especially_at_night_or_when_lying_down",
+      "criterion_text": "Severe worsening pain, especially at night or when lying down",
+      "criterion_type": "legacy_semantic_temporal",
+      "domain": "low_back_pain",
+      "missing_policy": "unresolved",
+      "node_ids": [
+        "lbp_n02_severe_worsening_pain_especially_at_night_or_when_lying_down"
+      ],
+      "normalization_status": "requires_ehr_mapping_and_domain_review",
+      "note_search_terms": [],
+      "resolution_mode": "UNSUPPORTED_IN_EHR",
+      "source_reference": "trees/lbp_tree.json:nodes[1]",
+      "state_space": [
+        "PRESENT_CURRENT",
+        "ABSENT_EXPLICIT",
+        "HISTORICAL",
+        "FAMILY_HISTORY_OR_OTHER_EXPERIENCER",
+        "UNCERTAIN",
+        "CONFLICTING",
+        "NOT_DOCUMENTED",
+        "POST_CUTOFF_ONLY",
+        "MODEL_ABSTENTION",
+        "PARSE_FAILURE",
+        "INFERENCE_FAILURE"
+      ],
+      "structured_sources": [],
+      "temporal_rule": {
+        "cutoff_relation": "at_or_before",
+        "lookback_hours": null
+      }
+    },
+    {
+      "anchor_eligible": false,
+      "counterfactual_types": [],
+      "criterion_id": "low_back_pain_significant_trauma",
+      "criterion_text": "Significant trauma",
+      "criterion_type": "legacy_semantic_temporal",
+      "domain": "low_back_pain",
+      "missing_policy": "unresolved",
+      "node_ids": [
+        "lbp_n03_significant_trauma"
+      ],
+      "normalization_status": "requires_ehr_mapping_and_domain_review",
+      "note_search_terms": [],
+      "resolution_mode": "UNSUPPORTED_IN_EHR",
+      "source_reference": "trees/lbp_tree.json:nodes[2]",
+      "state_space": [
+        "PRESENT_CURRENT",
+        "ABSENT_EXPLICIT",
+        "HISTORICAL",
+        "FAMILY_HISTORY_OR_OTHER_EXPERIENCER",
+        "UNCERTAIN",
+        "CONFLICTING",
+        "NOT_DOCUMENTED",
+        "POST_CUTOFF_ONLY",
+        "MODEL_ABSTENTION",
+        "PARSE_FAILURE",
+        "INFERENCE_FAILURE"
+      ],
+      "structured_sources": [],
+      "temporal_rule": {
+        "cutoff_relation": "at_or_before",
+        "lookback_hours": null
+      }
+    },
+    {
+      "anchor_eligible": false,
+      "counterfactual_types": [],
+      "criterion_id": "low_back_pain_weight_loss_history_of_cancer_fever",
+      "criterion_text": "Weight loss, history of cancer, fever",
+      "criterion_type": "legacy_semantic_temporal",
+      "domain": "low_back_pain",
+      "missing_policy": "unresolved",
+      "node_ids": [
+        "lbp_n04_weight_loss_history_of_cancer_fever"
+      ],
+      "normalization_status": "requires_ehr_mapping_and_domain_review",
+      "note_search_terms": [],
+      "resolution_mode": "UNSUPPORTED_IN_EHR",
+      "source_reference": "trees/lbp_tree.json:nodes[3]",
+      "state_space": [
+        "PRESENT_CURRENT",
+        "ABSENT_EXPLICIT",
+        "HISTORICAL",
+        "FAMILY_HISTORY_OR_OTHER_EXPERIENCER",
+        "UNCERTAIN",
+        "CONFLICTING",
+        "NOT_DOCUMENTED",
+        "POST_CUTOFF_ONLY",
+        "MODEL_ABSTENTION",
+        "PARSE_FAILURE",
+        "INFERENCE_FAILURE"
+      ],
+      "structured_sources": [],
+      "temporal_rule": {
+        "cutoff_relation": "at_or_before",
+        "lookback_hours": null
+      }
+    },
+    {
+      "anchor_eligible": false,
+      "counterfactual_types": [],
+      "criterion_id": "low_back_pain_use_of_steroids_or_intravenous_drugs",
+      "criterion_text": "Use of steroids or intravenous drugs",
+      "criterion_type": "legacy_semantic_temporal",
+      "domain": "low_back_pain",
+      "missing_policy": "unresolved",
+      "node_ids": [
+        "lbp_n05_use_of_steroids_or_intravenous_drugs"
+      ],
+      "normalization_status": "requires_ehr_mapping_and_domain_review",
+      "note_search_terms": [],
+      "resolution_mode": "UNSUPPORTED_IN_EHR",
+      "source_reference": "trees/lbp_tree.json:nodes[4]",
+      "state_space": [
+        "PRESENT_CURRENT",
+        "ABSENT_EXPLICIT",
+        "HISTORICAL",
+        "FAMILY_HISTORY_OR_OTHER_EXPERIENCER",
+        "UNCERTAIN",
+        "CONFLICTING",
+        "NOT_DOCUMENTED",
+        "POST_CUTOFF_ONLY",
+        "MODEL_ABSTENTION",
+        "PARSE_FAILURE",
+        "INFERENCE_FAILURE"
+      ],
+      "structured_sources": [],
+      "temporal_rule": {
+        "cutoff_relation": "at_or_before",
+        "lookback_hours": null
+      }
+    },
+    {
+      "anchor_eligible": false,
+      "counterfactual_types": [],
+      "criterion_id": "low_back_pain_patient_with_first_episode_over_50_years_old",
+      "criterion_text": "Patient with first episode over 50 years old",
+      "criterion_type": "legacy_semantic_temporal",
+      "domain": "low_back_pain",
+      "missing_policy": "unresolved",
+      "node_ids": [
+        "lbp_n06_patient_with_first_episode_over_50_years_old"
+      ],
+      "normalization_status": "requires_ehr_mapping_and_domain_review",
+      "note_search_terms": [],
+      "resolution_mode": "UNSUPPORTED_IN_EHR",
+      "source_reference": "trees/lbp_tree.json:nodes[5]",
+      "state_space": [
+        "PRESENT_CURRENT",
+        "ABSENT_EXPLICIT",
+        "HISTORICAL",
+        "FAMILY_HISTORY_OR_OTHER_EXPERIENCER",
+        "UNCERTAIN",
+        "CONFLICTING",
+        "NOT_DOCUMENTED",
+        "POST_CUTOFF_ONLY",
+        "MODEL_ABSTENTION",
+        "PARSE_FAILURE",
+        "INFERENCE_FAILURE"
+      ],
+      "structured_sources": [],
+      "temporal_rule": {
+        "cutoff_relation": "at_or_before",
+        "lookback_hours": null
+      }
+    },
+    {
+      "anchor_eligible": false,
+      "counterfactual_types": [],
+      "criterion_id": "low_back_pain_widespread_neurological_signs",
+      "criterion_text": "Widespread neurological signs",
+      "criterion_type": "legacy_semantic_temporal",
+      "domain": "low_back_pain",
+      "missing_policy": "unresolved",
+      "node_ids": [
+        "lbp_n07_widespread_neurological_signs"
+      ],
+      "normalization_status": "requires_ehr_mapping_and_domain_review",
+      "note_search_terms": [],
+      "resolution_mode": "UNSUPPORTED_IN_EHR",
+      "source_reference": "trees/lbp_tree.json:nodes[6]",
+      "state_space": [
+        "PRESENT_CURRENT",
+        "ABSENT_EXPLICIT",
+        "HISTORICAL",
+        "FAMILY_HISTORY_OR_OTHER_EXPERIENCER",
+        "UNCERTAIN",
+        "CONFLICTING",
+        "NOT_DOCUMENTED",
+        "POST_CUTOFF_ONLY",
+        "MODEL_ABSTENTION",
+        "PARSE_FAILURE",
+        "INFERENCE_FAILURE"
+      ],
+      "structured_sources": [],
+      "temporal_rule": {
+        "cutoff_relation": "at_or_before",
+        "lookback_hours": null
+      }
+    },
+    {
+      "anchor_eligible": false,
+      "counterfactual_types": [],
+      "criterion_id": "low_back_pain_pain_onset_within_12_weeks_first_episode",
+      "criterion_text": "Pain onset within 12 weeks - first episode",
+      "criterion_type": "legacy_semantic_temporal",
+      "domain": "low_back_pain",
+      "missing_policy": "unresolved",
+      "node_ids": [
+        "lbp_n08_pain_onset_within_12_weeks_first_episode"
+      ],
+      "normalization_status": "requires_ehr_mapping_and_domain_review",
+      "note_search_terms": [],
+      "resolution_mode": "UNSUPPORTED_IN_EHR",
+      "source_reference": "trees/lbp_tree.json:nodes[7]",
+      "state_space": [
+        "PRESENT_CURRENT",
+        "ABSENT_EXPLICIT",
+        "HISTORICAL",
+        "FAMILY_HISTORY_OR_OTHER_EXPERIENCER",
+        "UNCERTAIN",
+        "CONFLICTING",
+        "NOT_DOCUMENTED",
+        "POST_CUTOFF_ONLY",
+        "MODEL_ABSTENTION",
+        "PARSE_FAILURE",
+        "INFERENCE_FAILURE"
+      ],
+      "structured_sources": [],
+      "temporal_rule": {
+        "cutoff_relation": "at_or_before",
+        "lookback_hours": null
+      }
+    },
+    {
+      "anchor_eligible": false,
+      "counterfactual_types": [],
+      "criterion_id": "low_back_pain_pain_onset_within_12_weeks_not_improving_after_1_6_weeks",
+      "criterion_text": "Pain onset within 12 weeks - not improving after 1-6 weeks",
+      "criterion_type": "legacy_semantic_temporal",
+      "domain": "low_back_pain",
+      "missing_policy": "unresolved",
+      "node_ids": [
+        "lbp_n09_pain_onset_within_12_weeks_not_improving_after_1_6_weeks"
+      ],
+      "normalization_status": "requires_ehr_mapping_and_domain_review",
+      "note_search_terms": [],
+      "resolution_mode": "UNSUPPORTED_IN_EHR",
+      "source_reference": "trees/lbp_tree.json:nodes[8]",
+      "state_space": [
+        "PRESENT_CURRENT",
+        "ABSENT_EXPLICIT",
+        "HISTORICAL",
+        "FAMILY_HISTORY_OR_OTHER_EXPERIENCER",
+        "UNCERTAIN",
+        "CONFLICTING",
+        "NOT_DOCUMENTED",
+        "POST_CUTOFF_ONLY",
+        "MODEL_ABSTENTION",
+        "PARSE_FAILURE",
+        "INFERENCE_FAILURE"
+      ],
+      "structured_sources": [],
+      "temporal_rule": {
+        "cutoff_relation": "at_or_before",
+        "lookback_hours": null
+      }
+    },
+    {
+      "anchor_eligible": false,
+      "counterfactual_types": [],
+      "criterion_id": "low_back_pain_pain_onset_more_than_12_weeks_mild_to_moderate",
+      "criterion_text": "Pain onset more than 12 weeks - mild to moderate",
+      "criterion_type": "legacy_semantic_temporal",
+      "domain": "low_back_pain",
+      "missing_policy": "unresolved",
+      "node_ids": [
+        "lbp_n10_pain_onset_more_than_12_weeks_mild_to_moderate"
+      ],
+      "normalization_status": "requires_ehr_mapping_and_domain_review",
+      "note_search_terms": [],
+      "resolution_mode": "UNSUPPORTED_IN_EHR",
+      "source_reference": "trees/lbp_tree.json:nodes[9]",
+      "state_space": [
+        "PRESENT_CURRENT",
+        "ABSENT_EXPLICIT",
+        "HISTORICAL",
+        "FAMILY_HISTORY_OR_OTHER_EXPERIENCER",
+        "UNCERTAIN",
+        "CONFLICTING",
+        "NOT_DOCUMENTED",
+        "POST_CUTOFF_ONLY",
+        "MODEL_ABSTENTION",
+        "PARSE_FAILURE",
+        "INFERENCE_FAILURE"
+      ],
+      "structured_sources": [],
+      "temporal_rule": {
+        "cutoff_relation": "at_or_before",
+        "lookback_hours": null
+      }
+    },
+    {
+      "anchor_eligible": false,
+      "counterfactual_types": [],
+      "criterion_id": "low_back_pain_pain_onset_more_than_12_weeks_moderate_to_severe",
+      "criterion_text": "Pain onset more than 12 weeks - moderate to severe",
+      "criterion_type": "legacy_semantic_temporal",
+      "domain": "low_back_pain",
+      "missing_policy": "unresolved",
+      "node_ids": [
+        "lbp_n11_pain_onset_more_than_12_weeks_moderate_to_severe"
+      ],
+      "normalization_status": "requires_ehr_mapping_and_domain_review",
+      "note_search_terms": [],
+      "resolution_mode": "UNSUPPORTED_IN_EHR",
+      "source_reference": "trees/lbp_tree.json:nodes[10]",
+      "state_space": [
+        "PRESENT_CURRENT",
+        "ABSENT_EXPLICIT",
+        "HISTORICAL",
+        "FAMILY_HISTORY_OR_OTHER_EXPERIENCER",
+        "UNCERTAIN",
+        "CONFLICTING",
+        "NOT_DOCUMENTED",
+        "POST_CUTOFF_ONLY",
+        "MODEL_ABSTENTION",
+        "PARSE_FAILURE",
+        "INFERENCE_FAILURE"
+      ],
+      "structured_sources": [],
+      "temporal_rule": {
+        "cutoff_relation": "at_or_before",
+        "lookback_hours": null
+      }
+    }
+  ],
+  "normalization_metadata": {
+    "normalizer_version": "legacy-domain-normalizer-1.0",
+    "resolution_modes_remain_unsupported_until_project_owner_mapping": true
+  },
+  "version": "1.0-engineering-normalization"
+}

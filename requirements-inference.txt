@@ -1,0 +1,7 @@
+accelerate==1.13.0
+huggingface-hub==1.18.0
+nvidia-ml-py==13.610.43
+numpy==2.4.6
+torch==2.11.0
+transformers==5.10.2
+vllm==0.22.1

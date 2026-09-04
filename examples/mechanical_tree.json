@@ -1,0 +1,57 @@
+{
+  "tree_id": "nonclinical_mechanical_demo",
+  "domain": "demo",
+  "version": "1.0",
+  "root_id": "demo_n1",
+  "nodes": [
+    {
+      "node_id": "demo_n1",
+      "node_type": "criterion",
+      "criterion_id": "demo_threshold_signal",
+      "question": "Is the configured demonstration signal present?",
+      "criterion_type": "numeric_threshold",
+      "temporal_rule": {"cutoff_relation": "at_or_before", "lookback_hours": 24},
+      "state_branch_map": {
+        "PRESENT_CURRENT": ["yes"], "ABSENT_EXPLICIT": ["no"], "HISTORICAL": ["no"],
+        "FAMILY_HISTORY_OR_OTHER_EXPERIENCER": ["no"], "UNCERTAIN": ["no", "yes"],
+        "CONFLICTING": ["no", "yes"], "NOT_DOCUMENTED": ["no", "yes"],
+        "POST_CUTOFF_ONLY": ["no", "yes"], "MODEL_ABSTENTION": ["no", "yes"],
+        "PARSE_FAILURE": ["no", "yes"], "INFERENCE_FAILURE": ["no", "yes"]
+      },
+      "branches": {"yes": "demo_t_a", "no": "demo_n2"},
+      "source_reference": "non-clinical demonstration configuration"
+    },
+    {
+      "node_id": "demo_n2",
+      "node_type": "criterion",
+      "criterion_id": "demo_invariant_signal",
+      "question": "Is the configured invariant demonstration signal present?",
+      "criterion_type": "semantic_current",
+      "temporal_rule": {"cutoff_relation": "at_or_before", "lookback_hours": 24},
+      "state_branch_map": {
+        "PRESENT_CURRENT": ["yes"], "ABSENT_EXPLICIT": ["no"], "HISTORICAL": ["no"],
+        "FAMILY_HISTORY_OR_OTHER_EXPERIENCER": ["no"], "UNCERTAIN": ["no", "yes"],
+        "CONFLICTING": ["no", "yes"], "NOT_DOCUMENTED": ["no", "yes"],
+        "POST_CUTOFF_ONLY": ["no", "yes"], "MODEL_ABSTENTION": ["no", "yes"],
+        "PARSE_FAILURE": ["no", "yes"], "INFERENCE_FAILURE": ["no", "yes"]
+      },
+      "branches": {"yes": "demo_t_b1", "no": "demo_t_b2"},
+      "source_reference": "non-clinical demonstration configuration"
+    },
+    {
+      "node_id": "demo_t_a", "node_type": "terminal",
+      "terminal_action_id": "demo_action_a", "terminal_action_label": "Demonstration action A",
+      "source_reference": "non-clinical demonstration configuration"
+    },
+    {
+      "node_id": "demo_t_b1", "node_type": "terminal",
+      "terminal_action_id": "demo_action_b", "terminal_action_label": "Demonstration action B",
+      "source_reference": "non-clinical demonstration configuration"
+    },
+    {
+      "node_id": "demo_t_b2", "node_type": "terminal",
+      "terminal_action_id": "demo_action_b", "terminal_action_label": "Demonstration action B",
+      "source_reference": "non-clinical demonstration configuration"
+    }
+  ]
+}

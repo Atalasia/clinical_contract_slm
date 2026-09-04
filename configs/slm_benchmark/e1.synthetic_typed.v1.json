@@ -1,0 +1,100 @@
+{
+  "schema_version": "1.0",
+  "experiment_id": "sub5b_slm_e1_synthetic_typed_v1",
+  "freeze_status": "FROZEN",
+  "authorization": {
+    "inference": true,
+    "authorized_experiments": ["E1"],
+    "approved_on": "2026-08-28",
+    "note": "Project-owner authorization to continue after E0. E3, E4, model downloads, and full P2/E5 remain unauthorized."
+  },
+  "benchmark_config": "benchmark.v2.json",
+  "benchmark_config_sha256": "2b466e8b8708441cc57a788321ce24efa190533a823dddba516c7781f48c14f8",
+  "prompt": "prompts/typed_state.v1.json",
+  "prompt_sha256": "d924f968e65ceba77f8b6521347bf51c60b421bb9faf313da3a3754a8b99c777",
+  "construction": {
+    "version": "recursive_explicit_feature_labels_v2",
+    "feature_parser": "recursive list/tuple/set flattening with stable duplicate removal",
+    "positive_label": "PRESENT_CURRENT",
+    "negative_label": "ABSENT_EXPLICIT",
+    "unlisted_criteria": "unresolved and not inferred",
+    "positive_negative_conflict": "fatal validation error",
+    "candidate_span": "complete synthetic vignette",
+    "request_unit": "one explicitly labeled criterion in one vignette"
+  },
+  "domains": [
+    {
+      "domain": "headache",
+      "vignettes": "../../data/cpgprompt/headache/vignettes_data.csv",
+      "vignettes_sha256": "20352f593ce1da95ae5f404b39da2808f57a4f748b87ef0c910a7c3cafc8fd87",
+      "tree": "../trees/headache_redflags.normalized.json",
+      "tree_sha256": "0452a3be7f1f0bb75b76a59cda2f3db61a42170982fe4fb718bdc702ea552125",
+      "registry": "../criteria/headache_redflags.registry.json",
+      "registry_sha256": "0271b73a97c83a0d032b49969b3d370e3deba95591744ee732f1faf360ffffb5",
+      "target_spec": "../p2/headache.targets.v1.json",
+      "target_spec_sha256": "50822bbd82d32e96a92d846f2f81386a2b74742191bafc363ae5e0fb024a94a0",
+      "positive_features_column": "positive_features",
+      "negative_features_column": "negative_features",
+      "text_column": "text"
+    },
+    {
+      "domain": "low_back_pain",
+      "vignettes": "../../data/cpgprompt/lower_back_pain/lower_back_pain_results_short.csv",
+      "vignettes_sha256": "c0a29cf99e529ee663d5240d8e60f3e32cf5691328b8c42ab184c56777c395e0",
+      "tree": "../trees/low_back_pain.normalized.json",
+      "tree_sha256": "271e49c0d4c76930582c5deccb614e5c71f0465e12b9aca8c3a65cf5a089e993",
+      "registry": "../criteria/low_back_pain.registry.json",
+      "registry_sha256": "afeb0b84d88b0b78040ad87ca1feb88a4a0663df54ae1dfeebccd709c4650e15",
+      "target_spec": "../p2/low_back_pain.targets.v1.json",
+      "target_spec_sha256": "2dd1de8da60f0c05201978ee7b5ddd15936de724c22fd7d5d059d5052e5cdc83",
+      "positive_features_column": "positive_features",
+      "negative_features_column": "negative_features",
+      "text_column": "text"
+    },
+    {
+      "domain": "prostate_cancer",
+      "vignettes": "../../data/cpgprompt/prostate_cancer/vignettes_data_pc_test.csv",
+      "vignettes_sha256": "6f83e09cf6b2f10c3f07f3b4b40fe7f8d601c665003e01d56a596373f01f5768",
+      "tree": "../trees/prostate_cancer.normalized.json",
+      "tree_sha256": "91daa5a352118fc6f8dbabbd2fa2c193fdbd9c00cf06499fe0159e6b7ae23aca",
+      "registry": "../criteria/prostate_cancer.registry.json",
+      "registry_sha256": "0f9ff85842a16966014b4e8468766f0b5ab63a4097edf250403405056080dae6",
+      "target_spec": "../p2/prostate_cancer.targets.v1.json",
+      "target_spec_sha256": "76827912b0bf10b166347cfce7ae72db44c56b1aa2d848442f43bd7e9a75ce6b",
+      "positive_features_column": "positive_features",
+      "negative_features_column": "negative_features",
+      "text_column": "text"
+    }
+  ],
+  "expected_dataset": {
+    "source_rows": 323,
+    "cases": 249,
+    "requests": 387,
+    "state_counts": {"ABSENT_EXPLICIT": 132, "PRESENT_CURRENT": 255},
+    "domain_request_counts": {"headache": 67, "low_back_pain": 150, "prostate_cancer": 170},
+    "nested_feature_cells": 64,
+    "positive_negative_conflicts": 0
+  },
+  "inference": {
+    "use_declared_eight_model_panel": true,
+    "primary_dtype": "bfloat16",
+    "temperature": 0,
+    "seed": 2026,
+    "constrained_decoding": false,
+    "reuse_frozen_e0_wrappers": true,
+    "reuse_frozen_e0_runtime": true
+  },
+  "statistics": {
+    "primary_unit": "criterion request",
+    "bootstrap_cluster": "vignette case_id",
+    "bootstrap_replicates": 10000,
+    "bootstrap_seed": 2026,
+    "confidence_level": 0.95,
+    "paired_contrasts": "benchmark.v2.json contrasts"
+  },
+  "prior_exposure": {
+    "blinded_holdout": false,
+    "note": "The project previously evaluated 317 non-recursively parsed requests with a different Qwen3.5-4B-AWQ artifact. E1 v1 fixes the parser, adds 70 prostate PRESENT_CURRENT requests, uses the frozen shared prompt, and reruns every declared BF16 artifact."
+  },
+  "claim_boundary": "E1 measures controlled typed-state grounding when full synthetic vignette text is supplied. It is not a blinded benchmark, retrieval evaluation, clinical action-accuracy study, or authorization for E3, E4, or full P2/E5."
+}

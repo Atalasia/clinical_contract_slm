@@ -1,0 +1,189 @@
+{
+  "tree_id": "headache_redflags",
+  "domain": "headache",
+  "version": "1.0-engineering-representation",
+  "root_id": "headache_n01",
+  "nodes": [
+    {
+      "node_id": "headache_n01",
+      "node_type": "criterion",
+      "criterion_id": "headache_thunderclap",
+      "question": "Is a current thunderclap headache documented?",
+      "criterion_type": "semantic_temporal",
+      "temporal_rule": {"cutoff_relation": "at_or_before", "lookback_hours": null},
+      "state_branch_map": {
+        "PRESENT_CURRENT": ["yes"], "ABSENT_EXPLICIT": ["no"], "HISTORICAL": ["no"],
+        "FAMILY_HISTORY_OR_OTHER_EXPERIENCER": ["no"], "UNCERTAIN": ["no", "yes"],
+        "CONFLICTING": ["no", "yes"], "NOT_DOCUMENTED": ["no", "yes"],
+        "POST_CUTOFF_ONLY": ["no", "yes"], "MODEL_ABSTENTION": ["no", "yes"],
+        "PARSE_FAILURE": ["no", "yes"], "INFERENCE_FAILURE": ["no", "yes"]
+      },
+      "branches": {"yes": "headache_t01", "no": "headache_n02"},
+      "source_reference": "trees/headache_tree.json:redflags/Thunderclap headache"
+    },
+    {
+      "node_id": "headache_n02",
+      "node_type": "criterion",
+      "criterion_id": "headache_fever_neck_stiffness",
+      "question": "Is a current headache with fever and neck stiffness documented?",
+      "criterion_type": "semantic_temporal",
+      "temporal_rule": {"cutoff_relation": "at_or_before", "lookback_hours": null},
+      "state_branch_map": {
+        "PRESENT_CURRENT": ["yes"], "ABSENT_EXPLICIT": ["no"], "HISTORICAL": ["no"],
+        "FAMILY_HISTORY_OR_OTHER_EXPERIENCER": ["no"], "UNCERTAIN": ["no", "yes"],
+        "CONFLICTING": ["no", "yes"], "NOT_DOCUMENTED": ["no", "yes"],
+        "POST_CUTOFF_ONLY": ["no", "yes"], "MODEL_ABSTENTION": ["no", "yes"],
+        "PARSE_FAILURE": ["no", "yes"], "INFERENCE_FAILURE": ["no", "yes"]
+      },
+      "branches": {"yes": "headache_t02", "no": "headache_n03"},
+      "source_reference": "trees/headache_tree.json:redflags/Headache with fever and neck stiffness"
+    },
+    {
+      "node_id": "headache_n03",
+      "node_type": "criterion",
+      "criterion_id": "headache_papilledema_altered_or_focal",
+      "question": "Is current papilledema with altered consciousness and/or focal signs documented?",
+      "criterion_type": "semantic_temporal",
+      "temporal_rule": {"cutoff_relation": "at_or_before", "lookback_hours": null},
+      "state_branch_map": {
+        "PRESENT_CURRENT": ["yes"], "ABSENT_EXPLICIT": ["no"], "HISTORICAL": ["no"],
+        "FAMILY_HISTORY_OR_OTHER_EXPERIENCER": ["no"], "UNCERTAIN": ["no", "yes"],
+        "CONFLICTING": ["no", "yes"], "NOT_DOCUMENTED": ["no", "yes"],
+        "POST_CUTOFF_ONLY": ["no", "yes"], "MODEL_ABSTENTION": ["no", "yes"],
+        "PARSE_FAILURE": ["no", "yes"], "INFERENCE_FAILURE": ["no", "yes"]
+      },
+      "branches": {"yes": "headache_t03", "no": "headache_n04"},
+      "source_reference": "trees/headache_tree.json:redflags/Papilledema with altered consciousness and/or focal signs"
+    },
+    {
+      "node_id": "headache_n04",
+      "node_type": "criterion",
+      "criterion_id": "headache_acute_angle_closure_glaucoma",
+      "question": "Is current acute angle-closure glaucoma documented?",
+      "criterion_type": "semantic_temporal",
+      "temporal_rule": {"cutoff_relation": "at_or_before", "lookback_hours": null},
+      "state_branch_map": {
+        "PRESENT_CURRENT": ["yes"], "ABSENT_EXPLICIT": ["no"], "HISTORICAL": ["no"],
+        "FAMILY_HISTORY_OR_OTHER_EXPERIENCER": ["no"], "UNCERTAIN": ["no", "yes"],
+        "CONFLICTING": ["no", "yes"], "NOT_DOCUMENTED": ["no", "yes"],
+        "POST_CUTOFF_ONLY": ["no", "yes"], "MODEL_ABSTENTION": ["no", "yes"],
+        "PARSE_FAILURE": ["no", "yes"], "INFERENCE_FAILURE": ["no", "yes"]
+      },
+      "branches": {"yes": "headache_t04", "no": "headache_n05"},
+      "source_reference": "trees/headache_tree.json:redflags/Acute angle-closure glaucoma"
+    },
+    {
+      "node_id": "headache_n05",
+      "node_type": "criterion",
+      "criterion_id": "headache_systemic_illness_new_onset",
+      "question": "Are current signs of systemic illness with new-onset headache documented?",
+      "criterion_type": "semantic_temporal",
+      "temporal_rule": {"cutoff_relation": "at_or_before", "lookback_hours": null},
+      "state_branch_map": {
+        "PRESENT_CURRENT": ["yes"], "ABSENT_EXPLICIT": ["no"], "HISTORICAL": ["no"],
+        "FAMILY_HISTORY_OR_OTHER_EXPERIENCER": ["no"], "UNCERTAIN": ["no", "yes"],
+        "CONFLICTING": ["no", "yes"], "NOT_DOCUMENTED": ["no", "yes"],
+        "POST_CUTOFF_ONLY": ["no", "yes"], "MODEL_ABSTENTION": ["no", "yes"],
+        "PARSE_FAILURE": ["no", "yes"], "INFERENCE_FAILURE": ["no", "yes"]
+      },
+      "branches": {"yes": "headache_t05", "no": "headache_n06"},
+      "source_reference": "trees/headache_tree.json:redflags/Signs of systemic illness with new-onset headache"
+    },
+    {
+      "node_id": "headache_n06",
+      "node_type": "criterion",
+      "criterion_id": "headache_over_50_temporal_arteritis_features",
+      "question": "Is a new current headache in a patient over 50 with symptoms of temporal arteritis documented?",
+      "criterion_type": "semantic_temporal",
+      "temporal_rule": {"cutoff_relation": "at_or_before", "lookback_hours": null},
+      "state_branch_map": {
+        "PRESENT_CURRENT": ["yes"], "ABSENT_EXPLICIT": ["no"], "HISTORICAL": ["no"],
+        "FAMILY_HISTORY_OR_OTHER_EXPERIENCER": ["no"], "UNCERTAIN": ["no", "yes"],
+        "CONFLICTING": ["no", "yes"], "NOT_DOCUMENTED": ["no", "yes"],
+        "POST_CUTOFF_ONLY": ["no", "yes"], "MODEL_ABSTENTION": ["no", "yes"],
+        "PARSE_FAILURE": ["no", "yes"], "INFERENCE_FAILURE": ["no", "yes"]
+      },
+      "branches": {"yes": "headache_t06", "no": "headache_n07"},
+      "source_reference": "trees/headache_tree.json:redflags/New headache in patients over 50 with symptoms of temporal arteritis"
+    },
+    {
+      "node_id": "headache_n07",
+      "node_type": "criterion",
+      "criterion_id": "headache_papilledema_alert_no_focal",
+      "question": "Is current papilledema in an alert patient without focal neurological signs documented?",
+      "criterion_type": "semantic_temporal",
+      "temporal_rule": {"cutoff_relation": "at_or_before", "lookback_hours": null},
+      "state_branch_map": {
+        "PRESENT_CURRENT": ["yes"], "ABSENT_EXPLICIT": ["no"], "HISTORICAL": ["no"],
+        "FAMILY_HISTORY_OR_OTHER_EXPERIENCER": ["no"], "UNCERTAIN": ["no", "yes"],
+        "CONFLICTING": ["no", "yes"], "NOT_DOCUMENTED": ["no", "yes"],
+        "POST_CUTOFF_ONLY": ["no", "yes"], "MODEL_ABSTENTION": ["no", "yes"],
+        "PARSE_FAILURE": ["no", "yes"], "INFERENCE_FAILURE": ["no", "yes"]
+      },
+      "branches": {"yes": "headache_t07", "no": "headache_n08"},
+      "source_reference": "trees/headache_tree.json:redflags/Papilledema in alert patient without focal neurological signs"
+    },
+    {
+      "node_id": "headache_n08",
+      "node_type": "criterion",
+      "criterion_id": "headache_elderly_subacute_cognitive_change",
+      "question": "Is a new current headache with subacute cognitive change in an elderly patient documented?",
+      "criterion_type": "semantic_temporal",
+      "temporal_rule": {"cutoff_relation": "at_or_before", "lookback_hours": null},
+      "state_branch_map": {
+        "PRESENT_CURRENT": ["yes"], "ABSENT_EXPLICIT": ["no"], "HISTORICAL": ["no"],
+        "FAMILY_HISTORY_OR_OTHER_EXPERIENCER": ["no"], "UNCERTAIN": ["no", "yes"],
+        "CONFLICTING": ["no", "yes"], "NOT_DOCUMENTED": ["no", "yes"],
+        "POST_CUTOFF_ONLY": ["no", "yes"], "MODEL_ABSTENTION": ["no", "yes"],
+        "PARSE_FAILURE": ["no", "yes"], "INFERENCE_FAILURE": ["no", "yes"]
+      },
+      "branches": {"yes": "headache_t08", "no": "headache_t_end"},
+      "source_reference": "trees/headache_tree.json:redflags/Elderly patient with new headache and subacute cognitive change"
+    },
+    {
+      "node_id": "headache_t01", "node_type": "terminal",
+      "terminal_action_id": "immediate_ed_ct_sah", "terminal_action_label": "Send to emergency department for immediate CT to exclude subarachnoid hemorrhage",
+      "source_reference": "trees/headache_tree.json:redflags/Thunderclap headache:yes_action"
+    },
+    {
+      "node_id": "headache_t02", "node_type": "terminal",
+      "terminal_action_id": "immediate_ed_ct_lp", "terminal_action_label": "Send immediately to emergency department for CT and lumbar puncture",
+      "source_reference": "trees/headache_tree.json:redflags/Headache with fever and neck stiffness:yes_action"
+    },
+    {
+      "node_id": "headache_t03", "node_type": "terminal",
+      "terminal_action_id": "immediate_ed_neuroimaging", "terminal_action_label": "Send immediately to emergency department with neuroimaging for investigation",
+      "source_reference": "trees/headache_tree.json:redflags/Papilledema with altered consciousness and/or focal signs:yes_action"
+    },
+    {
+      "node_id": "headache_t04", "node_type": "terminal",
+      "terminal_action_id": "immediate_ophthalmology_or_ed", "terminal_action_label": "Send immediately for ophthalmological assessment or emergency department",
+      "source_reference": "trees/headache_tree.json:redflags/Acute angle-closure glaucoma:yes_action"
+    },
+    {
+      "node_id": "headache_t05", "node_type": "terminal",
+      "terminal_action_id": "urgent_specialist_or_investigation", "terminal_action_label": "Require urgent specialist consultation and/or investigation",
+      "source_reference": "trees/headache_tree.json:redflags/Signs of systemic illness with new-onset headache:yes_action"
+    },
+    {
+      "node_id": "headache_t06", "node_type": "terminal",
+      "terminal_action_id": "urgent_temporal_arteritis_investigation", "terminal_action_label": "Urgent investigation and possible temporal artery biopsy required",
+      "source_reference": "trees/headache_tree.json:redflags/New headache in patients over 50 with symptoms of temporal arteritis:yes_action"
+    },
+    {
+      "node_id": "headache_t07", "node_type": "terminal",
+      "terminal_action_id": "urgent_specialist_neuroimaging", "terminal_action_label": "Urgent specialist referral and neuroimaging required",
+      "source_reference": "trees/headache_tree.json:redflags/Papilledema in alert patient without focal neurological signs:yes_action"
+    },
+    {
+      "node_id": "headache_t08", "node_type": "terminal",
+      "terminal_action_id": "urgent_specialist_or_neuroimaging", "terminal_action_label": "Urgent specialist referral and/or neuroimaging required",
+      "source_reference": "trees/headache_tree.json:redflags/Elderly patient with new headache and subacute cognitive change:yes_action"
+    },
+    {
+      "node_id": "headache_t_end", "node_type": "terminal",
+      "terminal_action_id": "end_of_decision_tree", "terminal_action_label": "End of Decision Tree",
+      "source_reference": "trees/headache_tree.json:redflags:End of Decision Tree"
+    }
+  ]
+}

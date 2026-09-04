@@ -1,0 +1,825 @@
+{
+  "domain": "low_back_pain",
+  "nodes": [
+    {
+      "branches": {
+        "no": "lbp_n02_severe_worsening_pain_especially_at_night_or_when_lying_down",
+        "yes": "lbp_t_yes_01"
+      },
+      "criterion_id": "low_back_pain_features_of_cauda_equina_syndrome_including_sudden_onset_or_loss_of_bladder_bowel_control_saddle_anaesthesia",
+      "criterion_type": "legacy_semantic_temporal",
+      "node_id": "lbp_n01_features_of_cauda_equina_syndrome_including_sudden_onset_or_loss_of_bladder_bowel_control_saddle_anaesthesia",
+      "node_type": "criterion",
+      "normalization_metadata": {
+        "legacy_criteria": null,
+        "legacy_min_criteria": null,
+        "legacy_name": "Features of Cauda Equina Syndrome including sudden onset or loss of bladder/bowel control, saddle anaesthesia",
+        "requires_domain_temporal_freeze": true
+      },
+      "question": "Does the available evidence satisfy the encoded criterion: Features of Cauda Equina Syndrome including sudden onset or loss of bladder/bowel control, saddle anaesthesia?",
+      "source_reference": "trees/lbp_tree.json:nodes[0]",
+      "state_branch_map": {
+        "ABSENT_EXPLICIT": [
+          "no"
+        ],
+        "CONFLICTING": [
+          "no",
+          "yes"
+        ],
+        "FAMILY_HISTORY_OR_OTHER_EXPERIENCER": [
+          "no",
+          "yes"
+        ],
+        "HISTORICAL": [
+          "no",
+          "yes"
+        ],
+        "INFERENCE_FAILURE": [
+          "no",
+          "yes"
+        ],
+        "MODEL_ABSTENTION": [
+          "no",
+          "yes"
+        ],
+        "NOT_DOCUMENTED": [
+          "no",
+          "yes"
+        ],
+        "PARSE_FAILURE": [
+          "no",
+          "yes"
+        ],
+        "POST_CUTOFF_ONLY": [
+          "no",
+          "yes"
+        ],
+        "PRESENT_CURRENT": [
+          "yes"
+        ],
+        "UNCERTAIN": [
+          "no",
+          "yes"
+        ]
+      },
+      "temporal_rule": {
+        "cutoff_relation": "at_or_before",
+        "lookback_hours": null
+      }
+    },
+    {
+      "branches": {
+        "no": "lbp_n03_significant_trauma",
+        "yes": "lbp_t_yes_02"
+      },
+      "criterion_id": "low_back_pain_severe_worsening_pain_especially_at_night_or_when_lying_down",
+      "criterion_type": "legacy_semantic_temporal",
+      "node_id": "lbp_n02_severe_worsening_pain_especially_at_night_or_when_lying_down",
+      "node_type": "criterion",
+      "normalization_metadata": {
+        "legacy_criteria": null,
+        "legacy_min_criteria": null,
+        "legacy_name": "Severe worsening pain, especially at night or when lying down",
+        "requires_domain_temporal_freeze": true
+      },
+      "question": "Does the available evidence satisfy the encoded criterion: Severe worsening pain, especially at night or when lying down?",
+      "source_reference": "trees/lbp_tree.json:nodes[1]",
+      "state_branch_map": {
+        "ABSENT_EXPLICIT": [
+          "no"
+        ],
+        "CONFLICTING": [
+          "no",
+          "yes"
+        ],
+        "FAMILY_HISTORY_OR_OTHER_EXPERIENCER": [
+          "no",
+          "yes"
+        ],
+        "HISTORICAL": [
+          "no",
+          "yes"
+        ],
+        "INFERENCE_FAILURE": [
+          "no",
+          "yes"
+        ],
+        "MODEL_ABSTENTION": [
+          "no",
+          "yes"
+        ],
+        "NOT_DOCUMENTED": [
+          "no",
+          "yes"
+        ],
+        "PARSE_FAILURE": [
+          "no",
+          "yes"
+        ],
+        "POST_CUTOFF_ONLY": [
+          "no",
+          "yes"
+        ],
+        "PRESENT_CURRENT": [
+          "yes"
+        ],
+        "UNCERTAIN": [
+          "no",
+          "yes"
+        ]
+      },
+      "temporal_rule": {
+        "cutoff_relation": "at_or_before",
+        "lookback_hours": null
+      }
+    },
+    {
+      "branches": {
+        "no": "lbp_n04_weight_loss_history_of_cancer_fever",
+        "yes": "lbp_t_yes_03"
+      },
+      "criterion_id": "low_back_pain_significant_trauma",
+      "criterion_type": "legacy_semantic_temporal",
+      "node_id": "lbp_n03_significant_trauma",
+      "node_type": "criterion",
+      "normalization_metadata": {
+        "legacy_criteria": null,
+        "legacy_min_criteria": null,
+        "legacy_name": "Significant trauma",
+        "requires_domain_temporal_freeze": true
+      },
+      "question": "Does the available evidence satisfy the encoded criterion: Significant trauma?",
+      "source_reference": "trees/lbp_tree.json:nodes[2]",
+      "state_branch_map": {
+        "ABSENT_EXPLICIT": [
+          "no"
+        ],
+        "CONFLICTING": [
+          "no",
+          "yes"
+        ],
+        "FAMILY_HISTORY_OR_OTHER_EXPERIENCER": [
+          "no",
+          "yes"
+        ],
+        "HISTORICAL": [
+          "no",
+          "yes"
+        ],
+        "INFERENCE_FAILURE": [
+          "no",
+          "yes"
+        ],
+        "MODEL_ABSTENTION": [
+          "no",
+          "yes"
+        ],
+        "NOT_DOCUMENTED": [
+          "no",
+          "yes"
+        ],
+        "PARSE_FAILURE": [
+          "no",
+          "yes"
+        ],
+        "POST_CUTOFF_ONLY": [
+          "no",
+          "yes"
+        ],
+        "PRESENT_CURRENT": [
+          "yes"
+        ],
+        "UNCERTAIN": [
+          "no",
+          "yes"
+        ]
+      },
+      "temporal_rule": {
+        "cutoff_relation": "at_or_before",
+        "lookback_hours": null
+      }
+    },
+    {
+      "branches": {
+        "no": "lbp_n05_use_of_steroids_or_intravenous_drugs",
+        "yes": "lbp_t_yes_04"
+      },
+      "criterion_id": "low_back_pain_weight_loss_history_of_cancer_fever",
+      "criterion_type": "legacy_semantic_temporal",
+      "node_id": "lbp_n04_weight_loss_history_of_cancer_fever",
+      "node_type": "criterion",
+      "normalization_metadata": {
+        "legacy_criteria": null,
+        "legacy_min_criteria": null,
+        "legacy_name": "Weight loss, history of cancer, fever",
+        "requires_domain_temporal_freeze": true
+      },
+      "question": "Does the available evidence satisfy the encoded criterion: Weight loss, history of cancer, fever?",
+      "source_reference": "trees/lbp_tree.json:nodes[3]",
+      "state_branch_map": {
+        "ABSENT_EXPLICIT": [
+          "no"
+        ],
+        "CONFLICTING": [
+          "no",
+          "yes"
+        ],
+        "FAMILY_HISTORY_OR_OTHER_EXPERIENCER": [
+          "no",
+          "yes"
+        ],
+        "HISTORICAL": [
+          "no",
+          "yes"
+        ],
+        "INFERENCE_FAILURE": [
+          "no",
+          "yes"
+        ],
+        "MODEL_ABSTENTION": [
+          "no",
+          "yes"
+        ],
+        "NOT_DOCUMENTED": [
+          "no",
+          "yes"
+        ],
+        "PARSE_FAILURE": [
+          "no",
+          "yes"
+        ],
+        "POST_CUTOFF_ONLY": [
+          "no",
+          "yes"
+        ],
+        "PRESENT_CURRENT": [
+          "yes"
+        ],
+        "UNCERTAIN": [
+          "no",
+          "yes"
+        ]
+      },
+      "temporal_rule": {
+        "cutoff_relation": "at_or_before",
+        "lookback_hours": null
+      }
+    },
+    {
+      "branches": {
+        "no": "lbp_n06_patient_with_first_episode_over_50_years_old",
+        "yes": "lbp_t_yes_05"
+      },
+      "criterion_id": "low_back_pain_use_of_steroids_or_intravenous_drugs",
+      "criterion_type": "legacy_semantic_temporal",
+      "node_id": "lbp_n05_use_of_steroids_or_intravenous_drugs",
+      "node_type": "criterion",
+      "normalization_metadata": {
+        "legacy_criteria": null,
+        "legacy_min_criteria": null,
+        "legacy_name": "Use of steroids or intravenous drugs",
+        "requires_domain_temporal_freeze": true
+      },
+      "question": "Does the available evidence satisfy the encoded criterion: Use of steroids or intravenous drugs?",
+      "source_reference": "trees/lbp_tree.json:nodes[4]",
+      "state_branch_map": {
+        "ABSENT_EXPLICIT": [
+          "no"
+        ],
+        "CONFLICTING": [
+          "no",
+          "yes"
+        ],
+        "FAMILY_HISTORY_OR_OTHER_EXPERIENCER": [
+          "no",
+          "yes"
+        ],
+        "HISTORICAL": [
+          "no",
+          "yes"
+        ],
+        "INFERENCE_FAILURE": [
+          "no",
+          "yes"
+        ],
+        "MODEL_ABSTENTION": [
+          "no",
+          "yes"
+        ],
+        "NOT_DOCUMENTED": [
+          "no",
+          "yes"
+        ],
+        "PARSE_FAILURE": [
+          "no",
+          "yes"
+        ],
+        "POST_CUTOFF_ONLY": [
+          "no",
+          "yes"
+        ],
+        "PRESENT_CURRENT": [
+          "yes"
+        ],
+        "UNCERTAIN": [
+          "no",
+          "yes"
+        ]
+      },
+      "temporal_rule": {
+        "cutoff_relation": "at_or_before",
+        "lookback_hours": null
+      }
+    },
+    {
+      "branches": {
+        "no": "lbp_n07_widespread_neurological_signs",
+        "yes": "lbp_t_yes_06"
+      },
+      "criterion_id": "low_back_pain_patient_with_first_episode_over_50_years_old",
+      "criterion_type": "legacy_semantic_temporal",
+      "node_id": "lbp_n06_patient_with_first_episode_over_50_years_old",
+      "node_type": "criterion",
+      "normalization_metadata": {
+        "legacy_criteria": null,
+        "legacy_min_criteria": null,
+        "legacy_name": "Patient with first episode over 50 years old",
+        "requires_domain_temporal_freeze": true
+      },
+      "question": "Does the available evidence satisfy the encoded criterion: Patient with first episode over 50 years old?",
+      "source_reference": "trees/lbp_tree.json:nodes[5]",
+      "state_branch_map": {
+        "ABSENT_EXPLICIT": [
+          "no"
+        ],
+        "CONFLICTING": [
+          "no",
+          "yes"
+        ],
+        "FAMILY_HISTORY_OR_OTHER_EXPERIENCER": [
+          "no",
+          "yes"
+        ],
+        "HISTORICAL": [
+          "no",
+          "yes"
+        ],
+        "INFERENCE_FAILURE": [
+          "no",
+          "yes"
+        ],
+        "MODEL_ABSTENTION": [
+          "no",
+          "yes"
+        ],
+        "NOT_DOCUMENTED": [
+          "no",
+          "yes"
+        ],
+        "PARSE_FAILURE": [
+          "no",
+          "yes"
+        ],
+        "POST_CUTOFF_ONLY": [
+          "no",
+          "yes"
+        ],
+        "PRESENT_CURRENT": [
+          "yes"
+        ],
+        "UNCERTAIN": [
+          "no",
+          "yes"
+        ]
+      },
+      "temporal_rule": {
+        "cutoff_relation": "at_or_before",
+        "lookback_hours": null
+      }
+    },
+    {
+      "branches": {
+        "no": "lbp_n08_pain_onset_within_12_weeks_first_episode",
+        "yes": "lbp_t_yes_07"
+      },
+      "criterion_id": "low_back_pain_widespread_neurological_signs",
+      "criterion_type": "legacy_semantic_temporal",
+      "node_id": "lbp_n07_widespread_neurological_signs",
+      "node_type": "criterion",
+      "normalization_metadata": {
+        "legacy_criteria": null,
+        "legacy_min_criteria": null,
+        "legacy_name": "Widespread neurological signs",
+        "requires_domain_temporal_freeze": true
+      },
+      "question": "Does the available evidence satisfy the encoded criterion: Widespread neurological signs?",
+      "source_reference": "trees/lbp_tree.json:nodes[6]",
+      "state_branch_map": {
+        "ABSENT_EXPLICIT": [
+          "no"
+        ],
+        "CONFLICTING": [
+          "no",
+          "yes"
+        ],
+        "FAMILY_HISTORY_OR_OTHER_EXPERIENCER": [
+          "no",
+          "yes"
+        ],
+        "HISTORICAL": [
+          "no",
+          "yes"
+        ],
+        "INFERENCE_FAILURE": [
+          "no",
+          "yes"
+        ],
+        "MODEL_ABSTENTION": [
+          "no",
+          "yes"
+        ],
+        "NOT_DOCUMENTED": [
+          "no",
+          "yes"
+        ],
+        "PARSE_FAILURE": [
+          "no",
+          "yes"
+        ],
+        "POST_CUTOFF_ONLY": [
+          "no",
+          "yes"
+        ],
+        "PRESENT_CURRENT": [
+          "yes"
+        ],
+        "UNCERTAIN": [
+          "no",
+          "yes"
+        ]
+      },
+      "temporal_rule": {
+        "cutoff_relation": "at_or_before",
+        "lookback_hours": null
+      }
+    },
+    {
+      "branches": {
+        "no": "lbp_n09_pain_onset_within_12_weeks_not_improving_after_1_6_weeks",
+        "yes": "lbp_t_yes_08"
+      },
+      "criterion_id": "low_back_pain_pain_onset_within_12_weeks_first_episode",
+      "criterion_type": "legacy_semantic_temporal",
+      "node_id": "lbp_n08_pain_onset_within_12_weeks_first_episode",
+      "node_type": "criterion",
+      "normalization_metadata": {
+        "legacy_criteria": null,
+        "legacy_min_criteria": null,
+        "legacy_name": "Pain onset within 12 weeks - first episode",
+        "requires_domain_temporal_freeze": true
+      },
+      "question": "Does the available evidence satisfy the encoded criterion: Pain onset within 12 weeks - first episode?",
+      "source_reference": "trees/lbp_tree.json:nodes[7]",
+      "state_branch_map": {
+        "ABSENT_EXPLICIT": [
+          "no"
+        ],
+        "CONFLICTING": [
+          "no",
+          "yes"
+        ],
+        "FAMILY_HISTORY_OR_OTHER_EXPERIENCER": [
+          "no",
+          "yes"
+        ],
+        "HISTORICAL": [
+          "no",
+          "yes"
+        ],
+        "INFERENCE_FAILURE": [
+          "no",
+          "yes"
+        ],
+        "MODEL_ABSTENTION": [
+          "no",
+          "yes"
+        ],
+        "NOT_DOCUMENTED": [
+          "no",
+          "yes"
+        ],
+        "PARSE_FAILURE": [
+          "no",
+          "yes"
+        ],
+        "POST_CUTOFF_ONLY": [
+          "no",
+          "yes"
+        ],
+        "PRESENT_CURRENT": [
+          "yes"
+        ],
+        "UNCERTAIN": [
+          "no",
+          "yes"
+        ]
+      },
+      "temporal_rule": {
+        "cutoff_relation": "at_or_before",
+        "lookback_hours": null
+      }
+    },
+    {
+      "branches": {
+        "no": "lbp_n10_pain_onset_more_than_12_weeks_mild_to_moderate",
+        "yes": "lbp_t_yes_09"
+      },
+      "criterion_id": "low_back_pain_pain_onset_within_12_weeks_not_improving_after_1_6_weeks",
+      "criterion_type": "legacy_semantic_temporal",
+      "node_id": "lbp_n09_pain_onset_within_12_weeks_not_improving_after_1_6_weeks",
+      "node_type": "criterion",
+      "normalization_metadata": {
+        "legacy_criteria": null,
+        "legacy_min_criteria": null,
+        "legacy_name": "Pain onset within 12 weeks - not improving after 1-6 weeks",
+        "requires_domain_temporal_freeze": true
+      },
+      "question": "Does the available evidence satisfy the encoded criterion: Pain onset within 12 weeks - not improving after 1-6 weeks?",
+      "source_reference": "trees/lbp_tree.json:nodes[8]",
+      "state_branch_map": {
+        "ABSENT_EXPLICIT": [
+          "no"
+        ],
+        "CONFLICTING": [
+          "no",
+          "yes"
+        ],
+        "FAMILY_HISTORY_OR_OTHER_EXPERIENCER": [
+          "no",
+          "yes"
+        ],
+        "HISTORICAL": [
+          "no",
+          "yes"
+        ],
+        "INFERENCE_FAILURE": [
+          "no",
+          "yes"
+        ],
+        "MODEL_ABSTENTION": [
+          "no",
+          "yes"
+        ],
+        "NOT_DOCUMENTED": [
+          "no",
+          "yes"
+        ],
+        "PARSE_FAILURE": [
+          "no",
+          "yes"
+        ],
+        "POST_CUTOFF_ONLY": [
+          "no",
+          "yes"
+        ],
+        "PRESENT_CURRENT": [
+          "yes"
+        ],
+        "UNCERTAIN": [
+          "no",
+          "yes"
+        ]
+      },
+      "temporal_rule": {
+        "cutoff_relation": "at_or_before",
+        "lookback_hours": null
+      }
+    },
+    {
+      "branches": {
+        "no": "lbp_n11_pain_onset_more_than_12_weeks_moderate_to_severe",
+        "yes": "lbp_t_yes_10"
+      },
+      "criterion_id": "low_back_pain_pain_onset_more_than_12_weeks_mild_to_moderate",
+      "criterion_type": "legacy_semantic_temporal",
+      "node_id": "lbp_n10_pain_onset_more_than_12_weeks_mild_to_moderate",
+      "node_type": "criterion",
+      "normalization_metadata": {
+        "legacy_criteria": null,
+        "legacy_min_criteria": null,
+        "legacy_name": "Pain onset more than 12 weeks - mild to moderate",
+        "requires_domain_temporal_freeze": true
+      },
+      "question": "Does the available evidence satisfy the encoded criterion: Pain onset more than 12 weeks - mild to moderate?",
+      "source_reference": "trees/lbp_tree.json:nodes[9]",
+      "state_branch_map": {
+        "ABSENT_EXPLICIT": [
+          "no"
+        ],
+        "CONFLICTING": [
+          "no",
+          "yes"
+        ],
+        "FAMILY_HISTORY_OR_OTHER_EXPERIENCER": [
+          "no",
+          "yes"
+        ],
+        "HISTORICAL": [
+          "no",
+          "yes"
+        ],
+        "INFERENCE_FAILURE": [
+          "no",
+          "yes"
+        ],
+        "MODEL_ABSTENTION": [
+          "no",
+          "yes"
+        ],
+        "NOT_DOCUMENTED": [
+          "no",
+          "yes"
+        ],
+        "PARSE_FAILURE": [
+          "no",
+          "yes"
+        ],
+        "POST_CUTOFF_ONLY": [
+          "no",
+          "yes"
+        ],
+        "PRESENT_CURRENT": [
+          "yes"
+        ],
+        "UNCERTAIN": [
+          "no",
+          "yes"
+        ]
+      },
+      "temporal_rule": {
+        "cutoff_relation": "at_or_before",
+        "lookback_hours": null
+      }
+    },
+    {
+      "branches": {
+        "no": "lbp_t_end",
+        "yes": "lbp_t_yes_11"
+      },
+      "criterion_id": "low_back_pain_pain_onset_more_than_12_weeks_moderate_to_severe",
+      "criterion_type": "legacy_semantic_temporal",
+      "node_id": "lbp_n11_pain_onset_more_than_12_weeks_moderate_to_severe",
+      "node_type": "criterion",
+      "normalization_metadata": {
+        "legacy_criteria": null,
+        "legacy_min_criteria": null,
+        "legacy_name": "Pain onset more than 12 weeks - moderate to severe",
+        "requires_domain_temporal_freeze": true
+      },
+      "question": "Does the available evidence satisfy the encoded criterion: Pain onset more than 12 weeks - moderate to severe?",
+      "source_reference": "trees/lbp_tree.json:nodes[10]",
+      "state_branch_map": {
+        "ABSENT_EXPLICIT": [
+          "no"
+        ],
+        "CONFLICTING": [
+          "no",
+          "yes"
+        ],
+        "FAMILY_HISTORY_OR_OTHER_EXPERIENCER": [
+          "no",
+          "yes"
+        ],
+        "HISTORICAL": [
+          "no",
+          "yes"
+        ],
+        "INFERENCE_FAILURE": [
+          "no",
+          "yes"
+        ],
+        "MODEL_ABSTENTION": [
+          "no",
+          "yes"
+        ],
+        "NOT_DOCUMENTED": [
+          "no",
+          "yes"
+        ],
+        "PARSE_FAILURE": [
+          "no",
+          "yes"
+        ],
+        "POST_CUTOFF_ONLY": [
+          "no",
+          "yes"
+        ],
+        "PRESENT_CURRENT": [
+          "yes"
+        ],
+        "UNCERTAIN": [
+          "no",
+          "yes"
+        ]
+      },
+      "temporal_rule": {
+        "cutoff_relation": "at_or_before",
+        "lookback_hours": null
+      }
+    },
+    {
+      "node_id": "lbp_t_yes_01",
+      "node_type": "terminal",
+      "source_reference": "trees/lbp_tree.json:nodes[0].yes_action",
+      "terminal_action_id": "lbp_action_refer_for_immediate_evaluation_and_treatment_emergency_room_relevant_specialist",
+      "terminal_action_label": "Refer for immediate evaluation and treatment - emergency room, relevant specialist"
+    },
+    {
+      "node_id": "lbp_t_yes_02",
+      "node_type": "terminal",
+      "source_reference": "trees/lbp_tree.json:nodes[1].yes_action",
+      "terminal_action_id": "lbp_action_urgent_referral_within_24_48_hours",
+      "terminal_action_label": "Urgent referral within 24-48 hours"
+    },
+    {
+      "node_id": "lbp_t_yes_03",
+      "node_type": "terminal",
+      "source_reference": "trees/lbp_tree.json:nodes[2].yes_action",
+      "terminal_action_id": "lbp_action_urgent_referral_within_24_48_hours",
+      "terminal_action_label": "Urgent referral within 24-48 hours"
+    },
+    {
+      "node_id": "lbp_t_yes_04",
+      "node_type": "terminal",
+      "source_reference": "trees/lbp_tree.json:nodes[3].yes_action",
+      "terminal_action_id": "lbp_action_urgent_referral_within_24_48_hours",
+      "terminal_action_label": "Urgent referral within 24-48 hours"
+    },
+    {
+      "node_id": "lbp_t_yes_05",
+      "node_type": "terminal",
+      "source_reference": "trees/lbp_tree.json:nodes[4].yes_action",
+      "terminal_action_id": "lbp_action_urgent_referral_within_24_48_hours",
+      "terminal_action_label": "Urgent referral within 24-48 hours"
+    },
+    {
+      "node_id": "lbp_t_yes_06",
+      "node_type": "terminal",
+      "source_reference": "trees/lbp_tree.json:nodes[5].yes_action",
+      "terminal_action_id": "lbp_action_soon_referral_within_weeks",
+      "terminal_action_label": "Soon referral within weeks"
+    },
+    {
+      "node_id": "lbp_t_yes_07",
+      "node_type": "terminal",
+      "source_reference": "trees/lbp_tree.json:nodes[6].yes_action",
+      "terminal_action_id": "lbp_action_soon_referral_within_weeks",
+      "terminal_action_label": "Soon referral within weeks"
+    },
+    {
+      "node_id": "lbp_t_yes_08",
+      "node_type": "terminal",
+      "source_reference": "trees/lbp_tree.json:nodes[7].yes_action",
+      "terminal_action_id": "lbp_action_standard_acute_care_management",
+      "terminal_action_label": "Standard acute care management"
+    },
+    {
+      "node_id": "lbp_t_yes_09",
+      "node_type": "terminal",
+      "source_reference": "trees/lbp_tree.json:nodes[8].yes_action",
+      "terminal_action_id": "lbp_action_consider_referral_to_specialist",
+      "terminal_action_label": "Consider referral to specialist"
+    },
+    {
+      "node_id": "lbp_t_yes_10",
+      "node_type": "terminal",
+      "source_reference": "trees/lbp_tree.json:nodes[9].yes_action",
+      "terminal_action_id": "lbp_action_chronic_pain_management_approach",
+      "terminal_action_label": "Chronic pain management approach"
+    },
+    {
+      "node_id": "lbp_t_yes_11",
+      "node_type": "terminal",
+      "source_reference": "trees/lbp_tree.json:nodes[10].yes_action",
+      "terminal_action_id": "lbp_action_enhanced_chronic_pain_management",
+      "terminal_action_label": "Enhanced chronic pain management"
+    },
+    {
+      "node_id": "lbp_t_end",
+      "node_type": "terminal",
+      "source_reference": "trees/lbp_tree.json:End of Decision Tree",
+      "terminal_action_id": "lbp_action_end_of_decision_tree",
+      "terminal_action_label": "End of Decision Tree"
+    }
+  ],
+  "normalization_metadata": {
+    "configuration_gaps_fail_execution": true,
+    "legacy_nodes_are_preserved_in_encoded_no_edge_order": true,
+    "normalizer_version": "legacy-domain-normalizer-1.0",
+    "source_reference": "trees/lbp_tree.json",
+    "yes_actions_are_terminal": true
+  },
+  "root_id": "lbp_n01_features_of_cauda_equina_syndrome_including_sudden_onset_or_loss_of_bladder_bowel_control_saddle_anaesthesia",
+  "tree_id": "low_back_pain",
+  "version": "1.0-engineering-normalization"
+}

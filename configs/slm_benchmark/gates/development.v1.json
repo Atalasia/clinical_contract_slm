@@ -1,0 +1,89 @@
+{
+  "schema_version": "1.0",
+  "suite_id": "slm_benchmark_prompt_development_v1",
+  "purpose": "development",
+  "freeze_status": "FROZEN",
+  "contains_patient_data": false,
+  "cases": [
+    {
+      "case_id": "dev_typed_present",
+      "task": "typed_state",
+      "category": "present",
+      "synthetic": true,
+      "input": {"criterion_id": "current_pneumonia", "criterion_text": "Current pneumonia", "text": "Right lower lobe pneumonia is present."},
+      "expected": {"state": "PRESENT_CURRENT"}
+    },
+    {
+      "case_id": "dev_typed_absent",
+      "task": "typed_state",
+      "category": "explicit_absence",
+      "synthetic": true,
+      "input": {"criterion_id": "current_pneumonia", "criterion_text": "Current pneumonia", "text": "No focal pneumonia is seen."},
+      "expected": {"state": "ABSENT_EXPLICIT"}
+    },
+    {
+      "case_id": "dev_typed_historical",
+      "task": "typed_state",
+      "category": "historical",
+      "synthetic": true,
+      "input": {"criterion_id": "current_pneumonia", "criterion_text": "Current pneumonia", "text": "Pneumonia occurred in 2019 and resolved."},
+      "expected": {"state": "HISTORICAL"}
+    },
+    {
+      "case_id": "dev_typed_other",
+      "task": "typed_state",
+      "category": "other_experiencer",
+      "synthetic": true,
+      "input": {"criterion_id": "current_pneumonia", "criterion_text": "Current pneumonia", "text": "The patient's sibling currently has pneumonia."},
+      "expected": {"state": "FAMILY_HISTORY_OR_OTHER_EXPERIENCER"}
+    },
+    {
+      "case_id": "dev_typed_uncertain",
+      "task": "typed_state",
+      "category": "uncertain",
+      "synthetic": true,
+      "input": {"criterion_id": "current_pneumonia", "criterion_text": "Current pneumonia", "text": "The opacity may represent early pneumonia."},
+      "expected": {"state": "UNCERTAIN"}
+    },
+    {
+      "case_id": "dev_typed_not_documented",
+      "task": "typed_state",
+      "category": "not_documented",
+      "synthetic": true,
+      "input": {"criterion_id": "current_pneumonia", "criterion_text": "Current pneumonia", "text": "The cardiac silhouette is unchanged."},
+      "expected": {"state": "NOT_DOCUMENTED"}
+    },
+    {
+      "case_id": "dev_ext_detection_yes",
+      "task": "ext_notes_context",
+      "category": "detection",
+      "synthetic": true,
+      "input": {"note": "The patient reports shortness of breath today.", "target_mention": "shortness of breath", "candidate_concept": "Dyspnea", "semantic_type": "Sign or symptom"},
+      "expected": {"detection": "yes", "encounter": "yes", "negation": "no"}
+    },
+    {
+      "case_id": "dev_ext_detection_no",
+      "task": "ext_notes_context",
+      "category": "detection",
+      "synthetic": true,
+      "input": {"note": "The note says the patient was discharged home.", "target_mention": "home", "candidate_concept": "Homocystinuria", "semantic_type": "Disease or syndrome"},
+      "expected": {"detection": "no", "encounter": "not_applicable", "negation": "not_applicable"}
+    },
+    {
+      "case_id": "dev_ext_encounter_no",
+      "task": "ext_notes_context",
+      "category": "encounter",
+      "synthetic": true,
+      "input": {"note": "Remote asthma is listed in the history; today's visit concerns a wrist sprain.", "target_mention": "asthma", "candidate_concept": "Asthma", "semantic_type": "Disease or syndrome"},
+      "expected": {"detection": "yes", "encounter": "no", "negation": "no"}
+    },
+    {
+      "case_id": "dev_ext_negated",
+      "task": "ext_notes_context",
+      "category": "negation",
+      "synthetic": true,
+      "input": {"note": "The patient denies chest pain.", "target_mention": "chest pain", "candidate_concept": "Chest pain", "semantic_type": "Sign or symptom"},
+      "expected": {"detection": "yes", "encounter": "yes", "negation": "yes"}
+    }
+  ]
+}

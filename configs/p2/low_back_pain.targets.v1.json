@@ -1,0 +1,64 @@
+{
+  "schema_version": "1.0",
+  "domain": "low_back_pain",
+  "retrieval": {"version": "low_back_pain_exact_sentence_terms_v1", "top_k_per_note": 1},
+  "targets": [
+    {
+      "criterion_id": "low_back_pain_features_of_cauda_equina_syndrome_including_sudden_onset_or_loss_of_bladder_bowel_control_saddle_anaesthesia",
+      "criterion_definition": "Present if any current cauda-equina feature is explicit: sudden loss of bladder or bowel control, urinary retention attributable to cauda equina, or saddle anesthesia.",
+      "source_ids": ["mimiciv_ed.triage_chiefcomplaint", "mimiciv_note.radiology"],
+      "query_terms": ["cauda equina", "saddle anesthesia", "saddle anaesthesia", "bladder control", "bowel control", "urinary retention", "fecal incontinence"]
+    },
+    {
+      "criterion_id": "low_back_pain_severe_worsening_pain_especially_at_night_or_when_lying_down",
+      "source_ids": ["mimiciv_ed.triage_chiefcomplaint"],
+      "query_terms": ["night pain", "pain at night", "worse at night", "lying down", "severe worsening back pain"]
+    },
+    {
+      "criterion_id": "low_back_pain_significant_trauma",
+      "source_ids": ["mimiciv_ed.triage_chiefcomplaint", "mimiciv_note.radiology"],
+      "query_terms": ["trauma", "fall", "motor vehicle", "mvc", "collision", "struck"]
+    },
+    {
+      "criterion_id": "low_back_pain_weight_loss_history_of_cancer_fever",
+      "criterion_definition": "Present if any of these red flags is explicit: unexplained weight loss, patient history of cancer, or current fever.",
+      "source_ids": ["mimiciv_ed.triage_chiefcomplaint", "mimiciv_note.radiology"],
+      "query_terms": ["weight loss", "history of cancer", "history of malignancy", "known cancer", "known malignancy", "fever", "febrile"]
+    },
+    {
+      "criterion_id": "low_back_pain_use_of_steroids_or_intravenous_drugs",
+      "criterion_definition": "Present if current systemic steroid use or intravenous drug use is explicit; either is sufficient.",
+      "source_ids": ["mimiciv_ed.triage_chiefcomplaint", "mimiciv_note.radiology"],
+      "query_terms": ["steroid use", "chronic steroids", "prednisone", "intravenous drug", "iv drug", "ivdu"]
+    },
+    {
+      "criterion_id": "low_back_pain_widespread_neurological_signs",
+      "source_ids": ["mimiciv_ed.triage_chiefcomplaint", "mimiciv_note.radiology"],
+      "query_terms": ["neurologic deficit", "neurological deficit", "bilateral weakness", "bilateral numbness", "multiple neurologic", "widespread neurolog"]
+    },
+    {
+      "criterion_id": "low_back_pain_pain_onset_within_12_weeks_first_episode",
+      "criterion_definition": "Back pain began within the last 12 weeks AND is explicitly the first episode. Both are required.",
+      "source_ids": ["mimiciv_ed.triage_chiefcomplaint"],
+      "query_terms": ["first episode", "first time back pain", "new back pain", "weeks of back pain"]
+    },
+    {
+      "criterion_id": "low_back_pain_pain_onset_within_12_weeks_not_improving_after_1_6_weeks",
+      "criterion_definition": "Back pain began within the last 12 weeks AND has not improved after 1 to 6 weeks. Both duration and lack of improvement are required.",
+      "source_ids": ["mimiciv_ed.triage_chiefcomplaint"],
+      "query_terms": ["not improving", "no improvement", "persistent back pain", "weeks of back pain"]
+    },
+    {
+      "criterion_id": "low_back_pain_pain_onset_more_than_12_weeks_mild_to_moderate",
+      "criterion_definition": "Back pain duration is explicitly more than 12 weeks AND severity is explicitly mild to moderate.",
+      "source_ids": ["mimiciv_ed.triage_chiefcomplaint"],
+      "query_terms": ["chronic back pain", "months of back pain", "mild back pain", "moderate back pain"]
+    },
+    {
+      "criterion_id": "low_back_pain_pain_onset_more_than_12_weeks_moderate_to_severe",
+      "criterion_definition": "Back pain duration is explicitly more than 12 weeks AND severity is explicitly moderate to severe.",
+      "source_ids": ["mimiciv_ed.triage_chiefcomplaint"],
+      "query_terms": ["chronic back pain", "months of back pain", "moderate back pain", "severe back pain"]
+    }
+  ]
+}
