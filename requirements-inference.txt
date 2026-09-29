@@ -5,3 +5,4 @@ numpy==2.4.6
 torch==2.11.0
 transformers==5.10.2
 vllm==0.22.1
+xgrammar==0.2.1

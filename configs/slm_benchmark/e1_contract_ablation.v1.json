@@ -1,0 +1,31 @@
+{
+  "schema_version": "1.0",
+  "experiment_id": "sub5b_slm_e1_contract_ablation_v1",
+  "freeze_status": "FROZEN",
+  "status": "EXPLORATORY_FOLLOW_UP",
+  "authorization": {"inference": true, "approved_on": "2026-09-22", "model_downloads": false},
+  "primary_e1_config": "e1.synthetic_typed.v1.json",
+  "primary_e1_config_sha256": "d5cb16b5cdbe6ca329c3d8289dff30e9fc9d3b108d10db821d2375e1214cc682",
+  "dataset_manifest": "../../outputs/local_restricted/slm_benchmark_v2/e1/dataset/manifest.json",
+  "dataset_manifest_sha256": "2d28a056c8a53dc1cbaaf0ea297d093768a0c8e46de3e345e926045f0cfe48ef",
+  "compact_prompt": "prompts/typed_state_compact.v1.json",
+  "compact_prompt_sha256": "8541f4650c868d4abfa9d9fb9a0c7a90ebc00684ce7f6e0fd448f1011c8571b3",
+  "conditions": ["full_unconstrained", "full_constrained", "compact_unconstrained", "compact_constrained"],
+  "structured_backend": "xgrammar",
+  "expected_requests_per_cell": 387,
+  "expected_cases": 249,
+  "wrapper_overrides": {
+    "g4_it_v1": {"wrapper": "wrappers/official_processor_chat.s2.v1.json", "wrapper_sha256": "6329fd69a322fd4372f9ba6ed5e095bfdeafd9e82e7e174151bb850d74b0a7b5"},
+    "mg4_it_v1": {"wrapper": "wrappers/official_processor_chat.s2.v1.json", "wrapper_sha256": "6329fd69a322fd4372f9ba6ed5e095bfdeafd9e82e7e174151bb850d74b0a7b5"},
+    "mg15_it_v1": {"wrapper": "wrappers/official_processor_chat.s2.v1.json", "wrapper_sha256": "6329fd69a322fd4372f9ba6ed5e095bfdeafd9e82e7e174151bb850d74b0a7b5"}
+  },
+  "statistics": {"bootstrap_replicates": 10000, "bootstrap_seed": 20260922, "cluster": "case_id", "primary_endpoint": "state_macro_agreement", "operational_endpoint": "strict_micro_agreement"},
+  "output_root": "../../outputs/local_restricted/slm_benchmark_v2/contract_ablation_v1",
+  "claim_boundary": "Exploratory contract-complexity by decoder comparison on the fixed synthetic requests. Host completion of redundant fields is part of the compact intervention. No new EHR inference, scale claim, or causal training claim.",
+  "release_provenance": {
+    "paper_config_sha256": "7c65e8ae52d2996e0be3a71ddb323957127086fc0e5de4fa8c44c560b4de8acc",
+    "paper_primary_config_sha256": "77ebc22c1defcc2bb066da56218de180487c720a46fdd21521601146b140ea4d",
+    "paper_dataset_manifest_sha256": "2d28a056c8a53dc1cbaaf0ea297d093768a0c8e46de3e345e926045f0cfe48ef",
+    "portable_binding": "Primary config hash binds to the portable release. The retained dataset manifest hash identifies the paper run; verify and rebind to a newly generated local manifest before a new run. Do not edit or relabel existing outputs."
+  }
+}

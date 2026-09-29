@@ -76,6 +76,37 @@ class ReleaseConfigHashTests(unittest.TestCase):
             wrapper_path = CONFIG_ROOT / override["wrapper"]
             self.assertEqual(override["wrapper_sha256"], _file_sha256(wrapper_path))
 
+    def test_followup_configs_match_portable_primary_configs_and_wrappers(self) -> None:
+        for filename, primary_field in (
+            ("e1_contract_ablation.v1.json", "primary_e1_config"),
+            ("e3_contract_comparison.v1.json", "primary_e3_config"),
+        ):
+            with self.subTest(filename=filename):
+                followup = _load(CONFIG_ROOT / filename)
+                primary = _load(CONFIG_ROOT / followup[primary_field])
+                self.assertEqual(
+                    followup[f"{primary_field}_sha256"], _config_sha256(primary)
+                )
+                for override in followup["wrapper_overrides"].values():
+                    self.assertEqual(
+                        override["wrapper_sha256"],
+                        _file_sha256(CONFIG_ROOT / override["wrapper"]),
+                    )
+
+    def test_compact_followup_matches_published_prompt(self) -> None:
+        followup = _load(CONFIG_ROOT / "e1_contract_ablation.v1.json")
+        prompt = _load(CONFIG_ROOT / followup["compact_prompt"])
+        self.assertEqual(followup["compact_prompt_sha256"], _config_sha256(prompt))
+
+    def test_paired_note_followup_preserves_primary_counts_and_panel(self) -> None:
+        followup = _load(CONFIG_ROOT / "e3_contract_comparison.v1.json")
+        primary = _load(CONFIG_ROOT / followup["primary_e3_config"])
+        benchmark = _load(CONFIG_ROOT / primary["benchmark_config"])
+        self.assertEqual(followup["expected_counts"], primary["dataset"]["expected_counts"])
+        self.assertEqual(len(primary["panel"]), 8)
+        declared = {contrast["contrast_id"] for contrast in benchmark["contrasts"]}
+        self.assertTrue(set(followup["statistics"]["core_contrast_ids"]) <= declared)
+
 
 if __name__ == "__main__":
     unittest.main()

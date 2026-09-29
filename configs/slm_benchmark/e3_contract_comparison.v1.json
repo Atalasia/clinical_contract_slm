@@ -1,0 +1,53 @@
+{
+  "schema_version": "1.0",
+  "experiment_id": "sub5b_slm_e3_contract_comparison_v1",
+  "freeze_status": "FROZEN",
+  "status": "EXPLORATORY_FOLLOW_UP",
+  "execution": "Manual local invocation by the project owner; preparing this runner does not launch inference.",
+  "primary_e3_config": "e3.ext_notes.v1.json",
+  "primary_e3_config_sha256": "a710d8ba3ecaaf84c4df6f2ddd1528802f4713f15dcccf9f9d676d295d9010a4",
+  "dataset_manifest": "../../outputs/local_restricted/slm_benchmark_v2/ext_notes_context/dataset/manifest.json",
+  "dataset_manifest_sha256": "ba40890d32a279a65a47119cf6f03ea065e90cf21b704e86eff01bea3acde524",
+  "conditions": ["unconstrained", "constrained"],
+  "structured_backend": "xgrammar",
+  "runtime_versions": {
+    "vllm": "0.22.1",
+    "transformers": "5.10.2",
+    "torch": "2.11.0",
+    "numpy": "2.4.6",
+    "xgrammar": "0.2.1",
+    "accelerate": "1.13.0",
+    "huggingface-hub": "1.18.0"
+  },
+  "expected_counts": {"requests": 2288, "notes": 150, "admissions": 130, "subjects": 130},
+  "checkpoint_batch_size": 128,
+  "engine_overrides": {"enable_prefix_caching": false, "add_special_tokens": false},
+  "condition_order": "unconstrained then constrained within each model; timing is descriptive, not a decoder-speed comparison",
+  "wrapper_overrides": {
+    "g4_it_v1": {"wrapper": "wrappers/official_processor_chat.s2.v1.json", "wrapper_sha256": "6329fd69a322fd4372f9ba6ed5e095bfdeafd9e82e7e174151bb850d74b0a7b5"},
+    "mg4_it_v1": {"wrapper": "wrappers/official_processor_chat.s2.v1.json", "wrapper_sha256": "6329fd69a322fd4372f9ba6ed5e095bfdeafd9e82e7e174151bb850d74b0a7b5"},
+    "mg15_it_v1": {"wrapper": "wrappers/official_processor_chat.s2.v1.json", "wrapper_sha256": "6329fd69a322fd4372f9ba6ed5e095bfdeafd9e82e7e174151bb850d74b0a7b5"}
+  },
+  "statistics": {
+    "primary_endpoint": "strict_hierarchical_joint_exact_match",
+    "cluster": "subject_cluster",
+    "bootstrap_replicates": 10000,
+    "bootstrap_seed": 20260925,
+    "confidence_level": 0.95,
+    "core_contrast_ids": ["qwen_instruction_small", "qwen_instruction_medium", "qwen_size_pretrained", "qwen_size_instruction", "gemma_medical_adaptation_it"],
+    "decoder_effect": "constrained minus unconstrained within each model",
+    "interaction": "(model_b minus model_a) constrained minus (model_b minus model_a) unconstrained",
+    "interpretation": "Exploratory paired subject-cluster percentile intervals; unadjusted, not simultaneous confidence bounds or confirmatory multiplicity-controlled tests. Rankings and sign reversals are descriptive.",
+    "secondary": "Whole-output Markdown-fence normalization only; unchanged native labels and hierarchy checks. No JSON extraction, label repair or retries based on correctness."
+  },
+  "output_root": "../../outputs/local_restricted/slm_benchmark_v2/e3_contract_comparison_v1",
+  "privacy": {"model_downloads": false, "external_transmission": false, "restricted_artifact_mode": "0600", "aggregate_contains_request_ids_or_note_text": false},
+  "prior_exposure": "Original E3 outputs and synthetic contract-comparison results have already been inspected; this is a prospective paired follow-up on an existing dataset, not untouched external validation.",
+  "claim_boundary": "Contract sensitivity on a second, candidate-conditioned clinical-note task; not identical-criterion synthetic-to-EHR transfer, compact-versus-full replication, clinical benefit or measured performance at scale.",
+  "release_provenance": {
+    "paper_config_sha256": "3f5d935e158abde6ba1f5495e312005fc755bdd60799f10c48692fda169d2ae4",
+    "paper_primary_config_sha256": "7dd2b2a57977232e05d0f22d4e3d948fd53cf9dc306b3b61b31f1a46224ba8a1",
+    "paper_dataset_manifest_sha256": "ba40890d32a279a65a47119cf6f03ea065e90cf21b704e86eff01bea3acde524",
+    "portable_binding": "Primary config hash binds to the portable release. The retained dataset manifest hash identifies the paper run; verify and rebind to a newly generated local manifest before a new run. Do not edit or relabel existing outputs."
+  }
+}
